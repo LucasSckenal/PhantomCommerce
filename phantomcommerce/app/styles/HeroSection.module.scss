@@ -1,0 +1,412 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 100px; // Espaço para o header fixo
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(26, 28, 41, 0.8) 70%, rgba(26, 28, 41, 1) 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="nature" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23228B22;stop-opacity:0.8"/><stop offset="50%" style="stop-color:%2332CD32;stop-opacity:0.6"/><stop offset="100%" style="stop-color:%23000000;stop-opacity:0.9"/></linearGradient><radialGradient id="robot1" cx="40%" cy="30%" r="25%"><stop offset="0%" style="stop-color:%23FFD700;stop-opacity:0.8"/><stop offset="50%" style="stop-color:%23FFA500;stop-opacity:0.6"/><stop offset="100%" style="stop-color:%23000000;stop-opacity:0.4"/></radialGradient><radialGradient id="robot2" cx="80%" cy="70%" r="20%"><stop offset="0%" style="stop-color:%23FFFFFF;stop-opacity:0.7"/><stop offset="50%" style="stop-color:%2332CD32;stop-opacity:0.5"/><stop offset="100%" style="stop-color:%23000000;stop-opacity:0.3"/></radialGradient></defs><rect width="1200" height="800" fill="url(%23nature)"/><ellipse cx="200" cy="400" rx="150" ry="200" fill="%23228B22" opacity="0.6"/><ellipse cx="100" cy="500" rx="100" ry="150" fill="%2332CD32" opacity="0.5"/><ellipse cx="300" cy="600" rx="120" ry="180" fill="%23228B22" opacity="0.4"/><rect x="400" y="200" width="200" height="300" rx="20" fill="url(%23robot1)"/><rect x="450" y="250" width="100" height="200" rx="10" fill="%23FFD700" opacity="0.8"/><circle cx="500" cy="300" r="30" fill="%23FF0000" opacity="0.7"/><rect x="800" y="400" width="150" height="250" rx="15" fill="url(%23robot2)"/><rect x="820" y="450" width="110" height="150" rx="8" fill="%23FFFFFF" opacity="0.8"/><circle cx="875" cy="500" r="25" fill="%2300FF00" opacity="0.7"/><rect x="850" y="550" width="50" height="80" rx="5" fill="%2332CD32" opacity="0.6"/></svg>');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(26, 28, 41, 0.1) 60%, rgba(26, 28, 41, 0.3) 100%);
+  z-index: -1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.topSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.leftPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gameInfo {
+  .gameTitle {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  
+  .stars {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .ratingText {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .releaseDate {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+}
+
+.platforms {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  
+  .platformIcon {
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  
+  .currentPrice {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .originalPrice {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    text-decoration: line-through;
+  }
+  
+  .discount {
+    background: var(--success-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.875rem 1.75rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  &Primary {
+    background: #00d4ff;
+    color: white;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+  }
+  
+  &Secondary {
+    background: var(--secondary-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--accent-purple);
+    
+    &:hover {
+      background: var(--border-color);
+    }
+  }
+  
+  &Large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+  
+  &Buy {
+    background: #00d4ff;
+    color: white;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+  }
+}
+
+.mediaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.videoPlayer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: var(--secondary-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+  .playButton {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    
+    &:hover {
+      transform: scale(1.1);
+      background: white;
+    }
+  }
+}
+
+.imageCarousel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carouselBtn {
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  
+  &:hover {
+    background: var(--accent-purple);
+    color: white;
+  }
+}
+
+.carouselImages {
+  display: flex;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.carouselImage {
+  width: 80px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 2px solid transparent;
+  
+  &.active {
+    border-color: var(--accent-purple);
+  }
+  
+  .placeholder {
+    width: 100%;
+    height: 100%;
+    background: var(--border-color);
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.paginationDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  
+  &.active {
+    background: var(--accent-purple);
+    transform: scale(1.2);
+  }
+}
+
+.rightPanel {
+  .purchaseCard {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+.description {
+  margin-top: 2rem;
+  
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--accent-purple);
+  }
+  
+  p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .launchDate {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    
+    strong {
+      color: var(--accent-purple);
+    }
+  }
+}
+
+.savings {
+  color: var(--success-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+// Responsividade
+@media (max-width: 1024px) {
+  .topSection {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .rightPanel .purchaseCard {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .gameInfo .gameTitle {
+    font-size: 2.5rem;
+  }
+  
+  .pricing {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    
+    .currentPrice {
+      font-size: 1.75rem;
+    }
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .videoPlayer {
+    height: 250px;
+  }
+  
+  .carouselImages {
+    gap: 0.5rem;
+  }
+  
+  .carouselImage {
+    width: 60px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameInfo .gameTitle {
+    font-size: 2rem;
+  }
+  
+  .videoPlayer {
+    height: 200px;
+    
+    .playButton {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  .rightPanel .purchaseCard {
+    padding: 1.5rem;
+  }
+}
