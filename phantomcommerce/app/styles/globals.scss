@@ -1,4 +1,5 @@
 // Reset e variáveis globais
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,7 @@
   // Cores principais - Paleta preto e roxo
   --primary-bg: #000000;
   --secondary-bg: #1a1a1a;
-  --accent-blue: #8b5cf6;
+  --accent-blue: #5c78f6;
   --accent-purple: #a855f7;
   --accent-light-purple: #c084fc;
   --text-primary: #ffffff;
@@ -37,18 +38,18 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Arimo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: #1a1c29;
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
+
 // Utilitários
 .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 3rem !important;
   
   @media (min-width: 768px) {
     padding: 0 2rem;

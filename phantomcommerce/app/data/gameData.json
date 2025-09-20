@@ -1,0 +1,1293 @@
+[
+  {
+    "id": 1,
+    "title": "Cyberworld 2077",
+    "originalPrice": 299.99,
+    "discountedPrice": 150.00,
+    "rating": 4.8,
+    "platforms": ["xbox", "playstation", "steam"],
+    "tags": ["Ação", "RPG", "Mundo Aberto"],
+    "developer": "Night Studio",
+    "publisher": "Futuro Games",
+    "classification": "18+",
+    "releaseDate": "10/09/2025",
+    "bannerImage": "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/2781814/pexels-photo-2781814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/2a2a3d/ffffff?text=CYBERWORLD&font=orbitron",
+    "description": "CYBERWORLD 2077 é um jogo onde esse lado conectado, embosque esse fluído formado por números e explore, descubra, desvende e vivencie tudo o que um cenário distópico pode lhe oferecer no mais novo RPG da Night Studio.",
+    "about": "Um RPG futurista em mundo aberto com batalhas intensas e narrativa imersiva.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 970", "storage": "70GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "16GB", "gpu": "RTX 3060", "storage": "70GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/7319328/pexels-photo-7319328.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/7234316/pexels-photo-7234316.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/9890666/pexels-photo-9890666.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 2, "title": "Cosmic Guardian", "price": 89.99, "rating": 4.7, "reviews": 312, "image": "https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 3, "title": "Neon Runner", "price": 59.90, "rating": 4.5, "reviews": 189, "image": "https://images.pexels.com/photos/3829227/pexels-photo-3829227.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 4, "title": "Void Sector", "price": 75.00, "rating": 4.8, "reviews": 450, "image": "https://images.pexels.com/photos/392018/pexels-photo-392018.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 5, "title": "Astra Protocol", "price": 99.99, "rating": 4.9, "reviews": 521, "image": "https://images.pexels.com/photos/4009409/pexels-photo-4009409.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Starlight Odyssey",
+    "originalPrice": 249.90,
+    "discountedPrice": 124.95,
+    "rating": 4.9,
+    "platforms": ["pc", "playstation", "xbox"],
+    "tags": ["Sci-Fi", "RPG", "Exploração"],
+    "developer": "Galaxy Forge",
+    "publisher": "Celestial Interactive",
+    "classification": "14+",
+    "releaseDate": "22/05/2024",
+    "bannerImage": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/39561/solar-flare-sun-eruption-energy-39561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/1a1a2e/e0e0e0?text=STARLIGHT&font=orbitron",
+    "description": "Navegue por sistemas estelares desconhecidos, descubra civilizações antigas e desvende os mistérios de uma galáxia à beira do colapso. Suas escolhas moldarão o destino do universo.",
+    "about": "Um épico RPG de exploração espacial com uma narrativa ramificada e vastos mundos para descobrir.",
+    "systemRequirements": {
+      "minimum": { "cpu": "AMD Ryzen 5", "ram": "12GB", "gpu": "RX 580", "storage": "100GB" },
+      "recommended": { "cpu": "AMD Ryzen 7", "ram": "16GB", "gpu": "RTX 3070", "storage": "100GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/956981/milky-way-starry-sky-night-sky-star-956981.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2156/sky-earth-space-working.jpg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/326874/pexels-photo-326874.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 1, "title": "Cyberworld 2077", "price": 150.00, "rating": 4.8, "reviews": 1205, "image": "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 6, "title": "Ethereal Echoes", "price": 119.90, "rating": 4.6, "reviews": 250, "image": "https://images.pexels.com/photos/2887963/pexels-photo-2887963.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 7, "title": "Quantum Rift", "price": 99.50, "rating": 4.7, "reviews": 340, "image": "https://images.pexels.com/photos/36487/space-landing-apollo-11-buzz-aldrin.jpg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 8, "title": "Solaris Command", "price": 49.99, "rating": 4.4, "reviews": 150, "image": "https://images.pexels.com/photos/41162/moon-landing-apollo-11-nasa-buzz-aldrin-41162.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Chronicles of Eldoria",
+    "originalPrice": 199.99,
+    "discountedPrice": 99.99,
+    "rating": 4.7,
+    "platforms": ["pc", "steam"],
+    "tags": ["Fantasia", "RPG", "Estratégia"],
+    "developer": "Mythic Realms",
+    "publisher": "Dragonfire Games",
+    "classification": "16+",
+    "releaseDate": "15/01/2025",
+    "bannerImage": "https://images.pexels.com/photos/163822/borobudur-temple-destination-indonesia-163822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/207540/pexels-photo-207540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/4a2e1a/f0e0d0?text=ELDORIA&font=cinzel",
+    "description": "Forje seu próprio reino nas terras mágicas de Eldoria. Comande exércitos, domine magias ancestrais e enfrente criaturas míticas em um mundo vasto e cheio de segredos.",
+    "about": "Um grandioso RPG de estratégia e fantasia onde você constrói seu império e decide o destino do mundo.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 1050 Ti", "storage": "50GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "16GB", "gpu": "RTX 2060", "storage": "50GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/103463/pexels-photo-103463.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2440021/pexels-photo-2440021.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2088205/pexels-photo-2088205.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 9, "title": "Shadowheart Legacy", "price": 139.90, "rating": 4.8, "reviews": 620, "image": "https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 10, "title": "Dragon's Prophecy", "price": 109.99, "rating": 4.6, "reviews": 430, "image": "https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 11, "title": "King's Ascendancy", "price": 79.90, "rating": 4.5, "reviews": 310, "image": "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 12, "title": "Mythic Blade", "price": 45.00, "rating": 4.3, "reviews": 180, "image": "https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Veridian Veil",
+    "originalPrice": 89.90,
+    "discountedPrice": 44.95,
+    "rating": 4.5,
+    "platforms": ["nintendo-switch", "pc", "steam"],
+    "tags": ["Aventura", "Puzzle", "Indie"],
+    "developer": "BloomByte",
+    "publisher": "Whisperwind",
+    "classification": "Livre",
+    "releaseDate": "01/11/2024",
+    "bannerImage": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1528640/pexels-photo-1528640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/2d5a2d/e8f5e9?text=VERIDIAN&font=sacramento",
+    "description": "Explore uma floresta mágica e resolva quebra-cabeças baseados na natureza para desvendar os segredos de um véu misterioso que cobriu a terra. Uma jornada relaxante e visualmente deslumbrante.",
+    "about": "Um encantador jogo indie de aventura e puzzle com foco na exploração e na beleza da natureza.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i3", "ram": "4GB", "gpu": "Intel HD 4000", "storage": "5GB" },
+      "recommended": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 660", "storage": "5GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/235621/pexels-photo-235621.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1324803/pexels-photo-1324803.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 13, "title": "Glimmerbrook", "price": 39.90, "rating": 4.6, "reviews": 215, "image": "https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 14, "title": "The Last Seed", "price": 29.99, "rating": 4.7, "reviews": 190, "image": "https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 15, "title": "Windswept", "price": 49.00, "rating": 4.5, "reviews": 150, "image": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 16, "title": "Fae Folk", "price": 55.50, "rating": 4.4, "reviews": 120, "image": "https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Asphalt Fury: Tokyo Drift",
+    "originalPrice": 179.90,
+    "discountedPrice": 89.95,
+    "rating": 4.6,
+    "platforms": ["xbox", "playstation", "pc"],
+    "tags": ["Corrida", "Ação", "Arcade"],
+    "developer": "Nitro Pulse Studios",
+    "publisher": "Apex Racers",
+    "classification": "12+",
+    "releaseDate": "30/08/2025",
+    "bannerImage": "https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/ff0033/ffffff?text=ASPHALT+FURY&font=bebas-neue",
+    "description": "Domine as ruas de Tóquio em corridas de drift alucinantes. Personalize seu carro, desafie os melhores pilotos e torne-se uma lenda no cenário de corrida underground.",
+    "about": "Um jogo de corrida arcade focado em drift, personalização e competições intensas nas ruas de Tóquio.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 1060", "storage": "60GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "16GB", "gpu": "RTX 3060 Ti", "storage": "60GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 17, "title": "Grid Masters", "price": 219.90, "rating": 4.8, "reviews": 890, "image": "https://images.pexels.com/photos/337909/pexels-photo-337909.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 18, "title": "Speed Legion", "price": 159.90, "rating": 4.5, "reviews": 540, "image": "https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 19, "title": "Project Velocity", "price": 199.00, "rating": 4.7, "reviews": 720, "image": "https://images.pexels.com/photos/3422964/pexels-photo-3422964.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 20, "title": "Drift Kings", "price": 99.90, "rating": 4.4, "reviews": 350, "image": "https://images.pexels.com/photos/97353/pexels-photo-97353.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Ethereal Echoes",
+    "originalPrice": 119.90,
+    "discountedPrice": 59.95,
+    "rating": 4.6,
+    "platforms": ["pc", "steam", "playstation"],
+    "tags": ["Terror", "Sobrevivência", "Psicológico"],
+    "developer": "Dreadful Whispers",
+    "publisher": "Nightmare Interactive",
+    "classification": "18+",
+    "releaseDate": "31/10/2024",
+    "bannerImage": "https://images.pexels.com/photos/1887624/pexels-photo-1887624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/220201/pexels-photo-220201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/1a1a1a/9e9e9e?text=ETHEREAL&font=creepster",
+    "description": "Preso em uma mansão assombrada, você deve desvendar seu passado sombrio enquanto é caçado por uma entidade malévola. Cada eco e sussurro pode ser sua salvação ou sua perdição.",
+    "about": "Um jogo de terror de sobrevivência psicológico com uma atmosfera densa e puzzles desafiadores.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 970", "storage": "30GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "16GB", "gpu": "RTX 2070", "storage": "30GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1526/dark-blur-blurred-gradient.jpg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1270184/pexels-photo-1270184.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1294622/pexels-photo-1294622.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 21, "title": "Silent Manor", "price": 99.90, "rating": 4.7, "reviews": 410, "image": "https://images.pexels.com/photos/161284/barn-rural-farm-old-161284.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 22, "title": "The Gloom", "price": 79.99, "rating": 4.5, "reviews": 320, "image": "https://images.pexels.com/photos/2088203/pexels-photo-2088203.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 23, "title": "Phobia Protocol", "price": 129.00, "rating": 4.6, "reviews": 550, "image": "https://images.pexels.com/photos/103124/pexels-photo-103124.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 24, "title": "Nyctophobia", "price": 65.00, "rating": 4.4, "reviews": 280, "image": "https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "World Soccer 2026",
+    "originalPrice": 349.99,
+    "discountedPrice": 299.99,
+    "rating": 4.9,
+    "platforms": ["xbox", "playstation", "pc", "steam"],
+    "tags": ["Esportes", "Simulação", "Multiplayer"],
+    "developer": "Global Kick",
+    "publisher": "Champion Sports",
+    "classification": "Livre",
+    "releaseDate": "25/09/2025",
+    "bannerImage": "https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/006400/ffffff?text=WS+2026&font=montserrat",
+    "description": "Viva a paixão do futebol com a simulação mais realista já criada. Gráficos de ponta, jogabilidade aprimorada e novos modos de jogo levam a experiência a outro nível.",
+    "about": "A mais nova edição do simulador de futebol definitivo, com realismo e modos de jogo aprimorados.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 1060", "storage": "80GB" },
+      "recommended": { "cpu": "Intel i9", "ram": "16GB", "gpu": "RTX 4060", "storage": "80GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/209956/pexels-photo-209956.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/863660/pexels-photo-863660.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/364308/pexels-photo-364308.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 25, "title": "Pro Kick League", "price": 299.90, "rating": 4.7, "reviews": 1500, "image": "https://images.pexels.com/photos/54124/pexels-photo-54124.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 26, "title": "Street Power Football", "price": 89.99, "rating": 4.3, "reviews": 300, "image": "https://images.pexels.com/photos/399187/pexels-photo-399187.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 27, "title": "Manager Pro 2026", "price": 129.00, "rating": 4.8, "reviews": 950, "image": "https://images.pexels.com/photos/248547/pexels-photo-248547.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 28, "title": "Basket Kings", "price": 199.90, "rating": 4.6, "reviews": 780, "image": "https://images.pexels.com/photos/2834917/pexels-photo-2834917.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Pixel Pioneers",
+    "originalPrice": 69.90,
+    "discountedPrice": 34.95,
+    "rating": 4.8,
+    "platforms": ["pc", "nintendo-switch", "steam"],
+    "tags": ["Simulação", "Fazenda", "Indie"],
+    "developer": "Cozy Cat Games",
+    "publisher": "Pixel Perfect",
+    "classification": "Livre",
+    "releaseDate": "12/07/2024",
+    "bannerImage": "https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1578997/pexels-photo-1578997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/8bc34a/ffffff?text=Pixel+Pioneers&font=press-start-2p",
+    "description": "Comece uma nova vida em uma cidade pequena e charmosa. Construa sua fazenda, faça amizade com os moradores e descubra os segredos que a natureza esconde. Uma experiência relaxante e gratificante.",
+    "about": "Um simulador de fazenda e vida em pixel art, cheio de charme, atividades e personagens cativantes.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Qualquer um", "ram": "2GB", "gpu": "Integrada", "storage": "1GB" },
+      "recommended": { "cpu": "Intel i3", "ram": "4GB", "gpu": "Qualquer dedicada", "storage": "1GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/5969/woman-coffee-cup-pen.jpg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2876659/pexels-photo-2876659.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/434337/pexels-photo-434337.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/3127880/pexels-photo-3127880.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 29, "title": "Stardew Valley", "price": 24.99, "rating": 5.0, "reviews": 500000, "image": "https://images.pexels.com/photos/225502/pexels-photo-225502.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 30, "title": "Coral Island", "price": 79.90, "rating": 4.9, "reviews": 15000, "image": "https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 31, "title": "My Time at Portia", "price": 57.99, "rating": 4.7, "reviews": 25000, "image": "https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 32, "title": "Sun Haven", "price": 46.99, "rating": 4.8, "reviews": 18000, "image": "https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Voidfall Supremacy",
+    "originalPrice": 149.99,
+    "discountedPrice": 74.99,
+    "rating": 4.7,
+    "platforms": ["pc", "steam"],
+    "tags": ["Estratégia", "4X", "Sci-Fi"],
+    "developer": "Cosmic Drifters",
+    "publisher": "Stellaris Forge",
+    "classification": "10+",
+    "releaseDate": "19/03/2025",
+    "bannerImage": "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/0f0c29/ffffff?text=VOIDFALL&font=audiowide",
+    "description": "Lidere sua civilização desde os primeiros passos no espaço até a dominação galáctica. Explore, expanda, explore e extermine neste épico jogo de estratégia 4X.",
+    "about": "Um complexo e recompensador jogo de estratégia 4X de ficção científica com foco em diplomacia e guerra.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 760", "storage": "15GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "16GB", "gpu": "GTX 1070", "storage": "15GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/110854/pexels-photo-110854.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 33, "title": "Stellaris", "price": 75.49, "rating": 4.9, "reviews": 120000, "image": "https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 34, "title": "Galactic Civilizations IV", "price": 99.99, "rating": 4.6, "reviews": 8000, "image": "https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 35, "title": "Endless Space 2", "price": 75.49, "rating": 4.8, "reviews": 22000, "image": "https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 36, "title": "Sins of a Solar Empire", "price": 73.99, "rating": 4.7, "reviews": 15000, "image": "https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Arena of Champions",
+    "originalPrice": 99.90,
+    "discountedPrice": 0.00,
+    "rating": 4.4,
+    "platforms": ["pc", "xbox", "playstation"],
+    "tags": ["Luta", "Ação", "Multiplayer"],
+    "developer": "Brawler Bros.",
+    "publisher": "Epic Fights",
+    "classification": "14+",
+    "releaseDate": "05/02/2024",
+    "bannerImage": "https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/197906/pexels-photo-197906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/b71c1c/ffffff?text=ARENA&font=bangers",
+    "description": "Escolha seu campeão e lute pela glória em arenas dinâmicas. Com um sistema de combate profundo e um elenco diversificado de lutadores, apenas os mais habilidosos chegarão ao topo.",
+    "about": "Um jogo de luta competitivo e gratuito com um elenco de personagens únicos e combate rápido.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i3", "ram": "6GB", "gpu": "GTX 670", "storage": "40GB" },
+      "recommended": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 1060", "storage": "40GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/258287/pexels-photo-258287.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/403864/pexels-photo-403864.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/813339/pexels-photo-813339.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/163452/basketball-dunk-blue-game-163452.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 37, "title": "Street Fighter 6", "price": 249.90, "rating": 4.9, "reviews": 15000, "image": "https://images.pexels.com/photos/13189285/pexels-photo-13189285.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 38, "title": "Mortal Kombat 1", "price": 299.90, "rating": 4.8, "reviews": 12000, "image": "https://images.pexels.com/photos/982612/pexels-photo-982612.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 39, "title": "Tekken 8", "price": 299.90, "rating": 4.9, "reviews": 18000, "image": "https://images.pexels.com/photos/1298601/pexels-photo-1298601.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 40, "title": "Guilty Gear Strive", "price": 129.99, "rating": 4.8, "reviews": 25000, "image": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Project Chimera",
+    "originalPrice": 279.90,
+    "discountedPrice": 139.95,
+    "rating": 4.8,
+    "platforms": ["playstation", "pc"],
+    "tags": ["Ação", "Aventura", "Furtividade"],
+    "developer": "Stealth Works",
+    "publisher": "Phantom Entertainment",
+    "classification": "16+",
+    "releaseDate": "14/06/2025",
+    "bannerImage": "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/424242/ffffff?text=CHIMERA&font=oswald",
+    "description": "Como um agente geneticamente modificado, infiltre-se em complexos de alta segurança para desmantelar uma conspiração global. Use habilidades sobre-humanas, furtividade e combate para atingir seus objetivos.",
+    "about": "Um thriller de ação e furtividade com foco em habilidades especiais e narrativa de espionagem.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 1060", "storage": "75GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "16GB", "gpu": "RTX 3060", "storage": "75GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1036622/pexels-photo-1036622.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 41, "title": "Metal Gear Solid V", "price": 89.90, "rating": 4.9, "reviews": 45000, "image": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 42, "title": "Splinter Cell: Blacklist", "price": 59.99, "rating": 4.7, "reviews": 12000, "image": "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 43, "title": "Deus Ex: Mankind Divided", "price": 64.99, "rating": 4.6, "reviews": 18000, "image": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 44, "title": "Hitman 3", "price": 199.90, "rating": 4.8, "reviews": 22000, "image": "https://images.pexels.com/photos/1181280/pexels-photo-1181280.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Cartel Tycoon",
+    "originalPrice": 59.99,
+    "discountedPrice": 29.99,
+    "rating": 4.3,
+    "platforms": ["pc", "steam"],
+    "tags": ["Simulação", "Estratégia", "Gerenciamento"],
+    "developer": "Moon Moose",
+    "publisher": "tinyBuild",
+    "classification": "18+",
+    "releaseDate": "29/07/2021",
+    "bannerImage": "https://images.pexels.com/photos/159844/cellular-prison-heidelberg-prison-cell-159844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/209151/pexels-photo-209151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/9d6b53/ffffff?text=CARTEL&font=graduate",
+    "description": "Construa um império do crime do zero. Gerencie a produção, estabeleça rotas de contrabando e lide com a lei, cartéis rivais e a lealdade (ou falta dela) de seus capangas.",
+    "about": "Um simulador de negócios onde você constrói e gerencia um império de drogas na América Latina dos anos 80.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "4GB", "gpu": "Geforce 960", "storage": "5GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "8GB", "gpu": "Geforce 1060", "storage": "5GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/433309/pexels-photo-433309.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/210637/pexels-photo-210637.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/210574/pexels-photo-210574.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 45, "title": "Tropico 6", "price": 99.90, "rating": 4.7, "reviews": 14000, "image": "https://images.pexels.com/photos/16040/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 46, "title": "City Skylines", "price": 55.99, "rating": 4.9, "reviews": 90000, "image": "https://images.pexels.com/photos/2224861/pexels-photo-2224861.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 47, "title": "Prison Architect", "price": 57.99, "rating": 4.8, "reviews": 35000, "image": "https://images.pexels.com/photos/1116086/pexels-photo-1116086.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 48, "title": "Frostpunk", "price": 57.99, "rating": 4.8, "reviews": 48000, "image": "https://images.pexels.com/photos/325117/pexels-photo-325117.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "The Last Bastion",
+    "originalPrice": 129.90,
+    "discountedPrice": 64.95,
+    "rating": 4.5,
+    "platforms": ["pc", "xbox", "steam"],
+    "tags": ["Sobrevivência", "Construção", "Zumbis"],
+    "developer": "Ironclad Studios",
+    "publisher": "Survivalist Games",
+    "classification": "18+",
+    "releaseDate": "28/04/2025",
+    "bannerImage": "https://images.pexels.com/photos/2440061/pexels-photo-2440061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/795548/ffffff?text=BASTION&font=russo-one",
+    "description": "O mundo como conhecemos acabou. Reúna recursos, construa uma fortaleza e defenda-se contra hordas de infectados e outros sobreviventes desesperados. A confiança é um luxo que você não pode ter.",
+    "about": "Um jogo de sobrevivência pós-apocalíptico com foco em construção de base e defesa contra zumbis.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 970", "storage": "40GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "16GB", "gpu": "RTX 2060", "storage": "40GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1531660/pexels-photo-1531660.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 49, "title": "7 Days to Die", "price": 45.99, "rating": 4.6, "reviews": 180000, "image": "https://images.pexels.com/photos/1090979/pexels-photo-1090979.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 50, "title": "Project Zomboid", "price": 36.99, "rating": 4.8, "reviews": 150000, "image": "https://images.pexels.com/photos/2899727/pexels-photo-2899727.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 51, "title": "The Forest", "price": 37.99, "rating": 4.7, "reviews": 300000, "image": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 52, "title": "DayZ", "price": 119.99, "rating": 4.4, "reviews": 250000, "image": "https://images.pexels.com/photos/1647962/pexels-photo-1647962.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Rhythm Rush",
+    "originalPrice": 49.90,
+    "discountedPrice": 24.95,
+    "rating": 4.9,
+    "platforms": ["pc", "nintendo-switch", "steam"],
+    "tags": ["Ritmo", "Música", "Ação"],
+    "developer": "Beat Drop",
+    "publisher": "Synthwave Studios",
+    "classification": "10+",
+    "releaseDate": "18/10/2024",
+    "bannerImage": "https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/ff4081/ffffff?text=RHYTHM&font=audiowide",
+    "description": "Sinta a batida e lute contra inimigos em um mundo vibrante sincronizado com a música. Um jogo de ação e ritmo com uma trilha sonora eletrizante e jogabilidade viciante.",
+    "about": "Um jogo de ação onde cada movimento e ataque deve seguir o ritmo da música.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i3", "ram": "4GB", "gpu": "GTX 650", "storage": "10GB" },
+      "recommended": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 960", "storage": "10GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2111015/pexels-photo-2111015.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2531709/pexels-photo-2531709.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 53, "title": "Hi-Fi Rush", "price": 89.90, "rating": 5.0, "reviews": 30000, "image": "https://images.pexels.com/photos/1047442/pexels-photo-1047442.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 54, "title": "Beat Saber", "price": 57.99, "rating": 4.9, "reviews": 80000, "image": "https://images.pexels.com/photos/3747132/pexels-photo-3747132.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 55, "title": "Crypt of the NecroDancer", "price": 28.99, "rating": 4.8, "reviews": 25000, "image": "https://images.pexels.com/photos/761963/pexels-photo-761963.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 56, "title": "Sayonara Wild Hearts", "price": 24.99, "rating": 4.9, "reviews": 10000, "image": "https://images.pexels.com/photos/1389429/pexels-photo-1389429.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Aetherium Wars",
+    "originalPrice": 189.90,
+    "discountedPrice": 94.95,
+    "rating": 4.7,
+    "platforms": ["pc", "playstation"],
+    "tags": ["JRPG", "Turnos", "Fantasia"],
+    "developer": "Chrono Soft",
+    "publisher": "Infinity Games",
+    "classification": "12+",
+    "releaseDate": "11/12/2025",
+    "bannerImage": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1114690/pexels-photo-1114690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/5e35b1/ffffff?text=AETHERIUM&font=cinzel",
+    "description": "Viaje por um mundo onde a magia flui de cristais flutuantes. Junte um grupo de heróis e lute em batalhas de turnos estratégicas para impedir que o império corrompa a fonte de toda a magia.",
+    "about": "Um JRPG clássico com combate por turnos, uma história emocionante e um belo mundo de fantasia para explorar.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 750 Ti", "storage": "35GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "16GB", "gpu": "GTX 1070", "storage": "35GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1581617/pexels-photo-1581617.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 57, "title": "Final Fantasy VII Remake", "price": 349.90, "rating": 4.9, "reviews": 40000, "image": "https://images.pexels.com/photos/301614/pexels-photo-301614.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 58, "title": "Persona 5 Royal", "price": 299.90, "rating": 5.0, "reviews": 50000, "image": "https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 59, "title": "Dragon Quest XI S", "price": 199.90, "rating": 4.9, "reviews": 20000, "image": "https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 60, "title": "Tales of Arise", "price": 249.90, "rating": 4.8, "reviews": 30000, "image": "https://images.pexels.com/photos/2086622/pexels-photo-2086622.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Cosmo Colony",
+    "originalPrice": 79.99,
+    "discountedPrice": 39.99,
+    "rating": 4.6,
+    "platforms": ["pc", "steam"],
+    "tags": ["Simulação", "Construção de Cidades", "Sci-Fi"],
+    "developer": "Astro Builders",
+    "publisher": "Mars Initiative",
+    "classification": "Livre",
+    "releaseDate": "09/09/2024",
+    "bannerImage": "https://images.pexels.com/photos/220202/pexels-photo-220202.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/41130/earth-home-planet-universe-41130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/1e88e5/ffffff?text=COSMO&font=orbitron",
+    "description": "Construa e gerencie uma colônia autossustentável em um planeta alienígena. Lide com ambientes hostis, gerencie recursos e garanta a sobrevivência de seus colonos.",
+    "about": "Um simulador de construção de cidades espaciais com foco em sobrevivência e gerenciamento de recursos.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i3", "ram": "6GB", "gpu": "GTX 660", "storage": "8GB" },
+      "recommended": { "cpu": "Intel i5", "ram": "12GB", "gpu": "GTX 1060", "storage": "8GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/41951/solar-system-emergence-spitzer-space-telescope-telescope-41951.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1274260/pexels-photo-1274260.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/586056/pexels-photo-586056.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/73910/mars-mars-rover-space-travel-robot-73910.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 61, "title": "Surviving Mars", "price": 57.99, "rating": 4.7, "reviews": 15000, "image": "https://images.pexels.com/photos/41178/mars-planet-red-planet-space-41178.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 62, "title": "Planetbase", "price": 36.99, "rating": 4.6, "reviews": 8000, "image": "https://images.pexels.com/photos/355906/pexels-photo-355906.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 63, "title": "Aven Colony", "price": 89.99, "rating": 4.4, "reviews": 4000, "image": "https://images.pexels.com/photos/5439/earth-home-planet-blue-planet.jpg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 48, "title": "Frostpunk", "price": 57.99, "rating": 4.8, "reviews": 48000, "image": "https://images.pexels.com/photos/325117/pexels-photo-325117.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Depths of Insanity",
+    "originalPrice": 89.90,
+    "discountedPrice": 44.95,
+    "rating": 4.7,
+    "platforms": ["pc", "steam"],
+    "tags": ["Terror", "Aventura", "Lovecraftiano"],
+    "developer": "Abyssal Plain",
+    "publisher": "Madness Inc.",
+    "classification": "18+",
+    "releaseDate": "23/08/2024",
+    "bannerImage": "https://images.pexels.com/photos/76974/jellyfish-aquarium-sea-life-underwater-76974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1038628/pexels-photo-1038628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/0d47a1/e0f7fa?text=DEPTHS&font=creepster",
+    "description": "Como um investigador nos anos 1920, você explora uma ilha remota para desvendar o mistério de um culto sinistro. Mas quanto mais fundo você vai, mais sua sanidade é testada por horrores indescritíveis.",
+    "about": "Um jogo de terror e investigação inspirado nos mitos de H.P. Lovecraft, com foco na sanidade e exploração.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 960", "storage": "20GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "12GB", "gpu": "GTX 1070", "storage": "20GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1486974/pexels-photo-1486974.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/325044/pexels-photo-325044.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2132007/pexels-photo-2132007.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2418641/pexels-photo-2418641.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 64, "title": "Call of Cthulhu", "price": 79.99, "rating": 4.5, "reviews": 8000, "image": "https://images.pexels.com/photos/163872/book-stack-book-reading-163872.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 65, "title": "The Sinking City", "price": 107.99, "rating": 4.4, "reviews": 5000, "image": "https://images.pexels.com/photos/2228580/pexels-photo-2228580.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 66, "title": "Amnesia: The Dark Descent", "price": 36.99, "rating": 4.9, "reviews": 20000, "image": "https://images.pexels.com/photos/1846422/pexels-photo-1846422.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 67, "title": "Darkest Dungeon", "price": 46.99, "rating": 4.8, "reviews": 70000, "image": "https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Pirate's Legacy: Sea of Souls",
+    "originalPrice": 229.90,
+    "discountedPrice": 114.95,
+    "rating": 4.6,
+    "platforms": ["xbox", "playstation", "pc"],
+    "tags": ["Aventura", "Mundo Aberto", "Ação"],
+    "developer": "Black Flag",
+    "publisher": "Kraken Unleashed",
+    "classification": "16+",
+    "releaseDate": "20/05/2025",
+    "bannerImage": "https://images.pexels.com/photos/390051/pexels-photo-390051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1482193/pexels-photo-1482193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/5d4037/ffffff?text=PIRATE'S+LEGACY&font=pirata-one",
+    "description": "Navegue pelos mares do Caribe, lute em batalhas navais épicas, procure tesouros enterrados e construa sua própria frota pirata. Torne-se a lenda mais temida dos sete mares.",
+    "about": "Um jogo de aventura de piratas em mundo aberto com batalhas navais, exploração e caça a tesouros.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 1060", "storage": "65GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "16GB", "gpu": "RTX 3060", "storage": "65GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1005324/pexels-photo-1005324.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/403845/pexels-photo-403845.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/3642537/pexels-photo-3642537.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1388069/pexels-photo-1388069.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 68, "title": "Sea of Thieves", "price": 99.00, "rating": 4.7, "reviews": 150000, "image": "https://images.pexels.com/photos/3381013/pexels-photo-3381013.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 69, "title": "Assassin's Creed IV: Black Flag", "price": 59.99, "rating": 4.8, "reviews": 60000, "image": "https://images.pexels.com/photos/912110/pexels-photo-912110.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 70, "title": "Skull and Bones", "price": 299.90, "rating": 3.9, "reviews": 5000, "image": "https://images.pexels.com/photos/1252500/pexels-photo-1252500.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 71, "title": "Atlas", "price": 57.99, "rating": 3.5, "reviews": 40000, "image": "https://images.pexels.com/photos/1206101/pexels-photo-1206101.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Wartorn Lands: Siegecraft",
+    "originalPrice": 109.99,
+    "discountedPrice": 54.99,
+    "rating": 4.4,
+    "platforms": ["pc", "steam"],
+    "tags": ["Estratégia", "RTS", "Medieval"],
+    "developer": "Iron Gate",
+    "publisher": "Siege Masters",
+    "classification": "14+",
+    "releaseDate": "07/03/2025",
+    "bannerImage": "https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/102061/pexels-photo-102061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/616161/ffffff?text=WARTORN&font=medieval-sharp",
+    "description": "Comande vastos exércitos em batalhas medievais em tempo real. Construa castelos, gerencie sua economia e use táticas de cerco para esmagar seus inimigos e expandir seu reino.",
+    "about": "Um jogo de estratégia em tempo real (RTS) com foco em batalhas de cerco medievais e gerenciamento de império.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 770", "storage": "30GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "16GB", "gpu": "GTX 1070", "storage": "30GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/772831/pexels-photo-772831.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2087391/pexels-photo-2087391.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 72, "title": "Age of Empires IV", "price": 109.99, "rating": 4.8, "reviews": 50000, "image": "https://images.pexels.com/photos/161237/netherlands-holland-keukenhof-park-161237.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 73, "title": "Crusader Kings III", "price": 133.99, "rating": 4.9, "reviews": 70000, "image": "https://images.pexels.com/photos/209662/pexels-photo-209662.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 74, "title": "Total War: WARHAMMER III", "price": 299.99, "rating": 4.5, "reviews": 60000, "image": "https://images.pexels.com/photos/1632790/pexels-photo-1632790.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 75, "title": "Stronghold: Definitive Edition", "price": 29.99, "rating": 4.7, "reviews": 10000, "image": "https://images.pexels.com/photos/207983/pexels-photo-207983.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Robo-Brawl",
+    "originalPrice": 79.90,
+    "discountedPrice": 39.95,
+    "rating": 4.3,
+    "platforms": ["pc", "nintendo-switch"],
+    "tags": ["Ação", "Plataforma", "Roguelite"],
+    "developer": "Tin Can",
+    "publisher": "Bolt Interactive",
+    "classification": "10+",
+    "releaseDate": "15/11/2024",
+    "bannerImage": "https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1337380/pexels-photo-1337380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/00bcd4/ffffff?text=ROBO-BRAWL&font=bangers",
+    "description": "Lute através de fases geradas proceduralmente como um robô de combate. Colete peças, melhore suas armas e derrote chefes gigantescos em um roguelite de plataforma rápido e explosivo.",
+    "about": "Um roguelite de plataforma 2D onde você monta e personaliza seu próprio robô de combate.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel Core 2 Duo", "ram": "4GB", "gpu": "Qualquer uma com 1GB VRAM", "storage": "2GB" },
+      "recommended": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 660", "storage": "2GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/5474028/pexels-photo-5474028.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 76, "title": "Dead Cells", "price": 47.49, "rating": 4.9, "reviews": 120000, "image": "https://images.pexels.com/photos/1029243/pexels-photo-1029243.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 77, "title": "Hades", "price": 47.49, "rating": 5.0, "reviews": 200000, "image": "https://images.pexels.com/photos/1766604/pexels-photo-1766604.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 78, "title": "Risk of Rain 2", "price": 62.49, "rating": 4.9, "reviews": 180000, "image": "https://images.pexels.com/photos/269724/pexels-photo-269724.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 79, "title": "Enter the Gungeon", "price": 28.99, "rating": 4.8, "reviews": 80000, "image": "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Detective Noir: The Crimson Case",
+    "originalPrice": 59.90,
+    "discountedPrice": 29.95,
+    "rating": 4.8,
+    "platforms": ["pc", "steam", "nintendo-switch"],
+    "tags": ["Aventura", "Point-and-Click", "Mistério"],
+    "developer": "Shadow Play",
+    "publisher": "Gumshoe Games",
+    "classification": "16+",
+    "releaseDate": "04/10/2024",
+    "bannerImage": "https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/212121/f44336?text=NOIR&font=special-elite",
+    "description": "Em uma cidade chuvosa e corrupta, um detetive particular cínico assume um caso que o levará aos cantos mais sombrios da alta sociedade. Interrogue suspeitos, encontre pistas e resolva um assassinato complexo.",
+    "about": "Um jogo de detetive point-and-click com uma atmosfera noir clássica e uma trama envolvente.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Qualquer um", "ram": "2GB", "gpu": "Integrada", "storage": "3GB" },
+      "recommended": { "cpu": "Intel i3", "ram": "4GB", "gpu": "Integrada", "storage": "3GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/66867/pexels-photo-66867.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1855661/pexels-photo-1855661.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2733918/pexels-photo-2733918.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1290141/pexels-photo-1290141.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 80, "title": "L.A. Noire", "price": 59.99, "rating": 4.7, "reviews": 35000, "image": "https://images.pexels.com/photos/2989274/pexels-photo-2989274.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 81, "title": "Disco Elysium", "price": 75.49, "rating": 5.0, "reviews": 80000, "image": "https://images.pexels.com/photos/7319106/pexels-photo-7319106.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 82, "title": "The Wolf Among Us", "price": 47.99, "rating": 4.9, "reviews": 40000, "image": "https://images.pexels.com/photos/3359734/pexels-photo-3359734.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 83, "title": "Pentiment", "price": 36.99, "rating": 4.9, "reviews": 12000, "image": "https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Apex Vanguard",
+    "originalPrice": 259.99,
+    "discountedPrice": 129.99,
+    "rating": 4.7,
+    "platforms": ["pc", "playstation", "xbox"],
+    "tags": ["Tiro", "Herói", "Multiplayer"],
+    "developer": "Titanforge",
+    "publisher": "Momentum Gaming",
+    "classification": "16+",
+    "releaseDate": "17/02/2025",
+    "bannerImage": "https://images.pexels.com/photos/3782166/pexels-photo-3782166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/ff6d00/ffffff?text=APEX&font=orbitron",
+    "description": "Escolha seu Vanguard, cada um com habilidades únicas, e lute em partidas 5v5 baseadas em objetivos. Trabalho em equipe e estratégia são a chave para a vitória neste hero shooter tático e de ritmo acelerado.",
+    "about": "Um shooter de heróis 5v5 focado em habilidades únicas e jogabilidade tática em equipe.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 970", "storage": "50GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "16GB", "gpu": "RTX 2070", "storage": "50GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/3829227/pexels-photo-3829227.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/392018/pexels-photo-392018.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/4009409/pexels-photo-4009409.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 84, "title": "Overwatch 2", "price": 0.00, "rating": 4.2, "reviews": 100000, "image": "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 85, "title": "Valorant", "price": 0.00, "rating": 4.8, "reviews": 200000, "image": "https://images.pexels.com/photos/7915228/pexels-photo-7915228.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 86, "title": "Apex Legends", "price": 0.00, "rating": 4.7, "reviews": 500000, "image": "https://images.pexels.com/photos/135627/pexels-photo-135627.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 87, "title": "Paladins", "price": 0.00, "rating": 4.5, "reviews": 150000, "image": "https://images.pexels.com/photos/6894429/pexels-photo-6894429.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Kingdomfall Tactics",
+    "originalPrice": 89.99,
+    "discountedPrice": 44.99,
+    "rating": 4.8,
+    "platforms": ["pc", "steam", "nintendo-switch"],
+    "tags": ["Estratégia", "Turnos", "RPG"],
+    "developer": "Gridlock Games",
+    "publisher": "Tactician's Guild",
+    "classification": "12+",
+    "releaseDate": "08/08/2024",
+    "bannerImage": "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/ad1457/ffffff?text=KINGDOMFALL&font=cinzel-decorative",
+    "description": "Lidere um esquadrão de heróis em batalhas táticas por turnos para salvar o reino da escuridão. Posicione suas unidades, use o terreno a seu favor e combine habilidades para superar desafios cada vez maiores.",
+    "about": "Um RPG tático em turnos com combate profundo e uma história épica de guerra e heroísmo.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i3", "ram": "4GB", "gpu": "Integrada", "storage": "5GB" },
+      "recommended": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 750", "storage": "5GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1630344/pexels-photo-1630344.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/3358707/pexels-photo-3358707.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 88, "title": "XCOM 2", "price": 109.99, "rating": 4.9, "reviews": 60000, "image": "https://images.pexels.com/photos/4057663/pexels-photo-4057663.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 89, "title": "Fire Emblem: Three Houses", "price": 299.00, "rating": 4.9, "reviews": 30000, "image": "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 90, "title": "Into the Breach", "price": 28.99, "rating": 4.9, "reviews": 25000, "image": "https://images.pexels.com/photos/3768894/pexels-photo-3768894.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 91, "title": "Divinity: Original Sin 2", "price": 89.99, "rating": 5.0, "reviews": 150000, "image": "https://images.pexels.com/photos/3785931/pexels-photo-3785931.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Zenith's Fall",
+    "originalPrice": 299.99,
+    "discountedPrice": 224.99,
+    "rating": 4.9,
+    "platforms": ["playstation"],
+    "tags": ["Ação", "Aventura", "Exclusivo"],
+    "developer": "Olympus Studios",
+    "publisher": "Sony Interactive Entertainment",
+    "classification": "18+",
+    "releaseDate": "13/09/2025",
+    "bannerImage": "https://images.pexels.com/photos/413195/pexels-photo-413195.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/bcaaa4/3e2723?text=ZENITH'S+FALL&font=cinzel-decorative",
+    "description": "No papel de um semideus caído, busque vingança contra os deuses que o traíram. Escale o Monte Olimpo em uma jornada brutal com combate visceral, chefes colossais e uma narrativa trágica de poder e perda.",
+    "about": "Um épico de ação e aventura exclusivo do PlayStation, inspirado na mitologia grega.",
+    "systemRequirements": {
+      "minimum": { "cpu": "N/A", "ram": "N/A", "gpu": "N/A", "storage": "110GB" },
+      "recommended": { "cpu": "N/A", "ram": "N/A", "gpu": "N/A", "storage": "110GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/21014/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1319854/pexels-photo-1319854.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 92, "title": "God of War Ragnarök", "price": 349.90, "rating": 5.0, "reviews": 80000, "image": "https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 93, "title": "Horizon Forbidden West", "price": 249.50, "rating": 4.9, "reviews": 60000, "image": "https://images.pexels.com/photos/2064827/pexels-photo-2064827.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 94, "title": "Ghost of Tsushima", "price": 249.50, "rating": 4.9, "reviews": 70000, "image": "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 95, "title": "The Last of Us Part I", "price": 349.90, "rating": 5.0, "reviews": 50000, "image": "https://images.pexels.com/photos/1007410/pexels-photo-1007410.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Rail Empire",
+    "originalPrice": 88.99,
+    "discountedPrice": 44.49,
+    "rating": 4.5,
+    "platforms": ["pc", "steam"],
+    "tags": ["Simulação", "Gerenciamento", "Trens"],
+    "developer": "Track Masters",
+    "publisher": "Locomotive Co.",
+    "classification": "Livre",
+    "releaseDate": "19/04/2024",
+    "bannerImage": "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/3e2723/ffffff?text=RAIL+EMPIRE&font=roboto-condensed",
+    "description": "Construa uma rede ferroviária através de continentes e eras. Gerencie trens, otimize rotas e domine a indústria para se tornar o maior magnata ferroviário da história.",
+    "about": "Um simulador de gerenciamento de trens complexo e detalhado, abrangendo mais de 100 anos de história ferroviária.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 770", "storage": "12GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "16GB", "gpu": "GTX 1070", "storage": "12GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1034859/pexels-photo-1034859.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1118448/pexels-photo-1118448.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/273222/pexels-photo-273222.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/159862/art-school-of-athens-raphael-italian-painter-159862.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 96, "title": "Railway Empire 2", "price": 133.99, "rating": 4.6, "reviews": 5000, "image": "https://images.pexels.com/photos/2127037/pexels-photo-2127037.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 97, "title": "Transport Fever 2", "price": 109.99, "rating": 4.8, "reviews": 18000, "image": "https://images.pexels.com/photos/163792/model-train-railroad-train-railway-163792.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 98, "title": "Factorio", "price": 60.00, "rating": 5.0, "reviews": 120000, "image": "https://images.pexels.com/photos/159291/atomic-bomb-explosion-nuclear-weapons-nuclear-159291.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 99, "title": "Satisfactory", "price": 57.99, "rating": 4.9, "reviews": 110000, "image": "https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Solara: The Sunstone Saga",
+    "originalPrice": 149.99,
+    "discountedPrice": 74.99,
+    "rating": 4.7,
+    "platforms": ["pc", "steam", "nintendo-switch"],
+    "tags": ["Aventura", "RPG", "Mundo Aberto"],
+    "developer": "Radiant Dawn Studios",
+    "publisher": "Aurora Games",
+    "classification": "12+",
+    "releaseDate": "12/12/2024",
+    "bannerImage": "https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1528640/pexels-photo-1528640.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/ffb300/ffffff?text=SOLARA&font=cinzel",
+    "description": "Em um mundo onde o sol está desaparecendo, uma jovem heroína embarca em uma jornada para encontrar a lendária Sunstone e restaurar a luz. Explore um mundo vasto e vibrante, resolva quebra-cabeças e lute contra criaturas das sombras.",
+    "about": "Um RPG de ação e aventura em mundo aberto com um estilo de arte vibrante e uma história emocionante.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "8GB", "gpu": "GTX 960", "storage": "40GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "16GB", "gpu": "RTX 2060", "storage": "40GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1535907/pexels-photo-1535907.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2086676/pexels-photo-2086676.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2310713/pexels-photo-2310713.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2449600/pexels-photo-2449600.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 100, "title": "The Legend of Zelda: Breath of the Wild", "price": 299.00, "rating": 5.0, "reviews": 100000, "image": "https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 101, "title": "Genshin Impact", "price": 0.00, "rating": 4.8, "reviews": 1000000, "image": "https://images.pexels.com/photos/3648269/pexels-photo-3648269.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 102, "title": "Immortals Fenyx Rising", "price": 249.99, "rating": 4.6, "reviews": 15000, "image": "https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 103, "title": "Kena: Bridge of Spirits", "price": 107.99, "rating": 4.8, "reviews": 10000, "image": "https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Bloodborne Kart",
+    "originalPrice": 199.90,
+    "discountedPrice": 149.90,
+    "rating": 5.0,
+    "platforms": ["playstation"],
+    "tags": ["Corrida", "Ação", "Paródia"],
+    "developer": "FromSoftware",
+    "publisher": "Sony Interactive Entertainment",
+    "classification": "14+",
+    "releaseDate": "01/04/2026",
+    "bannerImage": "https://images.pexels.com/photos/103290/pexels-photo-103290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/3311574/pexels-photo-3311574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/424242/e0e0e0?text=BLOODBORNE+KART&font=metal-mania",
+    "description": "Corra pelas ruas góticas de Yharnam em karts movidos a ecos de sangue! Use truques de armas e itens insanos para superar caçadores rivais e feras neste inesperado pesadelo de corrida.",
+    "about": "O jogo que começou como uma piada e se tornou realidade. Corridas de kart no universo de Bloodborne.",
+    "systemRequirements": {
+      "minimum": { "cpu": "N/A", "ram": "N/A", "gpu": "N/A", "storage": "50GB" },
+      "recommended": { "cpu": "N/A", "ram": "N/A", "gpu": "N/A", "storage": "50GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2440079/pexels-photo-2440079.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2531236/pexels-photo-2531236.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 104, "title": "Mario Kart 8 Deluxe", "price": 299.00, "rating": 5.0, "reviews": 150000, "image": "https://images.pexels.com/photos/2101187/pexels-photo-2101187.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 105, "title": "Crash Team Racing Nitro-Fueled", "price": 179.90, "rating": 4.8, "reviews": 40000, "image": "https://images.pexels.com/photos/1231643/pexels-photo-1231643.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 106, "title": "Bloodborne", "price": 99.50, "rating": 5.0, "reviews": 120000, "image": "https://images.pexels.com/photos/1289567/pexels-photo-1289567.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 107, "title": "Elden Ring", "price": 249.90, "rating": 5.0, "reviews": 400000, "image": "https://images.pexels.com/photos/3277808/pexels-photo-3277808.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Mecha Assault: Colossus",
+    "originalPrice": 279.99,
+    "discountedPrice": 139.99,
+    "rating": 4.6,
+    "platforms": ["pc", "xbox"],
+    "tags": ["Ação", "Simulação", "Mecha"],
+    "developer": "Heavy Metal",
+    "publisher": "Giant Robot Games",
+    "classification": "14+",
+    "releaseDate": "21/02/2025",
+    "bannerImage": "https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/607d8b/ffffff?text=MECHA+ASSAULT&font=russo-one",
+    "description": "Pilote um mecha de guerra personalizável e participe de batalhas em larga escala em zonas de conflito futuristas. Destrua edifícios, esmague tanques e duele com outros mechas em um espetáculo de destruição.",
+    "about": "Um jogo de combate de mechas com personalização profunda e ambientes totalmente destrutíveis.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5", "ram": "12GB", "gpu": "GTX 1070", "storage": "90GB" },
+      "recommended": { "cpu": "Intel i7", "ram": "16GB", "gpu": "RTX 3070", "storage": "90GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/259915/pexels-photo-259915.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/35857/amazing-beautiful-breathtaking-clouds.jpg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2113566/pexels-photo-2113566.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 108, "title": "Titanfall 2", "price": 89.00, "rating": 4.9, "reviews": 150000, "image": "https://images.pexels.com/photos/1563354/pexels-photo-1563354.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 109, "title": "MechWarrior 5: Mercenaries", "price": 57.99, "rating": 4.5, "reviews": 8000, "image": "https://images.pexels.com/photos/2832034/pexels-photo-2832034.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 110, "title": "Armored Core VI: Fires of Rubicon", "price": 257.90, "rating": 4.8, "reviews": 25000, "image": "https://images.pexels.com/photos/1766838/pexels-photo-1766838.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 111, "title": "Earth Defense Force 5", "price": 107.99, "rating": 4.7, "reviews": 12000, "image": "https://images.pexels.com/photos/1428277/pexels-photo-1428277.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Spellweavers: The Arcane Tournament",
+    "originalPrice": 109.90,
+    "discountedPrice": 54.95,
+    "rating": 4.5,
+    "platforms": ["pc", "steam"],
+    "tags": ["Deckbuilder", "Roguelike", "Estratégia"],
+    "developer": "Grimoire Games",
+    "publisher": "Cardboard Castle",
+    "classification": "10+",
+    "releaseDate": "10/05/2024",
+    "bannerImage": "https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1431822/pexels-photo-1431822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/673ab7/ede7f6?text=SPELLWEAVERS&font=cinzel-decorative",
+    "description": "Monte um baralho de feitiços poderosos e lute contra outros magos em um torneio arcano. Cada jornada é diferente, com novas cartas, artefatos e desafios a cada passo.",
+    "about": "Um roguelike de construção de baralhos onde você combina feitiços para criar combos devastadores.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Qualquer um", "ram": "4GB", "gpu": "Integrada", "storage": "1.5GB" },
+      "recommended": { "cpu": "Intel i3", "ram": "6GB", "gpu": "Integrada", "storage": "1.5GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/132340/pexels-photo-132340.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 112, "title": "Slay the Spire", "price": 47.49, "rating": 5.0, "reviews": 130000, "image": "https://images.pexels.com/photos/1731427/pexels-photo-1731427.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 113, "title": "Monster Train", "price": 47.49, "rating": 4.9, "reviews": 30000, "image": "https://images.pexels.com/photos/2088170/pexels-photo-2088170.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 114, "title": "Inscryption", "price": 37.99, "rating": 4.9, "reviews": 80000, "image": "https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 115, "title": "Balatro", "price": 28.99, "rating": 5.0, "reviews": 40000, "image": "https://images.pexels.com/photos/2790396/pexels-photo-2790396.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 30,
+    "title": "Cook-Out Chaos",
+    "originalPrice": 99.90,
+    "discountedPrice": 49.95,
+    "rating": 4.8,
+    "platforms": ["pc", "nintendo-switch", "playstation", "xbox"],
+    "tags": ["Cooperativo", "Simulação", "Casual"],
+    "developer": "Team Feast",
+    "publisher": "Mayhem Makers",
+    "classification": "Livre",
+    "releaseDate": "26/07/2024",
+    "bannerImage": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/f4511e/ffffff?text=COOK-OUT&font=luckiest-guy",
+    "description": "Junte-se a até três amigos em cozinhas malucas e desafiadoras. Pique, cozinhe, monte pratos e sirva antes que os clientes percam a paciência. Comunicação e coordenação são essenciais para não queimar tudo!",
+    "about": "Um jogo de culinária cooperativo caótico e divertido para jogar com amigos.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel Core 2 Duo", "ram": "2GB", "gpu": "Integrada", "storage": "6GB" },
+      "recommended": { "cpu": "Intel i3", "ram": "4GB", "gpu": "NVIDIA GeForce GT 820M", "storage": "6GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 116, "title": "Overcooked! 2", "price": 47.49, "rating": 4.9, "reviews": 50000, "image": "https://images.pexels.com/photos/842571/pexels-photo-842571.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 117, "title": "Moving Out", "price": 47.49, "rating": 4.8, "reviews": 10000, "image": "https://images.pexels.com/photos/4253313/pexels-photo-4253313.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 118, "title": "Tools Up!", "price": 37.99, "rating": 4.6, "reviews": 5000, "image": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 119, "title": "PlateUp!", "price": 34.99, "rating": 4.9, "reviews": 15000, "image": "https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 31,
+    "title": "Ghostwire: Tokyo",
+    "originalPrice": 199.99,
+    "discountedPrice": 79.99,
+    "rating": 4.5,
+    "platforms": ["pc", "playstation", "xbox"],
+    "tags": ["Ação", "Aventura", "Sobrenatural"],
+    "developer": "Tango Gameworks",
+    "publisher": "Bethesda Softworks",
+    "classification": "16+",
+    "releaseDate": "25/03/2022",
+    "bannerImage": "https://images.pexels.com/photos/2132126/pexels-photo-2132126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1498273/pexels-photo-1498273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/000000/ffffff?text=GHOSTWIRE&font=special-elite",
+    "description": "Tóquio é invadida por forças sobrenaturais mortais após 99% da população desaparecer instantaneamente. Use um arsenal de habilidades elementais para combater a ameaça paranormal e desvendar o mistério por trás do desaparecimento em massa.",
+    "about": "Explore uma visão única de Tóquio distorcida por uma presença sobrenatural.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel Core i7 4770K", "ram": "12GB", "gpu": "NVIDIA GeForce GTX 1060", "storage": "20GB" },
+      "recommended": { "cpu": "Intel Core i7 6700", "ram": "16GB", "gpu": "NVIDIA GeForce GTX 1080", "storage": "20GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/593158/pexels-photo-593158.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2360569/pexels-photo-2360569.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2085832/pexels-photo-2085832.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2846814/pexels-photo-2846814.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 120, "title": "Deathloop", "price": 199.99, "rating": 4.6, "reviews": 20000, "image": "https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 121, "title": "The Evil Within 2", "price": 129.99, "rating": 4.7, "reviews": 15000, "image": "https://images.pexels.com/photos/1029611/pexels-photo-1029611.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 122, "title": "Control", "price": 147.99, "rating": 4.8, "reviews": 30000, "image": "https://images.pexels.com/photos/270756/pexels-photo-270756.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 43, "title": "Deus Ex: Mankind Divided", "price": 64.99, "rating": 4.6, "reviews": 18000, "image": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 32,
+    "title": "Valheim",
+    "originalPrice": 37.99,
+    "discountedPrice": 28.49,
+    "rating": 4.9,
+    "platforms": ["pc", "xbox", "steam"],
+    "tags": ["Sobrevivência", "Mundo Aberto", "Construção"],
+    "developer": "Iron Gate AB",
+    "publisher": "Coffee Stain Publishing",
+    "classification": "14+",
+    "releaseDate": "02/02/2021",
+    "bannerImage": "https://images.pexels.com/photos/106152/cerberus-mythical-creatures-monster-monster-dog-106152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/f57c00/ffffff?text=VALHEIM&font=medieval-sharp",
+    "description": "Um guerreiro morto em batalha, as Valquírias transportaram sua alma para Valheim, o décimo mundo nórdico. Cercado por criaturas do caos e antigos inimigos dos deuses, você é o mais novo guardião do purgatório primordial, encarregado de matar os antigos rivais de Odin e trazer ordem a Valheim.",
+    "about": "Um brutal jogo de exploração e sobrevivência para 1 a 10 jogadores, ambientado em um purgatório gerado proceduralmente e inspirado na cultura viking.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Dual Core 2.6 GHz", "ram": "4GB", "gpu": "GeForce GTX 500", "storage": "1GB" },
+      "recommended": { "cpu": "i5 3GHz", "ram": "8GB", "gpu": "GeForce GTX 970", "storage": "1GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1028741/pexels-photo-1028741.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/531321/pexels-photo-531321.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/207000/pexels-photo-207000.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/33044/sunflower-sun-summer-yellow.jpg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 51, "title": "The Forest", "price": 37.99, "rating": 4.7, "reviews": 300000, "image": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 123, "title": "Rust", "price": 73.99, "rating": 4.5, "reviews": 600000, "image": "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 124, "title": "ARK: Survival Evolved", "price": 36.99, "rating": 4.5, "reviews": 450000, "image": "https://images.pexels.com/photos/161294/color-pattern-paint-screen-161294.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 125, "title": "Subnautica", "price": 57.99, "rating": 4.9, "reviews": 200000, "image": "https://images.pexels.com/photos/1083822/pexels-photo-1083822.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 33,
+    "title": "Hollow Knight",
+    "originalPrice": 28.99,
+    "discountedPrice": 14.49,
+    "rating": 5.0,
+    "platforms": ["pc", "playstation", "xbox", "nintendo-switch", "steam"],
+    "tags": ["Metroidvania", "Aventura", "Indie"],
+    "developer": "Team Cherry",
+    "publisher": "Team Cherry",
+    "classification": "10+",
+    "releaseDate": "24/02/2017",
+    "bannerImage": "https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/1269968/pexels-photo-1269968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/263238/eceff1?text=HOLLOW+KNIGHT&font=cinzel",
+    "description": "Forje seu próprio caminho em Hollow Knight! Uma aventura de ação épica em um vasto reino arruinado de insetos e heróis. Explore cavernas sinuosas, lute contra criaturas contaminadas e faça amizade com insetos bizarros, tudo em um estilo 2D clássico desenhado à mão.",
+    "about": "Um aclamado Metroidvania com combate desafiador, exploração gratificante e uma atmosfera inesquecível.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel Core 2 Duo E5200", "ram": "4GB", "gpu": "GeForce 9800GTX+", "storage": "9GB" },
+      "recommended": { "cpu": "Intel Core i5", "ram": "8GB", "gpu": "GeForce GTX 560", "storage": "9GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1037993/pexels-photo-1037993.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1101150/pexels-photo-1101150.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1209610/pexels-photo-1209610.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1420440/pexels-photo-1420440.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 126, "title": "Ori and the Will of the Wisps", "price": 59.99, "rating": 5.0, "reviews": 50000, "image": "https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 127, "title": "Blasphemous", "price": 47.49, "rating": 4.8, "reviews": 25000, "image": "https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 76, "title": "Dead Cells", "price": 47.49, "rating": 4.9, "reviews": 120000, "image": "https://images.pexels.com/photos/1029243/pexels-photo-1029243.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 128, "title": "Bloodstained: Ritual of the Night", "price": 75.49, "rating": 4.8, "reviews": 18000, "image": "https://images.pexels.com/photos/159045/the-interior-of-the-library-book-books-159045.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 34,
+    "title": "PowerWash Simulator",
+    "originalPrice": 46.99,
+    "discountedPrice": 37.59,
+    "rating": 5.0,
+    "platforms": ["pc", "playstation", "xbox", "nintendo-switch", "steam"],
+    "tags": ["Simulação", "Casual", "Relaxante"],
+    "developer": "FuturLab",
+    "publisher": "Square Enix",
+    "classification": "Livre",
+    "releaseDate": "14/07/2022",
+    "bannerImage": "https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/03a9f4/ffffff?text=POWERWASH&font=anton",
+    "description": "Libere a pressão com o PowerWash Simulator! Lave suas preocupações com os sons relaxantes da água de alta pressão. Ligue seu lavador elétrico e remova toda a sujeira e fuligem que encontrar. Construa seu próprio negócio de lavagem de alta pressão e desbloqueie novas ferramentas, atualizações e muito mais - tudo com a simples satisfação da lavagem de alta pressão para um acabamento brilhante.",
+    "about": "O simulador de lavagem de alta pressão surpreendentemente relaxante e satisfatório.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5-760", "ram": "4GB", "gpu": "NVIDIA GeForce GTX 760", "storage": "6GB" },
+      "recommended": { "cpu": "Intel i7-6700K", "ram": "8GB", "gpu": "NVIDIA GeForce GTX 1060", "storage": "6GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1191377/pexels-photo-1191377.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 129, "title": "House Flipper", "price": 47.49, "rating": 4.8, "reviews": 60000, "image": "https://images.pexels.com/photos/1642125/pexels-photo-1642125.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 130, "title": "Hardspace: Shipbreaker", "price": 65.99, "rating": 4.7, "reviews": 15000, "image": "https://images.pexels.com/photos/220357/pexels-photo-220357.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 131, "title": "Euro Truck Simulator 2", "price": 39.99, "rating": 4.9, "reviews": 500000, "image": "https://images.pexels.com/photos/1235395/pexels-photo-1235395.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 132, "title": "Unpacking", "price": 37.99, "rating": 4.9, "reviews": 25000, "image": "https://images.pexels.com/photos/196643/pexels-photo-196643.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 35,
+    "title": "The Outer Worlds",
+    "originalPrice": 199.00,
+    "discountedPrice": 65.67,
+    "rating": 4.7,
+    "platforms": ["pc", "playstation", "xbox", "nintendo-switch", "steam"],
+    "tags": ["RPG", "Ação", "Sci-Fi"],
+    "developer": "Obsidian Entertainment",
+    "publisher": "Private Division",
+    "classification": "16+",
+    "releaseDate": "25/10/2019",
+    "bannerImage": "https://images.pexels.com/photos/2387866/pexels-photo-2387866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/2448749/pexels-photo-2448749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/0d47a1/ffffff?text=OUTER+WORLDS&font=orbitron",
+    "description": "The Outer Worlds é um premiado RPG de ficção científica para um jogador da Obsidian Entertainment e da Private Division. Perdido em trânsito enquanto estava a bordo de uma nave colonizadora com destino ao limite da galáxia, você acorda décadas depois apenas para se encontrar no meio de uma profunda conspiração que ameaça destruir a colônia Halcyon. Conforme você explora os confins mais distantes do espaço e encontra várias facções, todas competindo pelo poder, o personagem que você decide se tornar determinará como essa história se desenrola.",
+    "about": "Um RPG de ficção científica dirigido pelo jogador, dos criadores de Fallout: New Vegas.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel Core i3-3225", "ram": "4GB", "gpu": "Nvidia GTX 650 Ti", "storage": "40GB" },
+      "recommended": { "cpu": "Intel Core i7-7700K", "ram": "8GB", "gpu": "GeForce GTX 1060 6GB", "storage": "40GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/931018/pexels-photo-931018.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 133, "title": "Fallout: New Vegas", "price": 19.99, "rating": 4.9, "reviews": 120000, "image": "https://images.pexels.com/photos/315938/pexels-photo-315938.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 134, "title": "Starfield", "price": 299.00, "rating": 4.2, "reviews": 50000, "image": "https://images.pexels.com/photos/5282269/pexels-photo-5282269.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 135, "title": "Cyberpunk 2077", "price": 199.90, "rating": 4.5, "reviews": 400000, "image": "https://images.pexels.com/photos/3225528/pexels-photo-3225528.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 136, "title": "Mass Effect Legendary Edition", "price": 249.00, "rating": 4.9, "reviews": 45000, "image": "https://images.pexels.com/photos/220201/pexels-photo-220201.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 36,
+    "title": "Celeste",
+    "originalPrice": 36.99,
+    "discountedPrice": 9.24,
+    "rating": 5.0,
+    "platforms": ["pc", "playstation", "xbox", "nintendo-switch", "steam"],
+    "tags": ["Plataforma", "Precisão", "Indie"],
+    "developer": "Maddy Makes Games",
+    "publisher": "Maddy Makes Games",
+    "classification": "10+",
+    "releaseDate": "25/01/2018",
+    "bannerImage": "https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/414144/pexels-photo-414144.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/f06292/ffffff?text=CELESTE&font=lato",
+    "description": "Ajude Madeline a sobreviver a seus demônios internos em sua jornada até o topo da Montanha Celeste neste jogo de plataforma super afiado, feito à mão, dos criadores de TowerFall. O jogo apresenta mais de 700 telas de desafios de plataforma hardcore, com camadas de segredos para descobrir e uma narrativa sobre autodescoberta.",
+    "about": "Um jogo de plataforma desafiador com uma história tocante sobre saúde mental e perseverança.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel Core i3 M380", "ram": "2GB", "gpu": "Intel HD 4000", "storage": "1.2GB" },
+      "recommended": { "cpu": "Intel Core i3 M380", "ram": "2GB", "gpu": "Intel HD 4000", "storage": "1.2GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1528640/pexels-photo-1528640.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/235621/pexels-photo-235621.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 137, "title": "Super Meat Boy", "price": 28.99, "rating": 4.8, "reviews": 30000, "image": "https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 138, "title": "The End is Nigh", "price": 28.99, "rating": 4.7, "reviews": 5000, "image": "https://images.pexels.com/photos/1102915/pexels-photo-1102915.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 139, "title": "Shovel Knight: Treasure Trove", "price": 73.99, "rating": 4.9, "reviews": 15000, "image": "https://images.pexels.com/photos/273935/pexels-photo-273935.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 126, "title": "Ori and the Will of the Wisps", "price": 59.99, "rating": 5.0, "reviews": 50000, "image": "https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 37,
+    "title": "Deep Rock Galactic",
+    "originalPrice": 57.99,
+    "discountedPrice": 19.13,
+    "rating": 4.9,
+    "platforms": ["pc", "playstation", "xbox", "steam"],
+    "tags": ["Cooperativo", "Tiro", "FPS"],
+    "developer": "Ghost Ship Games",
+    "publisher": "Coffee Stain Publishing",
+    "classification": "16+",
+    "releaseDate": "13/05/2020",
+    "bannerImage": "https://images.pexels.com/photos/2529170/pexels-photo-2529170.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/3601422/pexels-photo-3601422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/ffa000/000000?text=DEEP+ROCK&font=russo-one",
+    "description": "Deep Rock Galactic é um jogo de tiro em primeira pessoa de ficção científica cooperativo para 1-4 jogadores, com anões espaciais durões, ambientes 100% destrutíveis, cavernas geradas proceduralmente e hordas infinitas de monstros alienígenas.",
+    "about": "Trabalhe em equipe para minerar, explorar e lutar em um sistema de cavernas massivo.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel i5-2500K", "ram": "6GB", "gpu": "NVIDIA GeForce GTX 760", "storage": "3GB" },
+      "recommended": { "cpu": "Intel i5-7400", "ram": "8GB", "gpu": "NVIDIA GeForce GTX 970", "storage": "3GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1576937/pexels-photo-1576937.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1576939/pexels-photo-1576939.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/347141/pexels-photo-347141.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/3601426/pexels-photo-3601426.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 140, "title": "Left 4 Dead 2", "price": 20.69, "rating": 4.9, "reviews": 600000, "image": "https://images.pexels.com/photos/167698/pexels-photo-167698.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 141, "title": "Warhammer: Vermintide 2", "price": 57.99, "rating": 4.6, "reviews": 70000, "image": "https://images.pexels.com/photos/2529147/pexels-photo-2529147.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 142, "title": "HELLDIVERS 2", "price": 199.50, "rating": 4.7, "reviews": 300000, "image": "https://images.pexels.com/photos/267569/pexels-photo-267569.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 143, "title": "GTFO", "price": 73.99, "rating": 4.6, "reviews": 30000, "image": "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  },
+  {
+    "id": 38,
+    "title": "It Takes Two",
+    "originalPrice": 199.00,
+    "discountedPrice": 49.75,
+    "rating": 5.0,
+    "platforms": ["pc", "playstation", "xbox", "nintendo-switch", "steam"],
+    "tags": ["Cooperativo", "Aventura", "Plataforma"],
+    "developer": "Hazelight Studios",
+    "publisher": "Electronic Arts",
+    "classification": "10+",
+    "releaseDate": "26/03/2021",
+    "bannerImage": "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "videoThumbnail": "https://images.pexels.com/photos/139398/sloth-sloths-gods-of-the-air-mammal-139398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "logo": "https://placehold.co/300x150/81d4fa/01579b?text=IT+TAKES+TWO&font=bangers",
+    "description": "Embarque na jornada mais maluca da sua vida em It Takes Two, um jogo de plataforma e aventura que redefine o gênero, criado exclusivamente para o modo cooperativo. Jogue como o conflituoso casal Cody e May, dois humanos transformados em bonecos por um feitiço mágico. Presos em um mundo fantástico, eles são relutantemente desafiados a salvar seu relacionamento pelo guru do amor, Dr. Hakim.",
+    "about": "Um jogo de aventura puramente cooperativo que ganhou o prêmio de Jogo do Ano em 2021.",
+    "systemRequirements": {
+      "minimum": { "cpu": "Intel Core i3-2100T", "ram": "8GB", "gpu": "Nvidia GeForce GTX 660", "storage": "50GB" },
+      "recommended": { "cpu": "Intel Core i5 3570K", "ram": "16GB", "gpu": "Nvidia GeForce GTX 980", "storage": "50GB" }
+    },
+    "gallery": [
+      "https://images.pexels.com/photos/1038000/pexels-photo-1038000.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1038002/pexels-photo-1038002.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/3727464/pexels-photo-3727464.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/3727469/pexels-photo-3727469.jpeg?auto=compress&cs=tinysrgb&w=600"
+    ],
+    "relatedGames": [
+      { "id": 144, "title": "A Way Out", "price": 109.00, "rating": 4.8, "reviews": 40000, "image": "https://images.pexels.com/photos/4033148/pexels-photo-4033148.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 116, "title": "Overcooked! 2", "price": 47.49, "rating": 4.9, "reviews": 50000, "image": "https://images.pexels.com/photos/842571/pexels-photo-842571.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 145, "title": "Portal 2", "price": 20.69, "rating": 5.0, "reviews": 300000, "image": "https://images.pexels.com/photos/459654/pexels-photo-459654.jpeg?auto=compress&cs=tinysrgb&w=400" },
+      { "id": 146, "title": "Unravel Two", "price": 79.00, "rating": 4.7, "reviews": 8000, "image": "https://images.pexels.com/photos/38544/imac-apple-mockup-app-38544.jpeg?auto=compress&cs=tinysrgb&w=400" }
+    ]
+  }]
