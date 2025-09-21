@@ -98,10 +98,8 @@
   a {
     color: #2563eb;
     text-decoration: none;
+    text-decoration: underline;
 
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
 

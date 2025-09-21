@@ -3,12 +3,12 @@
 import { useState } from 'react';
 import styles from '../../styles/Login.module.scss';
 import { Mail, Lock } from 'lucide-react';
+import Link from 'next/link';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // A única mudança é aqui: removemos a tipagem do 'event'
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('Email:', email);
@@ -59,7 +59,7 @@ export default function LoginPage() {
         </form>
 
         <div className={styles.signupLink}>
-          Não tem uma conta? <a href="#">Crie uma agora</a>
+          Não tem uma conta? <Link href="/auth/register">Crie uma agora</Link>
         </div>
 
         <div className={styles.divider}>

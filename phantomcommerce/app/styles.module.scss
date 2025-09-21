@@ -1,0 +1,113 @@
+.container {
+  background: #0d1117;
+  color: #fff;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  padding-bottom: 50px;
+}
+
+.hero {
+  position: relative;
+
+  .heroImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .heroInfo {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 12px;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #00ff95;
+    }
+
+    .buyBtn {
+      background: #0070f3;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #fff;
+      transition: 0.3s;
+
+      &:hover {
+        background: #0057b8;
+      }
+    }
+  }
+}
+
+.details {
+  display: flex;
+  gap: 20px;
+  margin: 40px;
+
+  .videoBox {
+    flex: 2;
+    background: #1e1e1e;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .videoPlaceholder {
+      font-size: 4rem;
+      color: #aaa;
+    }
+  }
+
+  .infoBox {
+    flex: 1;
+    background: #161b22;
+    padding: 20px;
+    border-radius: 12px;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+
+      li {
+        margin-bottom: 6px;
+        color: #ccc;
+      }
+    }
+
+    .release {
+      margin-top: 15px;
+      color: #999;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.related {
+  margin: 40px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .gamesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
