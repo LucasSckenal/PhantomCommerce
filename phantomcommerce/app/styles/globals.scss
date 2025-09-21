@@ -66,8 +66,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Arimo', sans-serif;
-  color: var(--text-primary);
+  color: var(--primary-color-50);
   margin-bottom: 1rem;
 }
 
@@ -78,9 +77,8 @@ p, a, li, span, div {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #1a1c29;
-  color: var(--text-primary);
+  font-family: 'Arimo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-900);
   line-height: 1.6;
   overflow-x: hidden;
 }

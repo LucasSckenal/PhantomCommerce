@@ -4,6 +4,7 @@ import { useState } from 'react';
 import styles from '../../styles/Login.module.scss';
 import { Mail, Lock } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -20,7 +21,7 @@ export default function LoginPage() {
     <div className={styles.container}>
       <div className={styles.loginBox}>
         <h1>Faça seu login</h1>
-        <p>Acesse sua conta para continuar</p>
+        <h3>Acesse sua conta para continuar</h3>
 
         <form onSubmit={handleSubmit}>
           <div className={styles.inputGroup}>
@@ -68,13 +69,28 @@ export default function LoginPage() {
 
         <div className={styles.socialLogin}>
           <button className={`${styles.socialButton} ${styles.google}`}>
-            G
+            <Image
+              src="/google.png"
+              alt="Google"
+              width={77}
+              height={77}
+            />
           </button>
           <button className={`${styles.socialButton} ${styles.twitter}`}>
-            X
+            <Image
+              src="/x.png"
+              alt="X"
+              width={77}
+              height={77}
+            />
           </button>
           <button className={`${styles.socialButton} ${styles.facebook}`}>
-            F
+            <Image
+              src="/facebook.png"
+              alt="Facebook"
+              width={77}
+              height={77}
+            />
           </button>
         </div>
       </div>
