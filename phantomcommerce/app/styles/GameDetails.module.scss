@@ -29,11 +29,15 @@
 }
 
 .infoLabel {
+  width: fit-content;
   color: var(--text-secondary);
   font-size: 0.9rem;
+  font-weight: bold;
   margin-bottom: 0.25rem;
   border-bottom: 2px solid var(--primary-color-600);
   padding-bottom: 4px;
+  padding-top: 16px;
+  gap: var(--gap-1);
 }
 
 .infoValue {

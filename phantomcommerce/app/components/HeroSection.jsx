@@ -52,9 +52,13 @@ export default function HeroSection({ game }) {
             <span className={styles.metaItem}>
               Lançamento: {game.releaseDate}
             </span>
-            <div className={styles.platformIcons}>
+            <div className={`${styles.metaItem} ${styles.platformIcons}`}>
               {game.platforms.map(platform => (
-                <span key={platform} title={platform.charAt(0).toUpperCase() + platform.slice(1)}>
+                <span 
+                  key={platform} 
+                  title={platform.charAt(0).toUpperCase() + platform.slice(1)}
+                  className={styles.platformIconWrapper} // Nova classe para o span
+                >
                   {platformIcons[platform] || platform}
                 </span>
               ))}

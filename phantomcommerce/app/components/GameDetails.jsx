@@ -10,19 +10,19 @@ export default function GameDetails({ game }) {
             <p className={styles.releaseDate}>Lançamento: {game.releaseDate}</p>
       <div className={styles.infoGrid}>
         <div>
-          <p className={styles.infoLabel}>Desenvolvedora</p>
+          <p className={styles.infoLabel}>Desenvolvedora:</p>
           <p className={styles.infoValue}>{game.developer}</p>
         </div>
         <div>
-          <p className={styles.infoLabel}>Publicadora</p>
+          <p className={styles.infoLabel}>Publicadora:</p>
           <p className={styles.infoValue}>{game.publisher}</p>
         </div>
         <div>
-          <p className={styles.infoLabel}>Gêneros</p>
+          <p className={styles.infoLabel}>Gêneros:</p>
           <p className={styles.infoValue}>{game.tags.join(', ')}</p>
         </div>
         <div>
-          <p className={styles.infoLabel}>Classificação</p>
+          <p className={styles.infoLabel}>Classificação:</p>
           <p className={styles.infoValue}>{game.classification}</p>
         </div>
       </div>

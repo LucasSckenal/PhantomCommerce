@@ -1,7 +1,17 @@
 import gameData from '../data/gameData.json';
 import Link from 'next/link';
 import { Star } from 'lucide-react';
+import { FaPlaystation, FaXbox, FaSteam } from "react-icons/fa";
+import { BsNintendoSwitch } from "react-icons/bs";
 import styles from '../styles/RelatedGames.module.scss';
+
+// Mapeamento de plataformas para ícones
+const platformIcons = {
+  xbox: <FaXbox size={15} />,
+  playstation: <FaPlaystation size={15} />, // Usando um ícone diferente para variar
+  steam: <FaSteam size={15} />,
+  nintendoSwitch: <BsNintendoSwitch size={15} />,
+};
 
 export default function RelatedGames({ games }) {
   return (
@@ -14,6 +24,13 @@ export default function RelatedGames({ games }) {
           return (
             <div key={game.id} className={styles.gameCard}>
               <img src={game.image} alt={game.title} className={styles.gameImage} />
+              <div className={styles.platformIcons}>
+                  {game.platforms?.map(platform => (
+                    <span key={platform} title={platform.charAt(0).toUpperCase() + platform.slice(1)}>
+                      {platformIcons[platform] || platform}
+                    </span>
+                  ))}
+                </div>
 
               <div className={styles.overlay}>
                 <div className={styles.hoverContent}>
