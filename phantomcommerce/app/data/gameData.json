@@ -27,10 +27,10 @@
       "https://images.pexels.com/photos/9890666/pexels-photo-9890666.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 2, "title": "Starlight Odyssey", "price": 124.95, "rating": 4.9, "reviews": 312, "image": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"] },
-      { "id": 3, "title": "Chronicles of Eldoria", "price": 99.99, "rating": 4.7, "reviews": 189, "image": "https://images.pexels.com/photos/163822/borobudur-temple-destination-indonesia-163822.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 4, "title": "Veridian Veil", "price": 44.95, "rating": 4.5, "reviews": 450, "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch",  "steam"] },
-      { "id": 5, "title": "Asphalt Fury: Tokyo Drift", "price": 89.95, "rating": 4.6, "reviews": 521, "image": "https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"] }
+      { "id": 2, "title": "Starlight Odyssey", "price": 124.95, "rating": 4.9, "reviews": 312, "image": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"], "discount": 50, "tags": ["Sci-Fi", "RPG", "Exploração"] },
+      { "id": 3, "title": "Chronicles of Eldoria", "price": 99.99, "rating": 4.7, "reviews": 189, "image": "https://images.pexels.com/photos/163822/borobudur-temple-destination-indonesia-163822.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Fantasia", "RPG", "Estratégia"] },
+      { "id": 4, "title": "Veridian Veil", "price": 44.95, "rating": 4.5, "reviews": 450, "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch",  "steam"], "discount": 50, "tags": ["Aventura", "Puzzle", "Indie"] },
+      { "id": 5, "title": "Asphalt Fury: Tokyo Drift", "price": 89.95, "rating": 4.6, "reviews": 521, "image": "https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"], "discount": 50, "tags": ["Corrida", "Ação", "Arcade"] }
     ]
   },
   {
@@ -61,10 +61,10 @@
       "https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 1, "title": "Cyberworld 2077", "price": 150.00, "rating": 4.8, "reviews": 1205, "image": "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation", "steam"] },
-      { "id": 6, "title": "Ethereal Echoes", "price": 59.95, "rating": 4.6, "reviews": 250, "image": "https://images.pexels.com/photos/1887624/pexels-photo-1887624.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "playstation"] },
-      { "id": 7, "title": "World Soccer 2026", "price": 299.99, "rating": 4.9, "reviews": 340, "image": "https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation",  "steam"] },
-      { "id": 8, "title": "Pixel Pioneers", "price": 34.95, "rating": 4.8, "reviews": 150, "image": "https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": [ "nintendoSwitch", "steam"] }
+      { "id": 1, "title": "Cyberworld 2077", "price": 150.00, "rating": 4.8, "reviews": 1205, "image": "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation", "steam"], "discount": 50, "tags": ["Ação", "RPG", "Mundo Aberto"] },
+      { "id": 6, "title": "Ethereal Echoes", "price": 59.95, "rating": 4.6, "reviews": 250, "image": "https://images.pexels.com/photos/1887624/pexels-photo-1887624.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "playstation"], "discount": 50, "tags": ["Terror", "Sobrevivência", "Psicológico"] },
+      { "id": 7, "title": "World Soccer 2026", "price": 299.99, "rating": 4.9, "reviews": 340, "image": "https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation",  "steam"], "discount": 14, "tags": ["Esportes", "Simulação", "Multiplayer"] },
+      { "id": 8, "title": "Pixel Pioneers", "price": 34.95, "rating": 4.8, "reviews": 150, "image": "https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": [ "nintendoSwitch", "steam"], "discount": 50, "tags": ["Simulação", "Fazenda", "Indie"] }
     ]
   },
   {
@@ -95,10 +95,10 @@
       "https://images.pexels.com/photos/2088205/pexels-photo-2088205.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-        { "id": 9, "title": "Voidfall Supremacy", "price": 74.99, "rating": 4.7, "reviews": 620, "image": "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-        { "id": 10, "title": "Arena of Champions", "price": 0.00, "rating": 4.4, "reviews": 430, "image": "https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"] },
-        { "id": 11, "title": "Project Chimera", "price": 139.95, "rating": 4.8, "reviews": 310, "image": "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] },
-        { "id": 12, "title": "Cartel Tycoon", "price": 29.99, "rating": 4.3, "reviews": 180, "image": "https://images.pexels.com/photos/159844/cellular-prison-heidelberg-prison-cell-159844.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] }
+        { "id": 9, "title": "Voidfall Supremacy", "price": 74.99, "rating": 4.7, "reviews": 620, "image": "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Estratégia", "4X", "Sci-Fi"] },
+        { "id": 10, "title": "Arena of Champions", "price": 0.00, "rating": 4.4, "reviews": 430, "image": "https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"], "discount": 100, "tags": ["Luta", "Ação", "Multiplayer"] },
+        { "id": 11, "title": "Project Chimera", "price": 139.95, "rating": 4.8, "reviews": 310, "image": "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 50, "tags": ["Ação", "Aventura", "Furtividade"] },
+        { "id": 12, "title": "Cartel Tycoon", "price": 29.99, "rating": 4.3, "reviews": 180, "image": "https://images.pexels.com/photos/159844/cellular-prison-heidelberg-prison-cell-159844.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Simulação", "Estratégia", "Gerenciamento"] }
     ]
   },
   {
@@ -129,10 +129,10 @@
       "https://images.pexels.com/photos/1324803/pexels-photo-1324803.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 13, "title": "The Last Bastion", "price": 64.95, "rating": 4.5, "reviews": 215, "image": "https://images.pexels.com/photos/2440061/pexels-photo-2440061.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "steam"] },
-      { "id": 14, "title": "Rhythm Rush", "price": 24.95, "rating": 4.9, "reviews": 190, "image": "https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"] },
-      { "id": 15, "title": "Aetherium Wars", "price": 94.95, "rating": 4.7, "reviews": 150, "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] },
-      { "id": 16, "title": "Cosmo Colony", "price": 39.99, "rating": 4.6, "reviews": 120, "image": "https://images.pexels.com/photos/220202/pexels-photo-220202.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] }
+      { "id": 13, "title": "The Last Bastion", "price": 64.95, "rating": 4.5, "reviews": 215, "image": "https://images.pexels.com/photos/2440061/pexels-photo-2440061.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "steam"], "discount": 50, "tags": ["Sobrevivência", "Construção", "Zumbis"] },
+      { "id": 14, "title": "Rhythm Rush", "price": 24.95, "rating": 4.9, "reviews": 190, "image": "https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"], "discount": 50, "tags": ["Ritmo", "Música", "Ação"] },
+      { "id": 15, "title": "Aetherium Wars", "price": 94.95, "rating": 4.7, "reviews": 150, "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 50, "tags": ["JRPG", "Turnos", "Fantasia"] },
+      { "id": 16, "title": "Cosmo Colony", "price": 39.99, "rating": 4.6, "reviews": 120, "image": "https://images.pexels.com/photos/220202/pexels-photo-220202.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Simulação", "Construção de Cidades", "Sci-Fi"] }
     ]
   },
   {
@@ -163,10 +163,10 @@
       "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 17, "title": "Depths of Insanity", "price": 44.95, "rating": 4.7, "reviews": 890, "image": "https://images.pexels.com/photos/76974/jellyfish-aquarium-sea-life-underwater-76974.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 18, "title": "Pirate's Legacy: Sea of Souls", "price": 114.95, "rating": 4.6, "reviews": 540, "image": "https://images.pexels.com/photos/390051/pexels-photo-390051.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"] },
-      { "id": 19, "title": "Wartorn Lands: Siegecraft", "price": 54.99, "rating": 4.4, "reviews": 720, "image": "https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 20, "title": "Robo-Brawl", "price": 39.95, "rating": 4.3, "reviews": 350, "image": "https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch"] }
+      { "id": 17, "title": "Depths of Insanity", "price": 44.95, "rating": 4.7, "reviews": 890, "image": "https://images.pexels.com/photos/76974/jellyfish-aquarium-sea-life-underwater-76974.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Terror", "Aventura", "Lovecraftiano"] },
+      { "id": 18, "title": "Pirate's Legacy: Sea of Souls", "price": 114.95, "rating": 4.6, "reviews": 540, "image": "https://images.pexels.com/photos/390051/pexels-photo-390051.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"], "discount": 50, "tags": ["Aventura", "Mundo Aberto", "Ação"] },
+      { "id": 19, "title": "Wartorn Lands: Siegecraft", "price": 54.99, "rating": 4.4, "reviews": 720, "image": "https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Estratégia", "RTS", "Medieval"] },
+      { "id": 20, "title": "Robo-Brawl", "price": 39.95, "rating": 4.3, "reviews": 350, "image": "https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch"], "discount": 50, "tags": ["Ação", "Plataforma", "Roguelite"] }
     ]
   },
   {
@@ -197,10 +197,10 @@
       "https://images.pexels.com/photos/1294622/pexels-photo-1294622.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 21, "title": "Detective Noir: The Crimson Case", "price": 29.95, "rating": 4.8, "reviews": 410, "image": "https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"] },
-      { "id": 22, "title": "Apex Vanguard", "price": 129.99, "rating": 4.7, "reviews": 320, "image": "https://images.pexels.com/photos/3782166/pexels-photo-3782166.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"] },
-      { "id": 23, "title": "Kingdomfall Tactics", "price": 44.99, "rating": 4.8, "reviews": 550, "image": "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"] },
-      { "id": 24, "title": "Zenith's Fall", "price": 224.99, "rating": 4.9, "reviews": 280, "image": "https://images.pexels.com/photos/413195/pexels-photo-413195.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] }
+      { "id": 21, "title": "Detective Noir: The Crimson Case", "price": 29.95, "rating": 4.8, "reviews": 410, "image": "https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"], "discount": 50, "tags": ["Aventura", "Point-and-Click", "Mistério"] },
+      { "id": 22, "title": "Apex Vanguard", "price": 129.99, "rating": 4.7, "reviews": 320, "image": "https://images.pexels.com/photos/3782166/pexels-photo-3782166.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"], "discount": 50, "tags": ["Tiro", "Herói", "Multiplayer"] },
+      { "id": 23, "title": "Kingdomfall Tactics", "price": 44.99, "rating": 4.8, "reviews": 550, "image": "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"], "discount": 50, "tags": ["Estratégia", "Turnos", "RPG"] },
+      { "id": 24, "title": "Zenith's Fall", "price": 224.99, "rating": 4.9, "reviews": 280, "image": "https://images.pexels.com/photos/413195/pexels-photo-413195.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 25, "tags": ["Ação", "Aventura", "Exclusivo"] }
     ]
   },
   {
@@ -231,10 +231,10 @@
       "https://images.pexels.com/photos/364308/pexels-photo-364308.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 25, "title": "Rail Empire", "price": 44.49, "rating": 4.5, "reviews": 1500, "image": "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 26, "title": "Solara: The Sunstone Saga", "price": 74.99, "rating": 4.7, "reviews": 300, "image": "https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"] },
-      { "id": 27, "title": "Bloodborne Kart", "price": 149.90, "rating": 5.0, "reviews": 950, "image": "https://images.pexels.com/photos/103290/pexels-photo-103290.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] },
-      { "id": 28, "title": "Mecha Assault: Colossus", "price": 139.99, "rating": 4.6, "reviews": 780, "image": "https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox"] }
+      { "id": 25, "title": "Rail Empire", "price": 44.49, "rating": 4.5, "reviews": 1500, "image": "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Simulação", "Gerenciamento", "Trens"] },
+      { "id": 26, "title": "Solara: The Sunstone Saga", "price": 74.99, "rating": 4.7, "reviews": 300, "image": "https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"], "discount": 50, "tags": ["Aventura", "RPG", "Mundo Aberto"] },
+      { "id": 27, "title": "Bloodborne Kart", "price": 149.90, "rating": 5.0, "reviews": 950, "image": "https://images.pexels.com/photos/103290/pexels-photo-103290.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 25, "tags": ["Corrida", "Ação", "Paródia"] },
+      { "id": 28, "title": "Mecha Assault: Colossus", "price": 139.99, "rating": 4.6, "reviews": 780, "image": "https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox"], "discount": 50, "tags": ["Ação", "Simulação", "Mecha"] }
     ]
   },
   {
@@ -265,10 +265,10 @@
       "https://images.pexels.com/photos/3127880/pexels-photo-3127880.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 29, "title": "Spellweavers: The Arcane Tournament", "price": 54.95, "rating": 4.5, "reviews": 500000, "image": "https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 30, "title": "Cook-Out Chaos", "price": 49.95, "rating": 4.8, "reviews": 15000, "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "playstation", "xbox"] },
-      { "id": 1, "title": "Cyberworld 2077", "price": 150.00, "rating": 4.8, "reviews": 25000, "image": "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation", "steam"] },
-      { "id": 2, "title": "Starlight Odyssey", "price": 124.95, "rating": 4.9, "reviews": 18000, "image": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"] }
+      { "id": 29, "title": "Spellweavers: The Arcane Tournament", "price": 54.95, "rating": 4.5, "reviews": 500000, "image": "https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Deckbuilder", "Roguelike", "Estratégia"] },
+      { "id": 30, "title": "Cook-Out Chaos", "price": 49.95, "rating": 4.8, "reviews": 15000, "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "playstation", "xbox"], "discount": 50, "tags": ["Cooperativo", "Simulação", "Casual"] },
+      { "id": 1, "title": "Cyberworld 2077", "price": 150.00, "rating": 4.8, "reviews": 25000, "image": "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation", "steam"], "discount": 50, "tags": ["Ação", "RPG", "Mundo Aberto"] },
+      { "id": 2, "title": "Starlight Odyssey", "price": 124.95, "rating": 4.9, "reviews": 18000, "image": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"], "discount": 50, "tags": ["Sci-Fi", "RPG", "Exploração"] }
     ]
   },
     {
@@ -299,10 +299,10 @@
       "https://images.pexels.com/photos/2422461/pexels-photo-2422461.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 3, "title": "Chronicles of Eldoria", "price": 99.99, "rating": 4.7, "reviews": 120000, "image": "https://images.pexels.com/photos/163822/borobudur-temple-destination-indonesia-163822.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 16, "title": "Cosmo Colony", "price": 39.99, "rating": 4.6, "reviews": 8000, "image": "https://images.pexels.com/photos/220202/pexels-photo-220202.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 25, "title": "Rail Empire", "price": 44.49, "rating": 4.5, "reviews": 22000, "image": "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 19, "title": "Wartorn Lands: Siegecraft", "price": 54.99, "rating": 4.4, "reviews": 15000, "image": "https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] }
+      { "id": 3, "title": "Chronicles of Eldoria", "price": 99.99, "rating": 4.7, "reviews": 120000, "image": "https://images.pexels.com/photos/163822/borobudur-temple-destination-indonesia-163822.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Fantasia", "RPG", "Estratégia"] },
+      { "id": 16, "title": "Cosmo Colony", "price": 39.99, "rating": 4.6, "reviews": 8000, "image": "https://images.pexels.com/photos/220202/pexels-photo-220202.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Simulação", "Construção de Cidades", "Sci-Fi"] },
+      { "id": 25, "title": "Rail Empire", "price": 44.49, "rating": 4.5, "reviews": 22000, "image": "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Simulação", "Gerenciamento", "Trens"] },
+      { "id": 19, "title": "Wartorn Lands: Siegecraft", "price": 54.99, "rating": 4.4, "reviews": 15000, "image": "https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Estratégia", "RTS", "Medieval"] }
     ]
   },
   {
@@ -333,10 +333,10 @@
       "https://images.pexels.com/photos/163452/basketball-dunk-blue-game-163452.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 5, "title": "Asphalt Fury: Tokyo Drift", "price": 89.95, "rating": 4.6, "reviews": 15000, "image": "https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"] },
-      { "id": 22, "title": "Apex Vanguard", "price": 129.99, "rating": 4.7, "reviews": 12000, "image": "https://images.pexels.com/photos/3782166/pexels-photo-3782166.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"] },
-      { "id": 27, "title": "Bloodborne Kart", "price": 149.90, "rating": 5.0, "reviews": 18000, "image": "https://images.pexels.com/photos/103290/pexels-photo-103290.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] },
-      { "id": 7, "title": "World Soccer 2026", "price": 299.99, "rating": 4.9, "reviews": 25000, "image": "https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation",  "steam"] }
+      { "id": 5, "title": "Asphalt Fury: Tokyo Drift", "price": 89.95, "rating": 4.6, "reviews": 15000, "image": "https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"], "discount": 50, "tags": ["Corrida", "Ação", "Arcade"] },
+      { "id": 22, "title": "Apex Vanguard", "price": 129.99, "rating": 4.7, "reviews": 12000, "image": "https://images.pexels.com/photos/3782166/pexels-photo-3782166.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"], "discount": 50, "tags": ["Tiro", "Herói", "Multiplayer"] },
+      { "id": 27, "title": "Bloodborne Kart", "price": 149.90, "rating": 5.0, "reviews": 18000, "image": "https://images.pexels.com/photos/103290/pexels-photo-103290.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 25, "tags": ["Corrida", "Ação", "Paródia"] },
+      { "id": 7, "title": "World Soccer 2026", "price": 299.99, "rating": 4.9, "reviews": 25000, "image": "https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation",  "steam"], "discount": 14, "tags": ["Esportes", "Simulação", "Multiplayer"] }
     ]
   },
   {
@@ -367,10 +367,10 @@
       "https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 24, "title": "Zenith's Fall", "price": 224.99, "rating": 4.9, "reviews": 45000, "image": "https://images.pexels.com/photos/413195/pexels-photo-413195.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] },
-      { "id": 6, "title": "Ethereal Echoes", "price": 59.95, "rating": 4.6, "reviews": 12000, "image": "https://images.pexels.com/photos/1887624/pexels-photo-1887624.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "playstation"] },
-      { "id": 2, "title": "Starlight Odyssey", "price": 124.95, "rating": 4.9, "reviews": 18000, "image": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"] },
-      { "id": 15, "title": "Aetherium Wars", "price": 94.95, "rating": 4.7, "reviews": 22000, "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] }
+      { "id": 24, "title": "Zenith's Fall", "price": 224.99, "rating": 4.9, "reviews": 45000, "image": "https://images.pexels.com/photos/413195/pexels-photo-413195.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 25, "tags": ["Ação", "Aventura", "Exclusivo"] },
+      { "id": 6, "title": "Ethereal Echoes", "price": 59.95, "rating": 4.6, "reviews": 12000, "image": "https://images.pexels.com/photos/1887624/pexels-photo-1887624.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "playstation"], "discount": 50, "tags": ["Terror", "Sobrevivência", "Psicológico"] },
+      { "id": 2, "title": "Starlight Odyssey", "price": 124.95, "rating": 4.9, "reviews": 18000, "image": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"], "discount": 50, "tags": ["Sci-Fi", "RPG", "Exploração"] },
+      { "id": 15, "title": "Aetherium Wars", "price": 94.95, "rating": 4.7, "reviews": 22000, "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 50, "tags": ["JRPG", "Turnos", "Fantasia"] }
     ]
   },
   {
@@ -401,10 +401,10 @@
       "https://images.pexels.com/photos/210574/pexels-photo-210574.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 19, "title": "Wartorn Lands: Siegecraft", "price": 54.99, "rating": 4.4, "reviews": 14000, "image": "https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 23, "title": "Kingdomfall Tactics", "price": 44.99, "rating": 4.8, "reviews": 90000, "image": "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"] },
-      { "id": 9, "title": "Voidfall Supremacy", "price": 74.99, "rating": 4.7, "reviews": 35000, "image": "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 29, "title": "Spellweavers: The Arcane Tournament", "price": 54.95, "rating": 4.5, "reviews": 48000, "image": "https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] }
+      { "id": 19, "title": "Wartorn Lands: Siegecraft", "price": 54.99, "rating": 4.4, "reviews": 14000, "image": "https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Estratégia", "RTS", "Medieval"] },
+      { "id": 23, "title": "Kingdomfall Tactics", "price": 44.99, "rating": 4.8, "reviews": 90000, "image": "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"], "discount": 50, "tags": ["Estratégia", "Turnos", "RPG"] },
+      { "id": 9, "title": "Voidfall Supremacy", "price": 74.99, "rating": 4.7, "reviews": 35000, "image": "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Estratégia", "4X", "Sci-Fi"] },
+      { "id": 29, "title": "Spellweavers: The Arcane Tournament", "price": 54.95, "rating": 4.5, "reviews": 48000, "image": "https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Deckbuilder", "Roguelike", "Estratégia"] }
     ]
   },
   {
@@ -435,10 +435,10 @@
       "https://images.pexels.com/photos/1531660/pexels-photo-1531660.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 6, "title": "Ethereal Echoes", "price": 59.95, "rating": 4.6, "reviews": 180000, "image": "https://images.pexels.com/photos/1887624/pexels-photo-1887624.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "playstation"] },
-      { "id": 17, "title": "Depths of Insanity", "price": 44.95, "rating": 4.7, "reviews": 150000, "image": "https://images.pexels.com/photos/76974/jellyfish-aquarium-sea-life-underwater-76974.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 1, "title": "Cyberworld 2077", "price": 150.00, "rating": 4.8, "reviews": 300000, "image": "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation", "steam"] },
-      { "id": 28, "title": "Mecha Assault: Colossus", "price": 139.99, "rating": 4.6, "reviews": 250000, "image": "https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox"] }
+      { "id": 6, "title": "Ethereal Echoes", "price": 59.95, "rating": 4.6, "reviews": 180000, "image": "https://images.pexels.com/photos/1887624/pexels-photo-1887624.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "playstation"], "discount": 50, "tags": ["Terror", "Sobrevivência", "Psicológico"] },
+      { "id": 17, "title": "Depths of Insanity", "price": 44.95, "rating": 4.7, "reviews": 150000, "image": "https://images.pexels.com/photos/76974/jellyfish-aquarium-sea-life-underwater-76974.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Terror", "Aventura", "Lovecraftiano"] },
+      { "id": 1, "title": "Cyberworld 2077", "price": 150.00, "rating": 4.8, "reviews": 300000, "image": "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation", "steam"], "discount": 50, "tags": ["Ação", "RPG", "Mundo Aberto"] },
+      { "id": 28, "title": "Mecha Assault: Colossus", "price": 139.99, "rating": 4.6, "reviews": 250000, "image": "https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox"], "discount": 50, "tags": ["Ação", "Simulação", "Mecha"] }
     ]
   },
   {
@@ -469,10 +469,10 @@
       "https://images.pexels.com/photos/2531709/pexels-photo-2531709.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 20, "title": "Robo-Brawl", "price": 39.95, "rating": 4.3, "reviews": 30000, "image": "https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch"] },
-      { "id": 30, "title": "Cook-Out Chaos", "price": 49.95, "rating": 4.8, "reviews": 80000, "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "playstation", "xbox"] },
-      { "id": 4, "title": "Veridian Veil", "price": 44.95, "rating": 4.5, "reviews": 25000, "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch",  "steam"] },
-      { "id": 8, "title": "Pixel Pioneers", "price": 34.95, "rating": 4.8, "reviews": 10000, "image": "https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": [ "nintendoSwitch", "steam"] }
+      { "id": 20, "title": "Robo-Brawl", "price": 39.95, "rating": 4.3, "reviews": 30000, "image": "https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch"], "discount": 50, "tags": ["Ação", "Plataforma", "Roguelite"] },
+      { "id": 30, "title": "Cook-Out Chaos", "price": 49.95, "rating": 4.8, "reviews": 80000, "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "playstation", "xbox"], "discount": 50, "tags": ["Cooperativo", "Simulação", "Casual"] },
+      { "id": 4, "title": "Veridian Veil", "price": 44.95, "rating": 4.5, "reviews": 25000, "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch",  "steam"], "discount": 50, "tags": ["Aventura", "Puzzle", "Indie"] },
+      { "id": 8, "title": "Pixel Pioneers", "price": 34.95, "rating": 4.8, "reviews": 10000, "image": "https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": [ "nintendoSwitch", "steam"], "discount": 50, "tags": ["Simulação", "Fazenda", "Indie"] }
     ]
   },
   {
@@ -503,10 +503,10 @@
       "https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 3, "title": "Chronicles of Eldoria", "price": 99.99, "rating": 4.7, "reviews": 40000, "image": "https://images.pexels.com/photos/163822/borobudur-temple-destination-indonesia-163822.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 26, "title": "Solara: The Sunstone Saga", "price": 74.99, "rating": 4.7, "reviews": 50000, "image": "https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"] },
-      { "id": 2, "title": "Starlight Odyssey", "price": 124.95, "rating": 4.9, "reviews": 20000, "image": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"] },
-      { "id": 24, "title": "Zenith's Fall", "price": 224.99, "rating": 4.9, "reviews": 30000, "image": "https://images.pexels.com/photos/413195/pexels-photo-413195.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] }
+      { "id": 3, "title": "Chronicles of Eldoria", "price": 99.99, "rating": 4.7, "reviews": 40000, "image": "https://images.pexels.com/photos/163822/borobudur-temple-destination-indonesia-163822.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Fantasia", "RPG", "Estratégia"] },
+      { "id": 26, "title": "Solara: The Sunstone Saga", "price": 74.99, "rating": 4.7, "reviews": 50000, "image": "https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"], "discount": 50, "tags": ["Aventura", "RPG", "Mundo Aberto"] },
+      { "id": 2, "title": "Starlight Odyssey", "price": 124.95, "rating": 4.9, "reviews": 20000, "image": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"], "discount": 50, "tags": ["Sci-Fi", "RPG", "Exploração"] },
+      { "id": 24, "title": "Zenith's Fall", "price": 224.99, "rating": 4.9, "reviews": 30000, "image": "https://images.pexels.com/photos/413195/pexels-photo-413195.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 25, "tags": ["Ação", "Aventura", "Exclusivo"] }
     ]
   },
   {
@@ -537,10 +537,10 @@
       "https://images.pexels.com/photos/73910/mars-mars-rover-space-travel-robot-73910.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 9, "title": "Voidfall Supremacy", "price": 74.99, "rating": 4.7, "reviews": 15000, "image": "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 12, "title": "Cartel Tycoon", "price": 29.99, "rating": 4.3, "reviews": 8000, "image": "https://images.pexels.com/photos/159844/cellular-prison-heidelberg-prison-cell-159844.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 25, "title": "Rail Empire", "price": 44.49, "rating": 4.5, "reviews": 4000, "image": "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 8, "title": "Pixel Pioneers", "price": 34.95, "rating": 4.8, "reviews": 48000, "image": "https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"] }
+      { "id": 9, "title": "Voidfall Supremacy", "price": 74.99, "rating": 4.7, "reviews": 15000, "image": "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Estratégia", "4X", "Sci-Fi"] },
+      { "id": 12, "title": "Cartel Tycoon", "price": 29.99, "rating": 4.3, "reviews": 8000, "image": "https://images.pexels.com/photos/159844/cellular-prison-heidelberg-prison-cell-159844.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Simulação", "Estratégia", "Gerenciamento"] },
+      { "id": 25, "title": "Rail Empire", "price": 44.49, "rating": 4.5, "reviews": 4000, "image": "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Simulação", "Gerenciamento", "Trens"] },
+      { "id": 8, "title": "Pixel Pioneers", "price": 34.95, "rating": 4.8, "reviews": 48000, "image": "https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"], "discount": 50, "tags": ["Simulação", "Fazenda", "Indie"] }
     ]
   },
   {
@@ -571,10 +571,10 @@
       "https://images.pexels.com/photos/2418641/pexels-photo-2418641.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 6, "title": "Ethereal Echoes", "price": 59.95, "rating": 4.6, "reviews": 8000, "image": "https://images.pexels.com/photos/1887624/pexels-photo-1887624.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "playstation"] },
-      { "id": 13, "title": "The Last Bastion", "price": 64.95, "rating": 4.5, "reviews": 5000, "image": "https://images.pexels.com/photos/2440061/pexels-photo-2440061.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "steam"] },
-      { "id": 27, "title": "Bloodborne Kart", "price": 149.90, "rating": 5.0, "reviews": 20000, "image": "https://images.pexels.com/photos/103290/pexels-photo-103290.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] },
-      { "id": 11, "title": "Project Chimera", "price": 139.95, "rating": 4.8, "reviews": 70000, "image": "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] }
+      { "id": 6, "title": "Ethereal Echoes", "price": 59.95, "rating": 4.6, "reviews": 8000, "image": "https://images.pexels.com/photos/1887624/pexels-photo-1887624.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "playstation"], "discount": 50, "tags": ["Terror", "Sobrevivência", "Psicológico"] },
+      { "id": 13, "title": "The Last Bastion", "price": 64.95, "rating": 4.5, "reviews": 5000, "image": "https://images.pexels.com/photos/2440061/pexels-photo-2440061.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "steam"], "discount": 50, "tags": ["Sobrevivência", "Construção", "Zumbis"] },
+      { "id": 27, "title": "Bloodborne Kart", "price": 149.90, "rating": 5.0, "reviews": 20000, "image": "https://images.pexels.com/photos/103290/pexels-photo-103290.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 25, "tags": ["Corrida", "Ação", "Paródia"] },
+      { "id": 11, "title": "Project Chimera", "price": 139.95, "rating": 4.8, "reviews": 70000, "image": "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 50, "tags": ["Ação", "Aventura", "Furtividade"] }
     ]
   },
   {
@@ -605,10 +605,10 @@
       "https://images.pexels.com/photos/1388069/pexels-photo-1388069.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 4, "title": "Veridian Veil", "price": 44.95, "rating": 4.5, "reviews": 150000, "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch",  "steam"] },
-      { "id": 1, "title": "Cyberworld 2077", "price": 150.00, "rating": 4.8, "reviews": 60000, "image": "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation", "steam"] },
-      { "id": 26, "title": "Solara: The Sunstone Saga", "price": 74.99, "rating": 4.7, "reviews": 5000, "image": "https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"] },
-      { "id": 2, "title": "Starlight Odyssey", "price": 124.95, "rating": 4.9, "reviews": 40000, "image": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"] }
+      { "id": 4, "title": "Veridian Veil", "price": 44.95, "rating": 4.5, "reviews": 150000, "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch",  "steam"], "discount": 50, "tags": ["Aventura", "Puzzle", "Indie"] },
+      { "id": 1, "title": "Cyberworld 2077", "price": 150.00, "rating": 4.8, "reviews": 60000, "image": "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation", "steam"], "discount": 50, "tags": ["Ação", "RPG", "Mundo Aberto"] },
+      { "id": 26, "title": "Solara: The Sunstone Saga", "price": 74.99, "rating": 4.7, "reviews": 5000, "image": "https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"], "discount": 50, "tags": ["Aventura", "RPG", "Mundo Aberto"] },
+      { "id": 2, "title": "Starlight Odyssey", "price": 124.95, "rating": 4.9, "reviews": 40000, "image": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"], "discount": 50, "tags": ["Sci-Fi", "RPG", "Exploração"] }
     ]
   },
   {
@@ -639,10 +639,10 @@
       "https://images.pexels.com/photos/2087391/pexels-photo-2087391.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 3, "title": "Chronicles of Eldoria", "price": 99.99, "rating": 4.7, "reviews": 50000, "image": "https://images.pexels.com/photos/163822/borobudur-temple-destination-indonesia-163822.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 9, "title": "Voidfall Supremacy", "price": 74.99, "rating": 4.7, "reviews": 70000, "image": "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 23, "title": "Kingdomfall Tactics", "price": 44.99, "rating": 4.8, "reviews": 60000, "image": "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"] },
-      { "id": 12, "title": "Cartel Tycoon", "price": 29.99, "rating": 4.3, "reviews": 10000, "image": "https://images.pexels.com/photos/159844/cellular-prison-heidelberg-prison-cell-159844.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] }
+      { "id": 3, "title": "Chronicles of Eldoria", "price": 99.99, "rating": 4.7, "reviews": 50000, "image": "https://images.pexels.com/photos/163822/borobudur-temple-destination-indonesia-163822.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Fantasia", "RPG", "Estratégia"] },
+      { "id": 9, "title": "Voidfall Supremacy", "price": 74.99, "rating": 4.7, "reviews": 70000, "image": "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Estratégia", "4X", "Sci-Fi"] },
+      { "id": 23, "title": "Kingdomfall Tactics", "price": 44.99, "rating": 4.8, "reviews": 60000, "image": "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"], "discount": 50, "tags": ["Estratégia", "Turnos", "RPG"] },
+      { "id": 12, "title": "Cartel Tycoon", "price": 29.99, "rating": 4.3, "reviews": 10000, "image": "https://images.pexels.com/photos/159844/cellular-prison-heidelberg-prison-cell-159844.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Simulação", "Estratégia", "Gerenciamento"] }
     ]
   },
   {
@@ -673,10 +673,10 @@
       "https://images.pexels.com/photos/5474028/pexels-photo-5474028.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 4, "title": "Veridian Veil", "price": 44.95, "rating": 4.5, "reviews": 120000, "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch",  "steam"] },
-      { "id": 14, "title": "Rhythm Rush", "price": 24.95, "rating": 4.9, "reviews": 200000, "image": "https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"] },
-      { "id": 29, "title": "Spellweavers: The Arcane Tournament", "price": 54.95, "rating": 4.5, "reviews": 180000, "image": "https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 8, "title": "Pixel Pioneers", "price": 34.95, "rating": 4.8, "reviews": 80000, "image": "https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"] }
+      { "id": 4, "title": "Veridian Veil", "price": 44.95, "rating": 4.5, "reviews": 120000, "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch",  "steam"], "discount": 50, "tags": ["Aventura", "Puzzle", "Indie"] },
+      { "id": 14, "title": "Rhythm Rush", "price": 24.95, "rating": 4.9, "reviews": 200000, "image": "https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"], "discount": 50, "tags": ["Ritmo", "Música", "Ação"] },
+      { "id": 29, "title": "Spellweavers: The Arcane Tournament", "price": 54.95, "rating": 4.5, "reviews": 180000, "image": "https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Deckbuilder", "Roguelike", "Estratégia"] },
+      { "id": 8, "title": "Pixel Pioneers", "price": 34.95, "rating": 4.8, "reviews": 80000, "image": "https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"], "discount": 50, "tags": ["Simulação", "Fazenda", "Indie"] }
     ]
   },
   {
@@ -707,10 +707,10 @@
       "https://images.pexels.com/photos/1290141/pexels-photo-1290141.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 17, "title": "Depths of Insanity", "price": 44.95, "rating": 4.7, "reviews": 35000, "image": "https://images.pexels.com/photos/76974/jellyfish-aquarium-sea-life-underwater-76974.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 6, "title": "Ethereal Echoes", "price": 59.95, "rating": 4.6, "reviews": 80000, "image": "https://images.pexels.com/photos/1887624/pexels-photo-1887624.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "playstation"] },
-      { "id": 11, "title": "Project Chimera", "price": 139.95, "rating": 4.8, "reviews": 40000, "image": "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] },
-      { "id": 12, "title": "Cartel Tycoon", "price": 29.99, "rating": 4.3, "reviews": 12000, "image": "https://images.pexels.com/photos/159844/cellular-prison-heidelberg-prison-cell-159844.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] }
+      { "id": 17, "title": "Depths of Insanity", "price": 44.95, "rating": 4.7, "reviews": 35000, "image": "https://images.pexels.com/photos/76974/jellyfish-aquarium-sea-life-underwater-76974.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Terror", "Aventura", "Lovecraftiano"] },
+      { "id": 6, "title": "Ethereal Echoes", "price": 59.95, "rating": 4.6, "reviews": 80000, "image": "https://images.pexels.com/photos/1887624/pexels-photo-1887624.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "playstation"], "discount": 50, "tags": ["Terror", "Sobrevivência", "Psicológico"] },
+      { "id": 11, "title": "Project Chimera", "price": 139.95, "rating": 4.8, "reviews": 40000, "image": "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 50, "tags": ["Ação", "Aventura", "Furtividade"] },
+      { "id": 12, "title": "Cartel Tycoon", "price": 29.99, "rating": 4.3, "reviews": 12000, "image": "https://images.pexels.com/photos/159844/cellular-prison-heidelberg-prison-cell-159844.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Simulação", "Estratégia", "Gerenciamento"] }
     ]
   },
   {
@@ -741,10 +741,10 @@
       "https://images.pexels.com/photos/4009409/pexels-photo-4009409.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 1, "title": "Cyberworld 2077", "price": 150.00, "rating": 4.8, "reviews": 100000, "image": "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation", "steam"] },
-      { "id": 10, "title": "Arena of Champions", "price": 0.00, "rating": 4.4, "reviews": 200000, "image": "https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"] },
-      { "id": 28, "title": "Mecha Assault: Colossus", "price": 139.99, "rating": 4.6, "reviews": 500000, "image": "https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox"] },
-      { "id": 13, "title": "The Last Bastion", "price": 64.95, "rating": 4.5, "reviews": 150000, "image": "https://images.pexels.com/photos/2440061/pexels-photo-2440061.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "steam"] }
+      { "id": 1, "title": "Cyberworld 2077", "price": 150.00, "rating": 4.8, "reviews": 100000, "image": "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation", "steam"], "discount": 50, "tags": ["Ação", "RPG", "Mundo Aberto"] },
+      { "id": 10, "title": "Arena of Champions", "price": 0.00, "rating": 4.4, "reviews": 200000, "image": "https://images.pexels.com/photos/1171084/pexels-photo-1171084.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"], "discount": 100, "tags": ["Luta", "Ação", "Multiplayer"] },
+      { "id": 28, "title": "Mecha Assault: Colossus", "price": 139.99, "rating": 4.6, "reviews": 500000, "image": "https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox"], "discount": 50, "tags": ["Ação", "Simulação", "Mecha"] },
+      { "id": 13, "title": "The Last Bastion", "price": 64.95, "rating": 4.5, "reviews": 150000, "image": "https://images.pexels.com/photos/2440061/pexels-photo-2440061.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "steam"], "discount": 50, "tags": ["Sobrevivência", "Construção", "Zumbis"] }
     ]
   },
   {
@@ -775,10 +775,10 @@
       "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 3, "title": "Chronicles of Eldoria", "price": 99.99, "rating": 4.7, "reviews": 60000, "image": "https://images.pexels.com/photos/163822/borobudur-temple-destination-indonesia-163822.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 15, "title": "Aetherium Wars", "price": 94.95, "rating": 4.7, "reviews": 30000, "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] },
-      { "id": 19, "title": "Wartorn Lands: Siegecraft", "price": 54.99, "rating": 4.4, "reviews": 25000, "image": "https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 26, "title": "Solara: The Sunstone Saga", "price": 74.99, "rating": 4.7, "reviews": 150000, "image": "https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"] }
+      { "id": 3, "title": "Chronicles of Eldoria", "price": 99.99, "rating": 4.7, "reviews": 60000, "image": "https://images.pexels.com/photos/163822/borobudur-temple-destination-indonesia-163822.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Fantasia", "RPG", "Estratégia"] },
+      { "id": 15, "title": "Aetherium Wars", "price": 94.95, "rating": 4.7, "reviews": 30000, "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 50, "tags": ["JRPG", "Turnos", "Fantasia"] },
+      { "id": 19, "title": "Wartorn Lands: Siegecraft", "price": 54.99, "rating": 4.4, "reviews": 25000, "image": "https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Estratégia", "RTS", "Medieval"] },
+      { "id": 26, "title": "Solara: The Sunstone Saga", "price": 74.99, "rating": 4.7, "reviews": 150000, "image": "https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"], "discount": 50, "tags": ["Aventura", "RPG", "Mundo Aberto"] }
     ]
   },
   {
@@ -809,10 +809,10 @@
       "https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 11, "title": "Project Chimera", "price": 139.95, "rating": 4.8, "reviews": 80000, "image": "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] },
-      { "id": 2, "title": "Starlight Odyssey", "price": 124.95, "rating": 4.9, "reviews": 60000, "image": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"] },
-      { "id": 18, "title": "Pirate's Legacy: Sea of Souls", "price": 114.95, "rating": 4.6, "reviews": 70000, "image": "https://images.pexels.com/photos/390051/pexels-photo-390051.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"] },
-      { "id": 27, "title": "Bloodborne Kart", "price": 149.90, "rating": 5.0, "reviews": 50000, "image": "https://images.pexels.com/photos/103290/pexels-photo-103290.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] }
+      { "id": 11, "title": "Project Chimera", "price": 139.95, "rating": 4.8, "reviews": 80000, "image": "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 50, "tags": ["Ação", "Aventura", "Furtividade"] },
+      { "id": 2, "title": "Starlight Odyssey", "price": 124.95, "rating": 4.9, "reviews": 60000, "image": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"], "discount": 50, "tags": ["Sci-Fi", "RPG", "Exploração"] },
+      { "id": 18, "title": "Pirate's Legacy: Sea of Souls", "price": 114.95, "rating": 4.6, "reviews": 70000, "image": "https://images.pexels.com/photos/390051/pexels-photo-390051.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"], "discount": 50, "tags": ["Aventura", "Mundo Aberto", "Ação"] },
+      { "id": 27, "title": "Bloodborne Kart", "price": 149.90, "rating": 5.0, "reviews": 50000, "image": "https://images.pexels.com/photos/103290/pexels-photo-103290.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 25, "tags": ["Corrida", "Ação", "Paródia"] }
     ]
   },
   {
@@ -843,10 +843,10 @@
       "https://images.pexels.com/photos/159862/art-school-of-athens-raphael-italian-painter-159862.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 12, "title": "Cartel Tycoon", "price": 29.99, "rating": 4.3, "reviews": 5000, "image": "https://images.pexels.com/photos/159844/cellular-prison-heidelberg-prison-cell-159844.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 16, "title": "Cosmo Colony", "price": 39.99, "rating": 4.6, "reviews": 18000, "image": "https://images.pexels.com/photos/220202/pexels-photo-220202.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 8, "title": "Pixel Pioneers", "price": 34.95, "rating": 4.8, "reviews": 120000, "image": "https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"] },
-      { "id": 9, "title": "Voidfall Supremacy", "price": 74.99, "rating": 4.7, "reviews": 110000, "image": "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] }
+      { "id": 12, "title": "Cartel Tycoon", "price": 29.99, "rating": 4.3, "reviews": 5000, "image": "https://images.pexels.com/photos/159844/cellular-prison-heidelberg-prison-cell-159844.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Simulação", "Estratégia", "Gerenciamento"] },
+      { "id": 16, "title": "Cosmo Colony", "price": 39.99, "rating": 4.6, "reviews": 18000, "image": "https://images.pexels.com/photos/220202/pexels-photo-220202.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Simulação", "Construção de Cidades", "Sci-Fi"] },
+      { "id": 8, "title": "Pixel Pioneers", "price": 34.95, "rating": 4.8, "reviews": 120000, "image": "https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"], "discount": 50, "tags": ["Simulação", "Fazenda", "Indie"] },
+      { "id": 9, "title": "Voidfall Supremacy", "price": 74.99, "rating": 4.7, "reviews": 110000, "image": "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Estratégia", "4X", "Sci-Fi"] }
     ]
   },
   {
@@ -877,10 +877,10 @@
       "https://images.pexels.com/photos/2449600/pexels-photo-2449600.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 4, "title": "Veridian Veil", "price": 44.95, "rating": 4.5, "reviews": 100000, "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch",  "steam"] },
-      { "id": 18, "title": "Pirate's Legacy: Sea of Souls", "price": 114.95, "rating": 4.6, "reviews": 1000000, "image": "https://images.pexels.com/photos/390051/pexels-photo-390051.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"] },
-      { "id": 15, "title": "Aetherium Wars", "price": 94.95, "rating": 4.7, "reviews": 15000, "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] },
-      { "id": 3, "title": "Chronicles of Eldoria", "price": 99.99, "rating": 4.7, "reviews": 10000, "image": "https://images.pexels.com/photos/163822/borobudur-temple-destination-indonesia-163822.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] }
+      { "id": 4, "title": "Veridian Veil", "price": 44.95, "rating": 4.5, "reviews": 100000, "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch",  "steam"], "discount": 50, "tags": ["Aventura", "Puzzle", "Indie"] },
+      { "id": 18, "title": "Pirate's Legacy: Sea of Souls", "price": 114.95, "rating": 4.6, "reviews": 1000000, "image": "https://images.pexels.com/photos/390051/pexels-photo-390051.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"], "discount": 50, "tags": ["Aventura", "Mundo Aberto", "Ação"] },
+      { "id": 15, "title": "Aetherium Wars", "price": 94.95, "rating": 4.7, "reviews": 15000, "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 50, "tags": ["JRPG", "Turnos", "Fantasia"] },
+      { "id": 3, "title": "Chronicles of Eldoria", "price": 99.99, "rating": 4.7, "reviews": 10000, "image": "https://images.pexels.com/photos/163822/borobudur-temple-destination-indonesia-163822.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Fantasia", "RPG", "Estratégia"] }
     ]
   },
   {
@@ -911,10 +911,10 @@
       "https://images.pexels.com/photos/2531236/pexels-photo-2531236.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 5, "title": "Asphalt Fury: Tokyo Drift", "price": 89.95, "rating": 4.6, "reviews": 150000, "image": "https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"] },
-      { "id": 14, "title": "Rhythm Rush", "price": 24.95, "rating": 4.9, "reviews": 40000, "image": "https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"] },
-      { "id": 17, "title": "Depths of Insanity", "price": 44.95, "rating": 4.7, "reviews": 120000, "image": "https://images.pexels.com/photos/76974/jellyfish-aquarium-sea-life-underwater-76974.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 24, "title": "Zenith's Fall", "price": 224.99, "rating": 4.9, "reviews": 400000, "image": "https://images.pexels.com/photos/413195/pexels-photo-413195.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"] }
+      { "id": 5, "title": "Asphalt Fury: Tokyo Drift", "price": 89.95, "rating": 4.6, "reviews": 150000, "image": "https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation"], "discount": 50, "tags": ["Corrida", "Ação", "Arcade"] },
+      { "id": 14, "title": "Rhythm Rush", "price": 24.95, "rating": 4.9, "reviews": 40000, "image": "https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"], "discount": 50, "tags": ["Ritmo", "Música", "Ação"] },
+      { "id": 17, "title": "Depths of Insanity", "price": 44.95, "rating": 4.7, "reviews": 120000, "image": "https://images.pexels.com/photos/76974/jellyfish-aquarium-sea-life-underwater-76974.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Terror", "Aventura", "Lovecraftiano"] },
+      { "id": 24, "title": "Zenith's Fall", "price": 224.99, "rating": 4.9, "reviews": 400000, "image": "https://images.pexels.com/photos/413195/pexels-photo-413195.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation"], "discount": 25, "tags": ["Ação", "Aventura", "Exclusivo"] }
     ]
   },
   {
@@ -945,10 +945,10 @@
       "https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 1, "title": "Cyberworld 2077", "price": 150.00, "rating": 4.8, "reviews": 150000, "image": "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation", "steam"] },
-      { "id": 22, "title": "Apex Vanguard", "price": 129.99, "rating": 4.7, "reviews": 8000, "image": "https://images.pexels.com/photos/3782166/pexels-photo-3782166.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"] },
-      { "id": 2, "title": "Starlight Odyssey", "price": 124.95, "rating": 4.9, "reviews": 25000, "image": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"] },
-      { "id": 13, "title": "The Last Bastion", "price": 64.95, "rating": 4.5, "reviews": 12000, "image": "https://images.pexels.com/photos/2440061/pexels-photo-2440061.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "steam"] }
+      { "id": 1, "title": "Cyberworld 2077", "price": 150.00, "rating": 4.8, "reviews": 150000, "image": "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "playstation", "steam"], "discount": 50, "tags": ["Ação", "RPG", "Mundo Aberto"] },
+      { "id": 22, "title": "Apex Vanguard", "price": 129.99, "rating": 4.7, "reviews": 8000, "image": "https://images.pexels.com/photos/3782166/pexels-photo-3782166.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"], "discount": 50, "tags": ["Tiro", "Herói", "Multiplayer"] },
+      { "id": 2, "title": "Starlight Odyssey", "price": 124.95, "rating": 4.9, "reviews": 25000, "image": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["playstation", "xbox"], "discount": 50, "tags": ["Sci-Fi", "RPG", "Exploração"] },
+      { "id": 13, "title": "The Last Bastion", "price": 64.95, "rating": 4.5, "reviews": 12000, "image": "https://images.pexels.com/photos/2440061/pexels-photo-2440061.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["xbox", "steam"], "discount": 50, "tags": ["Sobrevivência", "Construção", "Zumbis"] }
     ]
   },
   {
@@ -979,10 +979,10 @@
       "https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 12, "title": "Cartel Tycoon", "price": 29.99, "rating": 4.3, "reviews": 130000, "image": "https://images.pexels.com/photos/159844/cellular-prison-heidelberg-prison-cell-159844.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"] },
-      { "id": 20, "title": "Robo-Brawl", "price": 39.95, "rating": 4.3, "reviews": 30000, "image": "https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch"] },
-      { "id": 21, "title": "Detective Noir: The Crimson Case", "price": 29.95, "rating": 4.8, "reviews": 80000, "image": "https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"] },
-      { "id": 23, "title": "Kingdomfall Tactics", "price": 44.99, "rating": 4.8, "reviews": 40000, "image": "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"] }
+      { "id": 12, "title": "Cartel Tycoon", "price": 29.99, "rating": 4.3, "reviews": 130000, "image": "https://images.pexels.com/photos/159844/cellular-prison-heidelberg-prison-cell-159844.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam"], "discount": 50, "tags": ["Simulação", "Estratégia", "Gerenciamento"] },
+      { "id": 20, "title": "Robo-Brawl", "price": 39.95, "rating": 4.3, "reviews": 30000, "image": "https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch"], "discount": 50, "tags": ["Ação", "Plataforma", "Roguelite"] },
+      { "id": 21, "title": "Detective Noir: The Crimson Case", "price": 29.95, "rating": 4.8, "reviews": 80000, "image": "https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"], "discount": 50, "tags": ["Aventura", "Point-and-Click", "Mistério"] },
+      { "id": 23, "title": "Kingdomfall Tactics", "price": 44.99, "rating": 4.8, "reviews": 40000, "image": "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["steam", "nintendoSwitch"], "discount": 50, "tags": ["Estratégia", "Turnos", "RPG"] }
     ]
   },
   {
@@ -1013,10 +1013,10 @@
       "https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=600"
     ],
     "relatedGames": [
-      { "id": 8, "title": "Pixel Pioneers", "price": 34.95, "rating": 4.8, "reviews": 50000, "image": "https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"] },
-      { "id": 4, "title": "Veridian Veil", "price": 44.95, "rating": 4.5, "reviews": 10000, "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch",  "steam"] },
-      { "id": 14, "title": "Rhythm Rush", "price": 24.95, "rating": 4.9, "reviews": 5000, "image": "https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"] },
-      { "id": 20, "title": "Robo-Brawl", "price": 39.95, "rating": 4.3, "reviews": 15000, "image": "https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch"] }
+      { "id": 8, "title": "Pixel Pioneers", "price": 34.95, "rating": 4.8, "reviews": 50000, "image": "https://images.pexels.com/photos/258447/pexels-photo-258447.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"], "discount": 50, "tags": ["Simulação", "Fazenda", "Indie"] },
+      { "id": 4, "title": "Veridian Veil", "price": 44.95, "rating": 4.5, "reviews": 10000, "image": "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch",  "steam"], "discount": 50, "tags": ["Aventura", "Puzzle", "Indie"] },
+      { "id": 14, "title": "Rhythm Rush", "price": 24.95, "rating": 4.9, "reviews": 5000, "image": "https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch", "steam"], "discount": 50, "tags": ["Ritmo", "Música", "Ação"] },
+      { "id": 20, "title": "Robo-Brawl", "price": 39.95, "rating": 4.3, "reviews": 15000, "image": "https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg?auto=compress&cs=tinysrgb&w=400", "platforms": ["nintendoSwitch"], "discount": 50, "tags": ["Ação", "Plataforma", "Roguelite"] }
     ]
   }
 ]

@@ -23,11 +23,12 @@
 
 .gameCard {
   width: 16vw;
+  min-width: 300px;
   height: auto;
   background-color: var(--bg-800);
   border: 2px solid transparent;
   border-radius: 10px;
-  overflow: hidden;
+  /* overflow: hidden; // Removido para o selo de desconto poder sair do card */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -45,11 +46,32 @@
   }
 }
 
-.gameImage {
+/* Novo container para a imagem para aplicar o efeito de sombra e controlar o overflow */
+.imageContainer {
+  position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden; /* Garante que a imagem respeite as bordas arredondadas */
+  
+  /* Efeito de sombra interna (de baixo para cima) */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(16, 16, 24, 1) 10%, rgba(16, 16, 24, 0) 100%);
+    pointer-events: none; /* Garante que a sombra não interfira com o mouse */
+  }
+}
+
+.gameImage {
+  width: 100%;
+  height: 100%; /* Modificado para preencher o container */
   object-fit: cover;
-  box-shadow: var(--shadow-xl);
 }
 
 .overlay {
@@ -83,7 +105,7 @@
 
 .platformIcons {
   position: absolute;
-  bottom: 120px;
+  bottom: 160px;
   right: 20px;
   width: auto;
   background: rgba(0, 0, 0, 0.6);
@@ -101,10 +123,12 @@
 }
 
 .gameTitle {
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: bolder;
   color: var(--text-primary);
-  margin-bottom: 0.4rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .ratingInfo {
@@ -133,11 +157,29 @@
   color: #fff;
 }
 
+.gameTags { //! DEIXAR BONITO
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--br-8);
+  color: var(--text-primary);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Estilos modificados para o selo de desconto */
 .discountBadge {
-  font-size: 0.7rem;
+  position: absolute;
+  bottom: -15px;      /* Posiciona para fora do card na vertical */
+  right: 15px;       /* Alinha à direita do card */
+  font-size: 0.8rem;
   font-weight: 700;
-  background-color: #ef4444;
+  background-color: #ef4444; /* Vermelho para destaque */
   color: white;
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  z-index: 2; /* Garante que fique sobre outros elementos */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+  border: 2px solid var(--bg-800); /* Borda da cor do fundo para efeito de recorte */
 }

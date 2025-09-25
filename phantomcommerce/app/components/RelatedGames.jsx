@@ -23,7 +23,11 @@ export default function RelatedGames({ games }) {
 
           return (
             <div key={game.id} className={styles.gameCard}>
-              <img src={game.image} alt={game.title} className={styles.gameImage} />
+              {/* Novo container para a imagem para aplicar o efeito de sombra */}
+              <div className={styles.imageContainer}>
+                <img src={game.image} alt={game.title} className={styles.gameImage} />
+              </div>
+
               <div className={styles.platformIcons}>
                   {game.platforms?.map(platform => (
                     <span key={platform} title={platform.charAt(0).toUpperCase() + platform.slice(1)}>
@@ -51,17 +55,20 @@ export default function RelatedGames({ games }) {
               <div className={styles.cardBody}>
                 <div>
                   <h3 className={styles.gameTitle}>{game.title}</h3>
+                  <div className={styles.priceContainer}>
+                    <p className={styles.gamePrice}>R$ {game.price.toFixed(2)}</p>
+                  </div>
                   <div className={styles.ratingInfo}>
                     <Star size={16} className={styles.starIcon} />
                     <span>{game.rating}</span>
-                    <span className={styles.reviews}>({game.reviews})</span>
+                    <span className={styles.reviews}>({game.reviews})</span>  {/* Usar vocabulário GAMER, substituindo, por exemplo: 1000 por 1k*/}
                   </div>
-                </div>
-                <div className={styles.priceContainer}>
-                  <p className={styles.gamePrice}>R$ {game.price.toFixed(2)}</p>
-                  <span className={styles.discountBadge}>-25%</span>
+                  <span className={styles.gameTags}>{game.tags.join(', ')}</span>
                 </div>
               </div>
+              
+              {/* Selo de desconto movido para fora do cardBody para posicionamento absoluto */}
+              <span className={styles.discountBadge}>-{game.discount}%</span>
             </div>
           );
         })}
