@@ -2,26 +2,38 @@
 
 import { useState } from 'react';
 import { Play, ChevronLeft, ChevronRight, Star, Gamepad2, Monitor, Tv } from 'lucide-react';
+import { FaPlaystation, FaXbox, FaSteam } from "react-icons/fa";
+import { BsNintendoSwitch } from "react-icons/bs";
 import styles from '../styles/HeroSection.module.scss';
 
 // Mapeamento de plataformas para ícones
 const platformIcons = {
-  xbox: <Gamepad2 size={20} />,
-  playstation: <Tv size={20} />, // Usando um ícone diferente para variar
-  steam: <Monitor size={20} />,
+  xbox: <FaXbox size={20} />,
+  playstation: <FaPlaystation size={20} />, // Usando um ícone diferente para variar
+  steam: <FaSteam size={20} />,
+  nintendoSwitch: <BsNintendoSwitch size={20} />,
 };
+
+
 
 export default function HeroSection({ game }) {
   // Define a imagem principal inicial como a miniatura do vídeo
   const [activeImage, setActiveImage] = useState(game.videoThumbnail);
-  
+  const gameDiscount = game.originalPrice - game.discountedPrice;
   // Calcula a porcentagem de desconto
   const discountPercentage = Math.round(((game.originalPrice - game.discountedPrice) / game.originalPrice) * 100);
+
+  
+  const today = new Date();
+  const [day, month, year] = game.releaseDate.split('/');
+  const gameRelease = new Date(`${year}-${month}-${day}T00:00:00`);
+
+  const isReleased = today >= gameRelease;
 
   return (
     <div className={styles.heroWrapper}>
       {/* Banner de fundo com sobreposição */}
-      <div className={styles.banner} style={{ backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(26, 28, 41, 0.8) 70%, rgba(26, 28, 41, 1) 100%), url('${game.bannerImage}')` }}>
+      <div className={styles.banner} style={{ backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(15, 20, 36, 0.8) 70%, rgba(15, 20, 36, 1) 100%), url('${game.bannerImage}')` }}>
         <div className={styles.bannerOverlay}></div>
       </div>
       
@@ -59,7 +71,7 @@ export default function HeroSection({ game }) {
           </div>
 
           <div className={styles.buttonGroup}>
-            <button className={styles.addButton}>Realizar preorder</button>
+            <button className={styles.addButton}>{isReleased ? 'Comprar Agora' : 'Realizar Preorder'}</button>
             <button className={styles.trailerButton}>
               Ver trailer <Play size={16} />
             </button>
@@ -90,16 +102,18 @@ export default function HeroSection({ game }) {
           </div>
 
           <div className={styles.purchaseCard}>
-            <div className={styles.priceInfo} style={{marginBottom: '1rem'}}>
+            <div className={styles.card}>
+            <div className={styles.priceInfo} >
                <span className={styles.discountedPrice}>R$ {game.discountedPrice.toFixed(2)}</span>
                <span className={styles.originalPrice}>R$ {game.originalPrice.toFixed(2)}</span>
             </div>
+            <p style={{color:`green`, fontWeight:`bold`, marginBottom:`12px`}}>Você economiza {gameDiscount.toFixed(2)} reais</p>
             <button className={styles.addButton}>Comprar Agora</button>
-            <p className={styles.gameDescription}>{game.description}</p>
-            <p className={styles.releaseDate}>Lançamento: {game.releaseDate}</p>
-            
+
+            </div>
+
             <div className={styles.requirements}>
-              <div>
+              <div className={styles.card}>
                 <h3 className={styles.reqTitle}>Requisitos Mínimos</h3>
                 <ul className={styles.reqList}>
                   <li><strong>CPU:</strong> <span>{game.systemRequirements.minimum.cpu}</span></li>
@@ -108,7 +122,7 @@ export default function HeroSection({ game }) {
                   <li><strong>Armazenamento:</strong> <span>{game.systemRequirements.minimum.storage}</span></li>
                 </ul>
               </div>
-              <div>
+              <div className={styles.card}>
                 <h3 className={styles.reqTitle}>Requisitos Recomendados</h3>
                 <ul className={styles.reqList}>
                    <li><strong>CPU:</strong> <span>{game.systemRequirements.recommended.cpu}</span></li>

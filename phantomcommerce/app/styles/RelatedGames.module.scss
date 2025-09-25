@@ -1,22 +1,30 @@
 .relatedSection {
-  padding: 2rem 0;
+  width: 95vw;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-800);
+  border-radius: var(--br-16);
 }
 
 .sectionTitle {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 1.5rem;
+  padding: 1.5rem;
 }
 
 .gamesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
+  justify-items: center;
 }
 
 .gameCard {
-  background-color: var(--background-card-dark);
+  width: 16vw;
+  height: auto;
+  background-color: var(--bg-800);
   border: 2px solid transparent;
   border-radius: 10px;
   overflow: hidden;
@@ -24,11 +32,11 @@
   flex-direction: column;
   position: relative;
   transition: border-color 0.3s, transform 0.3s;
-  border: 1px solid var(--accent-blue);
+  border: 1px solid var(--primary-color-600);
   margin-bottom: 2rem;
 
   &:hover {
-    border-color: var(--accent-blue);
+    border-color: var(--primary-color-600);
     transform: translateY(-4px);
 
     .overlay {
@@ -41,6 +49,7 @@
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  box-shadow: var(--shadow-xl-inner) !important;
 }
 
 .overlay {
