@@ -1,92 +1,81 @@
+// Estilos para o componente Header
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 1000;
+  width: 100%;
+  z-index: 30;
   padding: 1rem 0;
-  transition: all 0.3s ease;
-  
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
+  background-color: transparent;
+  backdrop-filter: blur(0);
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, padding 0.3s ease;
+  border-bottom: 1px solid transparent;
 
-.header.scrolled {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  &.scrolled {
+    background-color: rgba(15, 20, 36, 0.8); // Usa a cor de fundo do seu tema com opacidade
+    backdrop-filter: blur(10px);
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
 }
 
 .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem; /* dá mais espaço entre logo, search e nav */
-  width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  position: relative;
 }
 
-/* --- Logo --- */
+// Secção do Logo
 .logoSection {
-  flex: 0 0 auto;
+  flex-shrink: 0;
+  z-index: 102; // Garante que o logo fique acima do menu móvel
 }
 
 .logoLink {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
+  color: var(--txt-50);
   text-decoration: none;
-  color: #ffffff;
-  transition: opacity 0.2s ease;
-}
-
-.logoLink:hover {
-  opacity: 0.8;
+  font-weight: bold;
 }
 
 .logoIcon {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 0.75rem;
+  height: 36px;
+  width: auto;
 }
 
 .logoText {
-  font-weight: 700;
   font-size: 1.25rem;
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .logoText {
-    display: block;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  @media (max-width: 768px) {
+    display: none;
   }
 }
 
-/* --- Search Section --- */
+// Secção de Pesquisa
 .searchSection {
-  flex: 1;
+  flex-grow: 1;
   display: flex;
-  justify-content: center; /* centraliza */
+  justify-content: center;
+  padding: 0 2rem;
+  @media (max-width: 992px) {
+    display: none;
+  }
 }
 
 .searchForm {
   width: 100%;
-  max-width: 500px; /* limita largura */
+  max-width: 500px;
 }
 
 .searchWrapper {
   position: relative;
-  width: 100%;
 }
 
 .searchIcon {
@@ -94,229 +83,175 @@
   left: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #c4c4dd;
-  pointer-events: none;
+  color: var(--txt-500);
 }
 
 .searchInput {
   width: 100%;
-  padding: 0.875rem 1rem 0.875rem 3rem;
-  border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.6rem 1rem 0.6rem 3rem;
+  color: var(--txt-50);
   transition: all 0.2s ease;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+
+  &::placeholder {
+    color: var(--txt-500);
+  }
+
+  &:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-color-600);
+    box-shadow: 0 0 0 2px var(--primary-color-600);
+  }
 }
 
-.searchInput::placeholder {
-  color: #c4c4dd;
-}
-
-.searchInput:focus {
-  outline: none;
-  border-color: #5865f2;
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.3);
-}
-
-/* --- Nav Section --- */
+// Secção de Navegação e Ações
 .navSection {
-  flex: 0 0 auto;
   display: flex;
   align-items: center;
-  gap: 1.5rem; /* espaçamento maior */
+  gap: 1.5rem;
 }
 
 .desktopNav {
-  display: none;
-  margin-right: 1rem;
-}
-
-@media (min-width: 768px) {
-  .desktopNav {
-    display: flex;
-    gap: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  @media (max-width: 992px) { // Alterado de 768px para 992px
+    display: none;
   }
 }
 
 .navLink {
-  color: #c4c4dd;
+  color: var(--txt-500);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
+  &:hover {
+    color: var(--txt-50);
+  }
 }
 
-.navLink:hover {
-  color: #ffffff;
-}
-
-/* --- Action Buttons --- */
 .actionButtons {
   display: flex;
   align-items: center;
-  gap: 1rem; /* aumenta espaço */
+  gap: 0.5rem;
 }
 
 .iconButton {
   position: relative;
   background: none;
   border: none;
-  color: #c4c4dd;
-  padding: 0.5rem;
-  border-radius: 8px;
+  color: var(--txt-500);
   cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
   transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.iconButton:hover {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
+  &:hover {
+    color: var(--txt-50);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
 
 .badge {
   position: absolute;
-  top: -5px;
-  right: -5px;
-  background: #5865f2;
-  color: white;
-  font-size: 0.75rem;
-  font-weight: 700;
+  top: 0;
+  right: 0;
+  background-color: var(--primary-color-400);
+  color: var(--white);
   border-radius: 50%;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  font-weight: bold;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  border: 2px solid var(--bg-900);
 }
 
 .userButton {
-  display: none;
-  align-items: center;
-  gap: 0.5rem;
-  background: #5865f2;
-  color: white;
-  border: none;
-  padding: 0.625rem 1rem;
-  border-radius: 8px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.userButton:hover {
-  background: #4752c4;
-}
-
-@media (min-width: 768px) {
-  .userButton {
-    display: flex;
-  }
-}
-
-.mobileMenuButton {
-  background: none;
-  border: none;
-  color: #c4c4dd;
-  padding: 0.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.mobileMenuButton:hover {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-@media (min-width: 768px) {
-  .mobileMenuButton {
+  gap: 0.5rem;
+  background-color: var(--primary-color-600);
+  color: var(--txt-50);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  &:hover {
+    background-color: var(--primary-color-700);
+  }
+  @media (max-width: 992px) { // Alterado de 768px para 992px
     display: none;
   }
 }
 
-/* --- Mobile Menu --- */
-.mobileMenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem 1.5rem;
-  transform: translateY(-10px);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--txt-50);
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 101;
+  @media (max-width: 992px) { // Alterado de 768px para 992px
+    display: block;
+  }
 }
 
-.mobileMenu.mobileMenuOpen {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
+// Menu Móvel
+.mobileMenu {
+  position: fixed; // Alterado para 'fixed'
+  top: 0;
+  left: -100%; // Começa fora da tela
+  width: 100%;
+  height: 100vh; // Ocupa a tela inteira
+  background-color: var(--bg-900);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.4s ease-out; // Anima a propriedade 'left'
+  padding: 2rem;
+  z-index: 100; // Fica abaixo do botão de fechar e do logo
+}
+
+.mobileMenuOpen {
+  left: 0; // Move para dentro da tela
 }
 
 .mobileNav {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem; // Aumentado o espaçamento
+  text-align: center;
 }
 
 .mobileNavLink {
-  color: #c4c4dd;
+  color: var(--txt-50);
+  font-size: 1.5rem; // Aumentado o tamanho da fonte
   text-decoration: none;
-  font-weight: 500;
-  padding: 0.75rem 0;
-  transition: color 0.2s ease;
-}
-
-.mobileNavLink:hover {
-  color: #ffffff;
+  padding: 0.5rem 0;
 }
 
 .mobileUserButton {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: #5865f2;
-  color: white;
+  background-color: var(--primary-color-600);
+  color: var(--txt-50);
   border: none;
-  padding: 0.875rem 1rem;
+  padding: 0.75rem 1.5rem; // Aumentado o padding
   border-radius: 8px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  margin-top: 1rem;
   justify-content: center;
+  margin-top: 2rem; // Aumentado a margem
+  width: auto;
+  font-size: 1.2rem;
 }
 
-.mobileUserButton:hover {
-  background: #4752c4;
-}
-
-/* --- Responsividade --- */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 1rem;
-    gap: 1rem;
-  }
-
-  .searchForm {
-    max-width: 100%;
-  }
-
-  .searchInput {
-    padding: 0.75rem 1rem 0.75rem 2.75rem;
-    font-size: 0.9rem;
-  }
-}
