@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./styles/globals.scss";
+import { SearchProvider } from './contexts/SearchContext';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,16 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "PhantomCommerce - Loja de Jogos",
-  description: "A melhor loja de jogos digitais com os melhores preços e ofertas",
+  title: 'Phantom Commerce',
+  description: 'Sua loja de jogos digitais',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+    <html lang="pt-br">
+      <body>
+        {/* Envolvendo a aplicação com o SearchProvider */}
+        <SearchProvider>
+          {children}
+        </SearchProvider>
       </body>
     </html>
   );
 }
+

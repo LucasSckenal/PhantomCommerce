@@ -1,6 +1,5 @@
 // Estilos para o componente Header
 
-
 .header {
   position: fixed;
   top: 0;
@@ -22,7 +21,7 @@
 }
 
 .container {
-  max-width: 1400px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
@@ -38,103 +37,171 @@
 .logoLink {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  color: var(--txt-50);
   text-decoration: none;
-  font-weight: bold;
 }
 
-.logoIcon {
-  height: 36px;
+.logo {
+  height: 3rem;
   width: auto;
 }
 
-.logoText {
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-
+// Seção de Busca
 .searchSection {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  padding: 0 2rem;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
   @media (max-width: 992px) {
-    display: none;
+    flex-grow: 1; // Permite que a busca cresça no mobile se necessário
+    padding: 0 1rem;
   }
 }
 
 .searchForm {
   width: 100%;
-  max-width: 500px;
 }
 
-.searchWrapper {
-  position: relative;
-}
-
-.searchIcon {
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--txt-50);
-}
-
-.searchInput {
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 0.6rem 1rem 0.6rem 3rem;
-  color: var(--txt-50);
-  transition: all 0.2s ease;
-
-  &::placeholder {
-    color: var(--txt-500);
-  }
-
-  &:focus {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: var(--primary-color-600);
-    box-shadow: 0 0 0 2px var(--primary-color-600);
-  }
-}
-
-.navSection {
+.rightItems {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-}
-
-.desktopNav {
-  display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   @media (max-width: 992px) {
     display: none;
   }
 }
 
+// Navegação Principal
+.mainNav {
+  display: flex;
+  gap: 1.5rem;
+}
+
 .navLink {
-  color: var(--txt-50);
   text-decoration: none;
-  font-weight: 500;
+  color: var(--txt-50); // Tom mais claro para melhor contraste e acessibilidade
+  font-weight: 600;
+  font-size: 0.9rem;
+  position: relative;
   transition: color 0.2s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color-400);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+
   &:hover {
     color: var(--primary-color-400);
-    text-decoration: underline;
+    &::after {
+      transform: scaleX(1);
+    }
   }
 }
 
-.actionButtons {
+.searchWrapper {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.65rem 1rem 0.65rem 2.5rem; 
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: var(--bg-800);
+  color: var(--txt-50);
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  
+  &:focus {
+    outline: none;
+    border-color: var(--primary-color-400);
+    background-color: var(--bg-900);
+  }
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.8rem;
+  color: var(--txt-500);
+  pointer-events: none; 
+}
+
+.searchResultsContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-800);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 50;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+}
+
+.searchResultsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.searchResultItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--txt-50);
+  transition: background-color 0.2s ease;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.resultImageContainer {
+  width: 100px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--bg-900);
+}
+
+.resultImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resultTitle {
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.userActions {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.desktopActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .iconButton {
@@ -144,11 +211,9 @@
   color: var(--txt-50);
   cursor: pointer;
   padding: 0.5rem;
-  border-radius: 50%;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
   &:hover {
     color: var(--primary-color-400);
-    background-color: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -156,17 +221,16 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--primary-color-400);
-  color: var(--white);
+  background-color: var(--primary-color-600);
+  color: var(--bg-50);
   border-radius: 50%;
   width: 18px;
   height: 18px;
-  font-size: 10px;
+  font-size: 0.7rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid var(--bg-900);
 }
 
 .userButton {
@@ -181,28 +245,48 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  text-decoration: none;
   &:hover {
     background-color: var(--primary-color-700);
   }
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.userAvatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  object-fit: cover;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+    border-color: var(--primary-color-400);
+  }
+}
+
+.mobileMenuToggle {
+  display: none;
   @media (max-width: 992px) { 
-    display: none;
+    display: block;
   }
 }
 
 .mobileMenuButton {
-  display: none;
   background: none;
   border: none;
   color: var(--txt-50);
   cursor: pointer;
   padding: 0.5rem;
   z-index: 101;
-  @media (max-width: 992px) { 
-    display: block;
-  }
 }
 
-// Menu Móvel
 .mobileMenu {
   position: fixed;
   top: 0;
@@ -215,32 +299,31 @@
   justify-content: center;
   align-items: center;
   transition: left 0.4s ease-out;
-  padding: 2rem;
-  z-index: 100; 
+  z-index: 100;
 }
 
 .mobileMenuOpen {
-  left: 0; 
+  left: 0;
 }
 
 .mobileNav {
   display: flex;
   flex-direction: column;
-  gap: 2rem; 
-  text-align: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .mobileNavLink {
+  text-decoration: none;
   color: var(--txt-50);
   font-size: 1.5rem;
-  text-decoration: none;
-  padding: 0.5rem 0;
+  font-weight: bold;
 }
 
 .mobileUserButton {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   background-color: var(--primary-color-600);
   color: var(--txt-50);
   border: none;
@@ -248,9 +331,13 @@
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  justify-content: center;
-  margin-top: 2rem; 
-  width: auto;
-  font-size: 1.2rem;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+
+  .userAvatar {
+    width: 32px;
+    height: 32px;
+  }
 }
 
