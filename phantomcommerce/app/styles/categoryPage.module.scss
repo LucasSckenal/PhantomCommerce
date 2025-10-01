@@ -50,6 +50,19 @@
     background-color: var(--primary-color-400);
     color: var(--txt-50);
   }
+
+    &:hover:not(:disabled) {
+    background-color: var(--primary-color-400);
+    color: var(--txt-50);
+  }
+
+  /* Estilo do botão desabilitado corrigido */
+  &:disabled {
+    border-color: var(--btn-disable);
+    background-color: transparent;
+    color: var(--btn-disable);
+    cursor: not-allowed;
+  }
 }
 
 .filterSection {
@@ -135,23 +148,41 @@
   border-radius: var(--br-8);
   border: 1px solid var(--txt-700);
 
-  select {
-  background: var(--bg-800);
-  color: var(--txt-50);
-  border: none;
-  border-radius: var(--br-4);
-  cursor: pointer;
+    .sortIcon {
+        color: var(--primary-color-400);
+        transition: transform var(--transition-normal);
 
-  option {
-    background: var(--bg-800);
-    color: var(--txt-50);
-  }
-}
+        &:not(.inactive) {
+            cursor: pointer;
+        }
+    }
+
+    .ascending {
+        transform: rotate(180deg);
+    }
+
+    .inactive {
+        color: var(--txt-700);
+        cursor: default;
+    }
+
+    select {
+        background: var(--bg-800);
+        color: var(--txt-50);
+        border: none;
+        border-radius: var(--br-4);
+        cursor: pointer;
+
+    option {
+        background: var(--bg-800);
+        color: var(--txt-50);
+    }
+    }
 
 
-  svg {
-    color: var(--primary-color-400);
-  }
+    svg {
+        color: var(--primary-color-400);
+    }
 }
 
 .gamesGrid {

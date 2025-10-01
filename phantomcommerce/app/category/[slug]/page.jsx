@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect, useMemo } from 'react';
-import { useParams } from 'next/navigation';
+import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { Star, ArrowUpDown, Tag, Gamepad2, X } from 'lucide-react';
+import { Star, ArrowUpDown, Tag, X } from 'lucide-react';
 import { FaPlaystation, FaXbox, FaSteam } from "react-icons/fa";
 import { BsNintendoSwitch } from "react-icons/bs";
 import gameData from '../../data/gameData.json';
@@ -20,26 +20,100 @@ const platformIcons = {
 const allTags = [...new Set(gameData.flatMap(game => game.tags))];
 const allPlatforms = [...new Set(gameData.flatMap(game => game.platforms))];
 
-export default function CategoryPage() {
+// Componente precisa ser envolvido por <Suspense> na page pai ou layout
+function CategoryPageComponent() {
+  const router = useRouter();
   const params = useParams();
+  const searchParams = useSearchParams();
   const slug = params.slug;
 
-  const [categoryName, setCategoryName] = useState('');
-  const [sortOrder, setSortOrder] = useState('rating');
-  const [selectedTags, setSelectedTags] = useState([]);
-  const [selectedPlatforms, setSelectedPlatforms] = useState([]);
-  const [priceRange, setPriceRange] = useState({ min: '', max: '' });
+  const [isMounted, setIsMounted] = useState(false);
   
+  const getInitialState = useCallback(() => {
+    const sort = searchParams.get('sort') || 'rating';
+    const tags = searchParams.get('tags')?.split(',').filter(Boolean) || [];
+    const platforms = searchParams.get('platforms')?.split(',').filter(Boolean) || [];
+    const minPrice = searchParams.get('minPrice') || '';
+    const maxPrice = searchParams.get('maxPrice') || '';
+    
+    const isAllCategory = slug.toLowerCase() === 'all';
+    const baseTags = isAllCategory ? [] : [decodeURIComponent(slug).toLowerCase()];
+
+    return {
+      sortOrder: sort,
+      selectedTags: [...new Set([...baseTags, ...tags])],
+      selectedPlatforms: platforms,
+      priceRange: { min: minPrice, max: maxPrice }
+    };
+  }, [searchParams, slug]);
+
+  const [sortOrder, setSortOrder] = useState(getInitialState().sortOrder);
+  const [selectedTags, setSelectedTags] = useState(getInitialState().selectedTags);
+  const [selectedPlatforms, setSelectedPlatforms] = useState(getInitialState().selectedPlatforms);
+  const [priceRange, setPriceRange] = useState(getInitialState().priceRange);
+
   useEffect(() => {
-    if (slug) {
-      const isAllCategory = slug.toLowerCase() === 'all';
-      const decodedSlug = decodeURIComponent(slug);
-      setCategoryName(isAllCategory ? 'Todos os Jogos' : decodedSlug.charAt(0).toUpperCase() + decodedSlug.slice(1));
-      setSelectedTags(isAllCategory ? [] : [decodedSlug.toLowerCase()]);
-      setSelectedPlatforms([]);
-      setPriceRange({ min: '', max: '' });
+    const initialState = getInitialState();
+    setSortOrder(initialState.sortOrder);
+    setSelectedTags(initialState.selectedTags);
+    setSelectedPlatforms(initialState.selectedPlatforms);
+    setPriceRange(initialState.priceRange);
+  }, [slug, searchParams, getInitialState]);
+
+  useEffect(() => {
+    if (!isMounted) {
+      setIsMounted(true);
+      return;
     }
-  }, [slug]);
+
+    const query = new URLSearchParams();
+    
+    const isAllCategory = slug.toLowerCase() === 'all';
+    const baseTag = isAllCategory ? '' : decodeURIComponent(slug).toLowerCase();
+    const additionalTags = selectedTags.filter(t => t !== baseTag);
+
+    if (additionalTags.length > 0) query.set('tags', additionalTags.join(','));
+    if (selectedPlatforms.length > 0) query.set('platforms', selectedPlatforms.join(','));
+    if (priceRange.min) query.set('minPrice', priceRange.min);
+    if (priceRange.max) query.set('maxPrice', priceRange.max);
+    if (sortOrder !== 'rating') query.set('sort', sortOrder);
+
+    const queryString = query.toString();
+    const newPath = `/category/${slug}${queryString ? `?${queryString}` : ''}`;
+    
+    router.push(newPath, { scroll: false });
+
+  }, [selectedTags, selectedPlatforms, priceRange, sortOrder, isMounted, router, slug]);
+
+  const dynamicPageTitle = useMemo(() => {
+      const capitalize = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : '';
+      const isAllCategory = slug.toLowerCase() === 'all';
+      
+      const tagsToDisplay = selectedTags.map(capitalize);
+      const platformsToDisplay = selectedPlatforms.map(capitalize);
+
+      if (tagsToDisplay.length === 0 && platformsToDisplay.length === 0) {
+          return isAllCategory ? 'Todos os Jogos' : capitalize(decodeURIComponent(slug));
+      }
+
+      let title = "Jogos";
+      if (tagsToDisplay.length > 0) {
+          title += ` de ${tagsToDisplay.join(', ')}`;
+      }
+      if (platformsToDisplay.length > 0) {
+          title += ` para ${platformsToDisplay.join(', ')}`;
+      }
+
+      return title;
+  }, [selectedTags, selectedPlatforms, slug]);
+
+  const handleSortIconClick = () => {
+    if (sortOrder.endsWith('-asc')) {
+      setSortOrder(sortOrder.replace('-asc', '-desc'));
+    } else if (sortOrder.endsWith('-desc')) {
+      setSortOrder(sortOrder.replace('-desc', '-asc'));
+    }
+  };
 
   const handleTagChange = (tag) => {
     const lowerCaseTag = tag.toLowerCase();
@@ -57,24 +131,48 @@ export default function CategoryPage() {
   };
 
   const clearFilters = () => {
-    setSelectedTags(slug.toLowerCase() === 'all' ? [] : [slug.toLowerCase()]);
+    const baseTags = slug.toLowerCase() === 'all' ? [] : [decodeURIComponent(slug).toLowerCase()];
+    setSelectedTags(baseTags);
     setSelectedPlatforms([]);
     setPriceRange({ min: '', max: '' });
-  }
+    setSortOrder('rating');
+  };
+
+  const { activeFilterCount, isPristine } = useMemo(() => {
+    const isAllCategory = slug.toLowerCase() === 'all';
+    const baseTag = isAllCategory ? '' : decodeURIComponent(slug).toLowerCase();
+    const additionalTags = selectedTags.filter(t => t !== baseTag);
+
+    let count = additionalTags.length + selectedPlatforms.length;
+    if (priceRange.min) count++;
+    if (priceRange.max) count++;
+    if (sortOrder !== 'rating') count++;
+    
+    const pristine = count === 0;
+
+    return { activeFilterCount: count, isPristine: pristine };
+  }, [selectedTags, selectedPlatforms, priceRange, sortOrder, slug]);
 
   const filteredAndSortedGames = useMemo(() => {
-    let filteredGames = [...gameData];
+    let gamesToFilter = [...gameData];
+    
     if (selectedTags.length > 0) {
-      filteredGames = filteredGames.filter(game => game.tags.some(tag => selectedTags.includes(tag.toLowerCase())));
+      gamesToFilter = gamesToFilter.filter(game => 
+        selectedTags.every(st => game.tags.map(t => t.toLowerCase()).includes(st))
+      );
     }
+
     if (selectedPlatforms.length > 0) {
-      filteredGames = filteredGames.filter(game => game.platforms.some(platform => selectedPlatforms.includes(platform.toLowerCase())));
+      gamesToFilter = gamesToFilter.filter(game =>
+        selectedPlatforms.every(sp => game.platforms.map(p => p.toLowerCase()).includes(sp))
+      );
     }
+
     const minPrice = parseFloat(priceRange.min) || 0;
     const maxPrice = parseFloat(priceRange.max) || Infinity;
-    filteredGames = filteredGames.filter(game => game.discountedPrice >= minPrice && game.discountedPrice <= maxPrice);
+    gamesToFilter = gamesToFilter.filter(game => game.discountedPrice >= minPrice && game.discountedPrice <= maxPrice);
 
-    return filteredGames.sort((a, b) => {
+    return gamesToFilter.sort((a, b) => {
       switch (sortOrder) {
         case 'price-asc': return a.discountedPrice - b.discountedPrice;
         case 'price-desc': return b.discountedPrice - a.discountedPrice;
@@ -90,14 +188,22 @@ export default function CategoryPage() {
     return Math.round(((original - discounted) / original) * 100);
   };
 
+  if (!isMounted) {
+      return null;
+  }
+
   return (
     <div className={styles.pageWrapper}>
       <Header />
       <div className={styles.categoryLayout}>
         <aside className={styles.sidebar}>
           <div className={styles.filterHeader}>
-            <h2>Filtros</h2>
-            <button onClick={clearFilters} className={styles.clearButton}><X size={16}/> Limpar</button>
+            <h2>Filtros {activeFilterCount > 0 && `(${activeFilterCount})`}</h2>
+            {!isPristine && (
+              <button onClick={clearFilters} className={styles.clearButton}>
+                <X size={16}/> Limpar
+              </button>
+            )}
           </div>
           <div className={styles.filterSection}>
             <h3>Gêneros</h3>
@@ -129,11 +235,15 @@ export default function CategoryPage() {
         <div className={styles.mainContent}>
           <header className={styles.categoryHeader}>
             <div>
-              <h1>{categoryName}</h1>
+              <h1>{dynamicPageTitle}</h1>
               <p>Mostrando {filteredAndSortedGames.length} resultados</p>
             </div>
             <div className={styles.sortContainer}>
-              <ArrowUpDown size={20} />
+              <ArrowUpDown 
+                size={20} 
+                className={`${styles.sortIcon} ${sortOrder.endsWith('-asc') ? styles.ascending : ''} ${sortOrder === 'rating' ? styles.inactive : ''}`}
+                onClick={handleSortIconClick}
+              />
               <select onChange={(e) => setSortOrder(e.target.value)} value={sortOrder}>
                 <option value="rating">Melhor Avaliação</option>
                 <option value="price-asc">Preço: Menor para Maior</option>
@@ -188,5 +298,11 @@ export default function CategoryPage() {
       </div>
     </div>
   );
+}
+
+export default function CategoryPage() {
+    return (
+        <CategoryPageComponent />
+    );
 }
 
