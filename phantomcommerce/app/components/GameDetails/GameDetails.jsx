@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '../styles/GameDetails.module.scss';
+import styles from './GameDetails.module.scss';
 
 export default function GameDetails({ game }) {
   return (

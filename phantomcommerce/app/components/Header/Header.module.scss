@@ -1,5 +1,6 @@
 // Estilos para o componente Header
 
+
 .header {
   position: fixed;
   top: 0;
@@ -13,7 +14,7 @@
   border-bottom: 1px solid transparent;
 
   &.scrolled {
-    background-color: rgba(15, 20, 36, 0.8); // Usa a cor de fundo do seu tema com opacidade
+    background-color: rgba(15, 20, 36, 0.8); 
     backdrop-filter: blur(10px);
     padding: 0.75rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -29,10 +30,9 @@
   align-items: center;
 }
 
-// Secção do Logo
 .logoSection {
   flex-shrink: 0;
-  z-index: 102; // Garante que o logo fique acima do menu móvel
+  z-index: 102; 
 }
 
 .logoLink {
@@ -58,7 +58,6 @@
   }
 }
 
-// Secção de Pesquisa
 .searchSection {
   flex-grow: 1;
   display: flex;
@@ -83,7 +82,7 @@
   left: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--txt-500);
+  color: var(--txt-50);
 }
 
 .searchInput {
@@ -107,7 +106,6 @@
   }
 }
 
-// Secção de Navegação e Ações
 .navSection {
   display: flex;
   align-items: center;
@@ -117,18 +115,19 @@
 .desktopNav {
   display: flex;
   gap: 1.5rem;
-  @media (max-width: 992px) { // Alterado de 768px para 992px
+  @media (max-width: 992px) {
     display: none;
   }
 }
 
 .navLink {
-  color: var(--txt-500);
+  color: var(--txt-50);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
   &:hover {
-    color: var(--txt-50);
+    color: var(--primary-color-400);
+    text-decoration: underline;
   }
 }
 
@@ -142,13 +141,13 @@
   position: relative;
   background: none;
   border: none;
-  color: var(--txt-500);
+  color: var(--txt-50);
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 50%;
   transition: all 0.2s ease;
   &:hover {
-    color: var(--txt-50);
+    color: var(--primary-color-400);
     background-color: rgba(255, 255, 255, 0.1);
   }
 }
@@ -185,7 +184,7 @@
   &:hover {
     background-color: var(--primary-color-700);
   }
-  @media (max-width: 992px) { // Alterado de 768px para 992px
+  @media (max-width: 992px) { 
     display: none;
   }
 }
@@ -198,42 +197,42 @@
   cursor: pointer;
   padding: 0.5rem;
   z-index: 101;
-  @media (max-width: 992px) { // Alterado de 768px para 992px
+  @media (max-width: 992px) { 
     display: block;
   }
 }
 
 // Menu Móvel
 .mobileMenu {
-  position: fixed; // Alterado para 'fixed'
+  position: fixed;
   top: 0;
-  left: -100%; // Começa fora da tela
+  left: -100%;
   width: 100%;
-  height: 100vh; // Ocupa a tela inteira
+  height: 100vh; 
   background-color: var(--bg-900);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: left 0.4s ease-out; // Anima a propriedade 'left'
+  transition: left 0.4s ease-out;
   padding: 2rem;
-  z-index: 100; // Fica abaixo do botão de fechar e do logo
+  z-index: 100; 
 }
 
 .mobileMenuOpen {
-  left: 0; // Move para dentro da tela
+  left: 0; 
 }
 
 .mobileNav {
   display: flex;
   flex-direction: column;
-  gap: 2rem; // Aumentado o espaçamento
+  gap: 2rem; 
   text-align: center;
 }
 
 .mobileNavLink {
   color: var(--txt-50);
-  font-size: 1.5rem; // Aumentado o tamanho da fonte
+  font-size: 1.5rem;
   text-decoration: none;
   padding: 0.5rem 0;
 }
@@ -245,12 +244,12 @@
   background-color: var(--primary-color-600);
   color: var(--txt-50);
   border: none;
-  padding: 0.75rem 1.5rem; // Aumentado o padding
+  padding: 0.75rem 1.5rem;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   justify-content: center;
-  margin-top: 2rem; // Aumentado a margem
+  margin-top: 2rem; 
   width: auto;
   font-size: 1.2rem;
 }

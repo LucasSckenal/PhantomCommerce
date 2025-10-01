@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { Trash2, ShoppingCart, X } from "lucide-react";
-import styles from "../styles/CartModal.module.scss";
+import styles from "./CartModal.module.scss";
 
 // --- Modal ---
 const CartModal = ({
