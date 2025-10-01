@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Play, ChevronLeft, ChevronRight, Star, Gamepad2, Monitor, Tv } from 'lucide-react';
 import { FaPlaystation, FaXbox, FaSteam } from "react-icons/fa";
 import { BsNintendoSwitch } from "react-icons/bs";
-import styles from '../styles/HeroSection.module.scss';
+import styles from './HeroSection.module.scss';
 
 // Mapeamento de plataformas para ícones
 const platformIcons = {

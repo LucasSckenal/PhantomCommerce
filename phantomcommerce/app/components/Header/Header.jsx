@@ -2,10 +2,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Search, ShoppingCart, Bell, User, Menu, X } from "lucide-react";
-import styles from "../styles/Header.module.scss";
-import CartModal from "./CartModal"; // 1. Importar o componente do Modal
+import styles from "./Header.module.scss";
+import CartModal from "../CartModal/CartModal"; 
 
-// Dados iniciais para o carrinho (pode vir de uma API ou contexto)
 const initialCartData = [
     { id: 1, name: 'Starlight Odyssey', edition: 'Edição Padrão', price: 124.95, oldPrice: 249.90, image: 'https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
     { id: 2, name: 'Cybernetic Revolt', edition: 'Edição Deluxe', price: 189.90, oldPrice: null, image: 'https://placehold.co/80x100/1a202c/a78bfa?text=Jogo+2' },
@@ -24,7 +23,6 @@ const Header = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // 2. Adicionar estados para o carrinho
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState(initialCartData);
 
@@ -39,7 +37,6 @@ const Header = () => {
     console.log("Buscar por:", searchQuery);
   };
 
-  // 3. Função para remover itens do carrinho
   const handleRemoveItem = (itemId) => {
       setCartItems(prevItems => prevItems.filter(item => item.id !== itemId));
   };

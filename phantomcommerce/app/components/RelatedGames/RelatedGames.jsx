@@ -1,9 +1,9 @@
-import gameData from '../data/gameData.json';
+import gameData from '../../data/gameData.json';
 import Link from 'next/link';
 import { Star } from 'lucide-react';
 import { FaPlaystation, FaXbox, FaSteam } from "react-icons/fa";
 import { BsNintendoSwitch } from "react-icons/bs";
-import styles from '../styles/RelatedGames.module.scss';
+import styles from './RelatedGames.module.scss';
 
 // Mapeamento de plataformas para ícones
 const platformIcons = {
