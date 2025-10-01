@@ -3,49 +3,50 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #0a0f1c;
-  padding: 20px; // garante espaçamento em telas pequenas
+  background-color: var(--bg-800);
+  padding: 20px; 
 }
 
 .box {
   text-align: center;
-  background: #11182b;
+  background: var(--bg-900);
   padding: 40px;
   border-radius: 12px;
   max-width: 400px;
-  width: 100%; // ocupa a largura disponível sem estourar
+  width: 100%; 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 
   h1 {
     font-size: 6rem;
     margin: 0;
-    color: #fff;
+    color: var(--txt-50);
   }
 
   h2 {
     font-size: 2rem;
     margin: 10px 0;
-    color: #ffffffcc;
+    color: var(--txt-50);
   }
 
   p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    color: #aaaaaa;
+    color: var(--txt-500);
   }
 
   .goBack {
     display: inline-block;
-    background: #2563eb; // azul vibrante
-    color: #fff;
+    background: var(--btn-500); 
+    color: var(--txt-50);
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease;
+    cursor: pointer;
 
     &:hover {
-      background: #1d4ed8;
+      background: var(--btn-400);
     }
   }
 }
