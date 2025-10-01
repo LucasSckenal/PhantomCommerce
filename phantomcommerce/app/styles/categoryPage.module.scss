@@ -1,7 +1,5 @@
 /* CategoryPage.module.scss */
 
-.pageWrapper {}
-
 .categoryLayout {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -89,7 +87,6 @@
     color: var(--txt-50);
     font-size: 1rem;
     outline: none;
-    -moz-appearance: textfield;
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
       -webkit-appearance: none;
@@ -108,7 +105,7 @@
 .categoryHeader {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 2rem;
   flex-wrap: wrap;
   gap: 1rem;
@@ -119,9 +116,7 @@
     font-size: 2.5rem;
     font-weight: 700;
     margin: 0;
-    background: -webkit-linear-gradient(45deg, var(--primary-color-300), var(--primary-color-400));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--txt-50);
   }
 
   p {
@@ -141,17 +136,18 @@
   border: 1px solid var(--txt-700);
 
   select {
-    background: transparent;
-    border: none;
+  background: var(--bg-800);
+  color: var(--txt-50);
+  border: none;
+  border-radius: var(--br-4);
+  cursor: pointer;
+
+  option {
+    background: var(--bg-800);
     color: var(--txt-50);
-    font-size: 1rem;
-    cursor: pointer;
-    outline: none;
-    option {
-      background: var(--bg-800);
-      color: var(--txt-50);
-    }
   }
+}
+
 
   svg {
     color: var(--primary-color-400);
@@ -178,6 +174,7 @@
   color: inherit;
 
   &:hover {
+    border: 1px solid var(--primary-color-400);
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
     .overlay { opacity: 1; }
@@ -324,7 +321,7 @@
   bottom: 1rem;
   left: 1rem;
   z-index: 2;
-  background-color: var(--s-500);
+  background-color: var(--e-500);
   color: var(--txt-50);
   padding: 5px 9px;
   border-radius: 6px;
