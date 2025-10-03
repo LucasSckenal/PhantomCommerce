@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import styles from '../../styles/Login.module.scss';
+import styles from './Login.module.scss';
 import { Mail, Lock } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';

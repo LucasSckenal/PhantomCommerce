@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import styles from '../../styles/Register.module.scss';
+import styles from './Register.module.scss';
 import Link from 'next/link';
 import { Camera, X } from 'lucide-react';
 import Image from 'next/image';

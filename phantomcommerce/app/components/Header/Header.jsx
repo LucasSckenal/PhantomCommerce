@@ -6,7 +6,6 @@ import styles from "./Header.module.scss";
 import CartModal from "../CartModal/CartModal";
 import { useSearch } from "../../contexts/SearchContext";
 
-// Dados de exemplo para o carrinho
 const initialCartData = [
     { id: 1, name: 'Starlight Odyssey', edition: 'Edição Padrão', price: 124.95, oldPrice: 249.90, image: 'https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
 ];
@@ -24,10 +23,8 @@ export default function Header() {
   const [cartItems, setCartItems] = useState([]);
   const [isScrolled, setIsScrolled] = useState(false);
   
-  // Simulação de estado de autenticação
   const [currentUser, setCurrentUser] = useState(null);
 
-  // Simula o login de um usuário após 3 segundos para demonstração
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentUser({
