@@ -80,7 +80,6 @@ const GameCard = ({ game }) => {
 const HomePage = () => {
     // Refs para os carrosséis
     const popularScrollRef = useRef(null);
-    const genreScrollRef = useRef(null);
     
     // Estado para a seção de destaque
     const [activeShowcase, setActiveShowcase] = useState('releases');
@@ -123,7 +122,9 @@ const HomePage = () => {
                         <span>R$ {heroGame.discountedPrice.toFixed(2)}</span>
                         <small>R$ {heroGame.originalPrice.toFixed(2)}</small>
                     </div>
-                    <button className={styles.heroButton}>Ver detalhes</button>
+                    <Link href={`/product/${heroGame.id}`} className={styles.heroButton}>
+                        Ver detalhes
+                    </Link>
                 </div>
                 <div className={styles.carouselIndicators}>
                     <span className={`${styles.indicator} ${styles.active}`}></span>
@@ -178,7 +179,7 @@ const HomePage = () => {
                 </div>
                 <div className={styles.bestSellersGrid}>
                     {bestSellers.map((game, index) => (
-                        <div key={game.id} className={styles.bestSellerCard}>
+                        <Link href={`/product/${game.id}`} key={game.id} className={styles.bestSellerCard}>
                             <span className={styles.rank}>#{index + 1}</span>
                             <div className={styles.bestSellerImage}>
                                <Image src={game.image || game.bannerImage} alt={game.title} width={60} height={80} objectFit="cover" />
@@ -196,7 +197,7 @@ const HomePage = () => {
                                 <span>R$ {game.price?.toFixed(2) || game.discountedPrice.toFixed(2)}</span>
                                 <button>COMPRAR</button>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </section>
@@ -205,17 +206,17 @@ const HomePage = () => {
             <section className={styles.section}>
                  <div className={styles.sectionHeader}>
                     <h2 className={styles.sectionTitle}>Explore por Gênero</h2>
-                    <div className={styles.carouselNav}>
-                        <button onClick={() => handleScroll(genreScrollRef, 'left')}><ChevronLeft size={20} /></button>
-                        <button onClick={() => handleScroll(genreScrollRef, 'right')}><ChevronRight size={20} /></button>
-                    </div>
-                </div>
-                <div className={styles.genresGrid} ref={genreScrollRef}>
+                 </div>
+                <div className={styles.genresGrid}>
                     {genres.map(genre => (
-                        <button key={genre} className={styles.genreButton}>
+                        <Link 
+                            href={`/category/${genre.toLowerCase().replace(/\s+/g, '-')}`} 
+                            key={genre} 
+                            className={styles.genreButton}
+                        >
                             {genreIcons[genre] || genreIcons.Default}
                             <span>{genre}</span>
-                        </button>
+                        </Link>
                     ))}
                 </div>
             </section>
@@ -266,3 +267,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
