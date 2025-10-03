@@ -1,0 +1,737 @@
+@keyframes hero-zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+
+.mainPage {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+        padding: 1rem;
+    }
+}
+
+.section {
+    margin-bottom: 5rem;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--txt-50);
+}
+
+.carouselNav {
+    display: flex;
+    gap: 0.5rem;
+    button {
+        background: var(--bg-800);
+        border: 1px solid var(--nc-300);
+        color: var(--txt-50);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        transition: var(--transition-normal);
+        &:hover {
+            background-color: var(--primary-color-600);
+            border-color: var(--primary-color-600);
+        }
+    }
+}
+
+.viewMoreButton {
+    background: transparent;
+    border: 1px solid var(--primary-color-400);
+    color: var(--primary-color-400);
+    padding: 0.5rem 1.5rem;
+    border-radius: 99px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-normal);
+     &:hover {
+        background-color: var(--primary-color-400);
+        color: var(--txt-50);
+    }
+}
+
+
+/* Hero Section */
+.heroSection {
+    height: 70vh;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    border-radius: var(--br-16);
+    position: relative;
+    color: var(--txt-50);
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center 30%;
+    padding: 4rem;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: inherit;
+        background-size: inherit;
+        background-position: inherit;
+        animation: hero-zoom 8s ease-out forwards;
+        border-radius: var(--br-16);
+    }
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(15, 20, 36, 1) 0%, rgba(15, 20, 36, 0.8) 40%, rgba(15, 20, 36, 0.2) 70%, transparent 100%);
+    border-radius: var(--br-16);
+    z-index: 1;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    max-width: 50%;
+
+    .heroTag {
+        background-color: var(--primary-color-400);
+        padding: 0.4rem 1rem;
+        border-radius: 99px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        font-size: 3.8rem;
+        font-weight: 700;
+        line-height: 1.1;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+   
+    .heroDescription {
+        font-size: 1rem;
+        color: var(--txt-500);
+        margin: 1.5rem 0 2rem 0;
+        line-height: 1.7;
+        max-width: 500px;
+    }
+    .heroPrice {
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+        span {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--s-500);
+        }
+        small {
+            font-size: 1.2rem;
+            text-decoration: line-through;
+            color: var(--txt-500);
+        }
+    }
+    .heroButton {
+        background: var(--primary-color-600);
+        color: var(--txt-50);
+        border: none;
+        padding: 1rem 3rem;
+        border-radius: var(--br-8);
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition-normal);
+        box-shadow: var(--shadow-lg);
+
+        &:hover {
+            background-color: var(--primary-color-400);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 20px -5px rgba(45, 91, 255, 0.3);
+        }
+    }
+}
+
+.carouselIndicators {
+    position: absolute;
+    bottom: 2rem;
+    left: 4rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 2;
+
+    .indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: var(--transition-fast);
+        &.active {
+           background-color: var(--white);
+           width: 24px;
+           border-radius: 99px;
+        }
+    }
+}
+
+
+/* Horizontal Scroll */
+.horizontalScroll {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem 0 1.5rem; // Espaço para a sombra e animação
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+}
+
+/* Grids de Cards */
+.cardGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    padding-top: 1rem; // Espaço para a animação
+}
+
+
+/* --- ESTILOS DO NOVO GAME CARD (do GameGrid) --- */
+.gameCard {
+  background: var(--bg-800);
+  border-radius: var(--br-8);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0; // Para o carrossel
+  width: 250px; // Largura fixa para o carrossel
+
+  &:hover {
+    border-color: var(--primary-color-400);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    .overlay { opacity: 1; }
+    .gameImage {
+        transform: scale(1.05);
+    }
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 133%; /* Proporção 3:4 */
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(to top, rgba(26, 32, 44, 0.95) 10%, transparent 100%);
+    z-index: 1;
+    transition: opacity var(--transition-normal);
+  }
+
+  .gameImage {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+  }
+}
+
+.platformIcons {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 2;
+  display: flex;
+  gap: 0.5rem;
+  background-color: rgba(15, 20, 36, 0.7);
+  backdrop-filter: blur(4px);
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--br-16);
+  color: var(--txt-50);
+}
+
+.overlay {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(15, 20, 36, 0.7);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; 
+  transition: opacity var(--transition-normal);
+}
+
+.viewMoreButton {
+  border: 2px solid var(--txt-50);
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: var(--txt-50);
+  background: transparent;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--txt-50);
+    color: var(--bg-900);
+  }
+}
+
+.cardBody {
+  padding: 1rem; 
+  display: flex; 
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.gameTitle {
+  font-size: 1.1rem; 
+  font-weight: 600; 
+  margin-bottom: 0.5rem;
+  min-height: 44px;
+  color: var(--txt-50);
+}
+
+.tagsContainer {
+  display: flex; 
+  align-items: center; 
+  gap: 0.4rem;
+  color: var(--txt-500); 
+  margin-bottom: 0.8rem;
+  .tagIcon { flex-shrink: 0; }
+}
+
+.gameTags {
+  font-size: 0.8rem; 
+  color: var(--txt-500); 
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+
+.ratingInfo {
+  display: flex; 
+  align-items: center; 
+  gap: 0.4rem;
+  margin-top: auto; 
+  padding-top: 0.5rem; 
+  color: var(--txt-500);
+  .starIcon { color: #ffca28; }
+}
+
+.priceSection {
+  padding: 0 1rem 1rem;
+  display: flex;
+  justify-content: flex-end; /* Alinha o preço à direita */
+  align-items: center;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  .gamePrice { 
+    font-size: 1.4rem; 
+    font-weight: 700; 
+    color: var(--txt-50); 
+  }
+  .originalPrice {
+    font-size: 0.9rem;
+    color: var(--txt-500);
+    text-decoration: line-through;
+  }
+}
+
+.discountBadge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 2;
+  background-color: var(--e-500);
+  color: var(--txt-50);
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+/* --- FIM ESTILOS GAME CARD --- */
+
+
+/* Showcase Section */
+.showcaseSection {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "nav image"
+        "content image";
+    background-color: var(--bg-800);
+    border-radius: var(--br-16);
+    min-height: 450px;
+    overflow: hidden;
+}
+
+.showcaseNav {
+    grid-area: nav;
+    padding: 2rem 2rem 0 3rem;
+    
+    button {
+        background: none;
+        border: none;
+        color: var(--txt-500);
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 0.5rem 0;
+        margin-right: 2rem;
+        cursor: pointer;
+        position: relative;
+        transition: color var(--transition-normal);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: var(--primary-color-400);
+            transform: scaleX(0);
+            transition: transform var(--transition-normal);
+        }
+
+        &.active {
+            color: var(--txt-50);
+             &::after {
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+.showcaseContent {
+    grid-area: content;
+    padding: 1rem 2rem 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p:first-of-type {
+        color: var(--primary-color-300);
+        font-weight: 600;
+    }
+    h3 {
+        font-size: 2.5rem;
+        margin: 0.5rem 0 1rem 0;
+    }
+    .showcaseDesc {
+        color: var(--txt-500);
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+}
+
+.showcaseActions {
+    display: flex;
+    gap: 1rem;
+    
+    .primaryButton {
+        background-color: var(--btn-500);
+        color: var(--txt-50);
+        border: none;
+        padding: 0.8rem 2rem;
+        border-radius: var(--br-8);
+        font-weight: 600;
+        cursor: pointer;
+         &:hover { background-color: var(--btn-400); }
+    }
+    .secondaryButton {
+        background-color: transparent;
+        color: var(--txt-50);
+        border: 1px solid var(--nc-300);
+        padding: 0.8rem 2rem;
+        border-radius: var(--br-8);
+        font-weight: 600;
+        cursor: pointer;
+        &:hover { background-color: var(--bg-900); }
+    }
+}
+
+.showcaseImage {
+    grid-area: image;
+    position: relative;
+    border-radius: 0 var(--br-16) var(--br-16) 0;
+    overflow: hidden;
+}
+
+/* Best Sellers */
+.bestSellersGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.bestSellerCard {
+    background-color: var(--bg-800);
+    border-radius: var(--br-16);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    transition: var(--transition-normal);
+
+    &:hover {
+        background-color: #2D3748; // Um pouco mais claro que o bg-800
+        transform: translateY(-3px);
+    }
+}
+
+.rank {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--txt-500);
+    padding: 0 0.5rem;
+}
+
+.bestSellerImage img {
+    border-radius: var(--br-8);
+}
+
+.bestSellerInfo {
+    h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
+    .bestSellerTags {
+        display: flex;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        color: var(--txt-500);
+        margin-bottom: 0.25rem;
+    }
+    .bestSellerRating {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0.9rem;
+        color: var(--w-500);
+    }
+}
+
+.bestSellerPrice {
+    text-align: right;
+
+    span {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    button {
+        background-color: var(--primary-color-600);
+        color: var(--txt-50);
+        border: none;
+        padding: 0.4rem 1rem;
+        border-radius: var(--br-8);
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+/* Genres */
+.genresGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-top: 1rem; // Espaço para a animação
+}
+
+.genreButton {
+    background-color: var(--bg-800);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--txt-50);
+    border-radius: var(--br-16);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    flex-shrink: 0;
+    width: 180px;
+
+    &:hover {
+        background-color: var(--primary-color-900);
+        border-color: var(--primary-color-400);
+        color: var(--primary-color-400);
+        transform: translateY(-5px);
+    }
+}
+
+
+/* Leadership Section */
+.leadershipSection {
+    background: linear-gradient(135deg, var(--primary-color-900), var(--primary-color-700));
+    border-radius: var(--br-16);
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.leadershipContent {
+    h3 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+    p {
+        color: var(--txt-500);
+        line-height: 1.7;
+    }
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.statItem {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: var(--br-16);
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    
+    svg {
+        color: var(--primary-color-400);
+        margin-bottom: 0.5rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    p {
+        color: var(--txt-500);
+        font-size: 0.9rem;
+    }
+}
+
+/* Promotions */
+.countdown {
+    background-color: var(--e-700);
+    padding: 0.4rem 1rem;
+    border-radius: 99px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .leadershipSection {
+        grid-template-columns: 1fr;
+    }
+    .bestSellersGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .showcaseSection {
+         grid-template-columns: 1fr;
+         grid-template-areas: 
+            "nav"
+            "image"
+            "content";
+    }
+    .showcaseImage {
+        height: 300px;
+        border-radius: 0;
+    }
+    .heroContent {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainPage { padding: 1rem; }
+    .heroSection {
+        padding: 2rem;
+        height: 80vh;
+        align-items: flex-end;
+        background-position: center 50%;
+    }
+    .heroContent {
+        max-width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 { font-size: 2.5rem; }
+        .heroPrice { 
+            justify-content: center;
+            span { font-size: 2rem; }
+        }
+    }
+     .carouselIndicators {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 1.5rem;
+    }
+    .leadershipSection {
+        padding: 2rem;
+    }
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
