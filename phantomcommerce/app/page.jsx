@@ -1,10 +1,11 @@
 'use client';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
     Star, Tag, ChevronLeft, ChevronRight, BarChart, Users, Award, Zap,
-    Sword, Shield, Wand, Brain, Puzzle, Trophy, Car, Gamepad2
+    Sword, Shield, Wand, Brain, Puzzle, Trophy, Car, Gamepad2,
+    CalendarDays, User
 } from 'lucide-react';
 import { FaPlaystation, FaXbox, FaSteam } from "react-icons/fa";
 import { BsNintendoSwitch } from "react-icons/bs";
@@ -84,8 +85,11 @@ const HomePage = () => {
     // Estado para a seção de destaque
     const [activeShowcase, setActiveShowcase] = useState('releases');
 
+    // Estado para o Hero Banner
+    const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
+    const heroGames = gameData.slice(0, 3); // Usando os 3 primeiros jogos para o banner
+
     // Dados dos jogos
-    const heroGame = gameData.find(g => g.id === 1);
     const popularGames = gameData.slice(1, 9);
     const newReleasesIndie = gameData.find(g => g.id === 4);
     const featuredIndie = gameData.find(g => g.id === 5); // Jogo diferente para a aba "Destacado"
@@ -94,7 +98,7 @@ const HomePage = () => {
     
     const genres = ["Ação", "Aventura", "RPG", "Estratégia", "Indie", "Esportes", "Corrida"];
 
-    // Função para controlar o scroll
+    // Função para controlar o scroll horizontal
     const handleScroll = (ref, direction) => {
         if (ref.current) {
             const scrollAmount = ref.current.offsetWidth * 0.8;
@@ -104,32 +108,105 @@ const HomePage = () => {
             });
         }
     };
+    
+    // Lógica de navegação do Hero Banner
+    const handleHeroNav = (direction) => {
+        const totalSlides = heroGames.length;
+        if (direction === 'next') {
+            setCurrentHeroIndex((prevIndex) => (prevIndex + 1) % totalSlides);
+        } else {
+            setCurrentHeroIndex((prevIndex) => (prevIndex - 1 + totalSlides) % totalSlides);
+        }
+    };
+
+    const handleIndicatorClick = (index) => {
+        setCurrentHeroIndex(index);
+    };
+
+    // Efeito para troca automática de slides no Hero Banner
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            handleHeroNav('next');
+        }, 7000); // Muda a cada 7 segundos
+
+        return () => clearTimeout(timer); // Limpa o timer ao desmontar ou mudar de slide
+    }, [currentHeroIndex]);
 
     const showcaseGame = activeShowcase === 'releases' ? newReleasesIndie : featuredIndie;
+    const activeHeroGame = heroGames[currentHeroIndex];
+
+    if (!activeHeroGame) {
+        return <div>Carregando...</div>; // Fallback caso os dados não estejam prontos
+    }
 
     return (
         <main className={styles.mainPage}>
             <Header />
             
             {/* Hero Section */}
-            <section className={styles.heroSection} style={{ backgroundImage: `url(${heroGame.bannerImage})` }}>
+            <section 
+                key={activeHeroGame.id} // Chave para forçar a re-renderização e reiniciar a animação CSS
+                className={styles.heroSection} 
+                style={{ backgroundImage: `url(${activeHeroGame.bannerImage})` }}>
                 <div className={styles.heroOverlay}></div>
+                
+                <button className={`${styles.heroNavArrow} ${styles.left}`} onClick={() => handleHeroNav('prev')}>
+                    <ChevronLeft size={32} />
+                </button>
+                
                 <div className={styles.heroContent}>
-                    <span className={styles.heroTag}>Lançamento</span>
-                    <h1>{heroGame.title}</h1>
-                    <p className={styles.heroDescription}>{heroGame.description}</p>
-                    <div className={styles.heroPrice}>
-                        <span>R$ {heroGame.discountedPrice.toFixed(2)}</span>
-                        <small>R$ {heroGame.originalPrice.toFixed(2)}</small>
+                    <h1 className={styles.heroTitle}>{activeHeroGame.title}</h1>
+                    <h2 className={styles.heroSubtitle}>{activeHeroGame.shortDescription}</h2>
+                    <p className={styles.heroDescription}>
+                        {activeHeroGame.about.substring(0, 150)}...
+                    </p>
+                    
+                    <div className={styles.heroInfoBar}>
+                        <div className={styles.infoItem}>
+                            <Star size={16} />
+                            <span>{activeHeroGame.rating} ({activeHeroGame.reviews || 'N/A'})</span>
+                        </div>
+                        <div className={styles.infoItem}>
+                            <CalendarDays size={16} />
+                            <span>Lançamento: {activeHeroGame.releaseYear || 'TBA'}</span>
+                        </div>
+                        <div className={styles.platformIconsHero}>
+                            {activeHeroGame.platforms?.includes('xbox') && <FaXbox size={20} />}
+                            {activeHeroGame.platforms?.includes('steam') && <FaSteam size={20} />}
+                            {activeHeroGame.platforms?.includes('playstation') && <FaPlaystation size={20} />}
+                        </div>
                     </div>
-                    <Link href={`/product/${heroGame.id}`} className={styles.heroButton}>
-                        Ver detalhes
-                    </Link>
+
+                    <div className={styles.heroPriceSection}>
+                         <div className={styles.priceWrapper}>
+                            <span className={styles.currentPrice}>R$ {activeHeroGame.discountedPrice.toFixed(2).replace('.',',')}</span>
+                            {activeHeroGame.originalPrice && <span className={styles.originalPrice}>R$ {activeHeroGame.originalPrice.toFixed(2).replace('.',',')}</span>}
+                            {activeHeroGame.originalPrice && <span className={styles.discountBadgeHero}>Economize {Math.round(((activeHeroGame.originalPrice - activeHeroGame.discountedPrice) / activeHeroGame.originalPrice) * 100)}%</span>}
+                        </div>
+                    </div>
+
+                    <div className={styles.heroActions}>
+                        <Link href={`/product/${activeHeroGame.id}`} className={styles.heroButtonPrimary}>
+                            {activeHeroGame.preOrder ? 'Realizar pré-order' : 'Comprar Agora'}
+                        </Link>
+                        <Link href={`/product/${activeHeroGame.id}/trailer`} className={styles.heroButtonSecondary}>
+                            Ver trailer &gt;
+                        </Link>
+                    </div>
                 </div>
+                
+                <button className={`${styles.heroNavArrow} ${styles.right}`} onClick={() => handleHeroNav('next')}>
+                    <ChevronRight size={32} />
+                </button>
+
                 <div className={styles.carouselIndicators}>
-                    <span className={`${styles.indicator} ${styles.active}`}></span>
-                    <span className={styles.indicator}></span>
-                    <span className={styles.indicator}></span>
+                    {heroGames.map((game, index) => (
+                        <span 
+                            key={game.id}
+                            className={`${styles.indicator} ${currentHeroIndex === index ? styles.active : ''}`}
+                            onClick={() => handleIndicatorClick(index)}
+                        ></span>
+                    ))}
                 </div>
             </section>
 
@@ -253,7 +330,7 @@ const HomePage = () => {
 
             {/* Promoções Imperdíveis */}
             <section className={styles.section}>
-                 <div className={styles.sectionHeader}>
+                 <div className={styles.sectionCountdown}>
                     <h2 className={styles.sectionTitle}>Promoções Imperdíveis</h2>
                     <span className={styles.countdown}>Últimas 48h</span>
                 </div>
@@ -267,4 +344,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
