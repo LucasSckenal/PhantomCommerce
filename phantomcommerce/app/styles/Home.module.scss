@@ -150,19 +150,23 @@
     line-height: 1.1;
     text-shadow: 0 2px 10px rgba(0,0,0,0.5);
     margin-bottom: -1rem;
+    text-shadow: 1px 1px 2px black;
 }
 
 .heroSubtitle {
     font-size: 1.2rem;
-    font-weight: 400;
-    color: var(--txt-500);
+    font-weight: bold;
+    color: var(--txt-50);
+    text-shadow: 1px 1px 2px black;
 }
 
 .heroDescription {
     font-size: 0.95rem;
-    color: var(--txt-500);
+    color: var(--txt-50);
     line-height: 1.6;
     max-width: 480px;
+    text-shadow: 1px 1px 2px black;
+    text-align: justify;
 }
 
 .heroInfoBar {
@@ -259,11 +263,12 @@
 }
 
 .heroButtonSecondary {
-    background: transparent;
+    background-color: rgba(15, 20, 36, 0.8); 
+    backdrop-filter: blur(10px);
     color: var(--txt-50);
-    padding: 0.7rem;
+    padding: 0.8rem;
     border: 1px solid var(--primary-color-400);
-    border-radius: var(--br-16);
+    border-radius: var(--br-8);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -352,7 +357,7 @@
 .cardGrid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 2.5rem;
     padding-top: 1rem; // Espaço para a animação
 }
@@ -436,18 +441,18 @@
 }
 
 .viewMoreButton {
-  border: 2px solid var(--txt-50);
+  border: 2px solid var(--primary-color-400);
   padding: 10px 20px;
   border-radius: 6px;
   font-weight: 600;
-  color: var(--txt-50);
+  color: var(--primary-color-400);
   background: transparent;
   transition: all var(--transition-fast);
   cursor: pointer;
 
   &:hover {
-    background: var(--txt-50);
-    color: var(--bg-900);
+    background: var(--primary-color-400);
+    color: var(--txt-50);
   }
 }
 
@@ -608,6 +613,7 @@
         color: var(--txt-500);
         line-height: 1.7;
         margin-bottom: 2rem;
+        text-align: justify;
     }
 }
 
@@ -665,7 +671,7 @@
 
     &:hover {
         border-color: var(--primary-color-400);
-        background-color: #2D3748; // Um pouco mais claro que o bg-800
+        background-color: #2D3748; 
         transform: translateY(-3px);
 
         .rank {
@@ -681,7 +687,7 @@
     color: var(--txt-50);
 }
 
-.bestSellerImage img {
+.bestSellerImage {
     height: 7.5rem;
     width: 7.5rem;
     border-radius: var(--br-8);
@@ -696,9 +702,16 @@
     }
     .bestSellerTags {
         display: flex;
+        width: fit-content;
         gap: 0.5rem;
+        text-align: center;
+        align-items: center;
+        justify-content: left;
+        padding: 0.3rem;
         font-size: 0.8rem;
         color: var(--txt-500);
+        background-color: rgba(15, 20, 36, 0.7);
+        border-radius: var(--br-16);
         margin-bottom: 0.25rem;
     }
     .bestSellerRating {
@@ -735,7 +748,7 @@
 .genresGrid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1.5rem;
     padding-top: 1rem; // Espaço para a animação
 }
@@ -896,24 +909,23 @@
     }
 }
 /* Melhorias para a seção Mais Vendidos */
-.bestSellersGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-}
-
+/* Melhorias para a seção Mais Vendidos */
 .bestSellerCard {
     background-color: var(--bg-800);
     border-radius: var(--br-16);
     padding: 1.5rem;
     display: grid;
-    grid-template-columns: auto 100px 1fr auto;
-    align-items: start;
+    /* A coluna da imagem foi removida, o grid agora é para o conteúdo */
+    grid-template-columns: auto 1fr auto; 
+    align-items: center; /* Centraliza o conteúdo verticalmente */
     gap: 1.2rem;
     transition: var(--transition-normal);
     border: 1px solid var(--txt-700);
-    text-decoration: none;
     min-height: 140px;
+
+    /* Adições Cruciais */
+    position: relative; /* Define este card como o container para elementos com posição absoluta */
+    overflow: hidden;  /* Garante que a imagem com zoom não "vaze" para fora das bordas */
 
     &:hover {
         border-color: var(--primary-color-400);
@@ -923,40 +935,53 @@
         .rank {
             color: var(--btn-400);
         }
-        
-        .bestSellerImage img {
-            transform: scale(1.05);
+
+        /* Efeito de hover para a imagem de fundo */
+        .bestSellerImage {
+            opacity: 0.15; /* Aumenta a opacidade da imagem no hover */
+            transform: scale(1.05); /* Efeito de zoom sutil */
         }
     }
 }
 
+.bestSellerImage {
+    /* Transforma a div em um fundo que cobre todo o card */
+    position: absolute;
+    inset: 0; /* Equivalente a top: 0; right: 0; bottom: 0; left: 0; */
+    width: 100%;
+    height: 100%;
+    
+    /* Z-index 0 coloca a imagem atrás do conteúdo (que terá z-index 1) */
+    z-index: 0; 
+    
+    /* Opacidade inicial bem baixa para não ofuscar o conteúdo */
+    opacity: 0; 
+    
+    /* Transições suaves para os efeitos de hover */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Garante que todo o conteúdo textual fique ACIMA da camada da imagem */
+.rank,
+.bestSellerInfo,
+.bestSellerPrice {
+    position: relative; /* Necessário para que o z-index funcione */
+    z-index: 1;
+}
+
+/* O resto dos estilos do conteúdo são mantidos para consistência visual */
 .rank {
     font-size: 1.5rem;
     font-weight: bolder;
     padding: 0 0.5rem;
     color: var(--txt-50);
+    text-shadow: 1px 1px 2px black;
     align-self: center;
-}
-
-.bestSellerImage {
-    position: relative;
-    width: 100px;
-    height: 120px;
-    border-radius: var(--br-8);
-    overflow: hidden;
-    flex-shrink: 0;
-    
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform var(--transition-normal);
-        border-radius: var(--br-8);
-    }
 }
 
 .bestSellerInfo {
     color: var(--txt-50);
+    text-shadow: 1px 1px 2px black;
     align-self: center;
     
     h4 {
@@ -987,8 +1012,9 @@
 .bestSellerPrice {
     text-align: right;
     color: var(--txt-50);
+    text-shadow: 1px 1px 2px black;
     align-self: center;
-
+    
     span {
         display: block;
         font-size: 1.3rem;
@@ -1015,6 +1041,7 @@
     }
 }
 
+
 /* Responsive para Mais Vendidos */
 @media (max-width: 768px) {
     .bestSellerCard {
@@ -1026,11 +1053,6 @@
         padding: 1rem;
     }
     
-    .bestSellerImage {
-        width: 80px;
-        height: 100px;
-        grid-area: image;
-    }
     
     .rank {
         grid-area: rank;

@@ -90,6 +90,18 @@ const GameCard = ({ game }) => {
   );
 };
 
+// --- Função utilitária para formatar data ---
+const formatReleaseDate = (dateStr) => {
+  if (!dateStr) return 'TBA';
+  const date = new Date(dateStr);
+  if (isNaN(date)) return dateStr; // fallback caso venha num formato inesperado
+  return date.toLocaleDateString('pt-BR', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  });
+};
+
 // --- PÁGINA PRINCIPAL ---
 const HomePage = () => {
   const { games, loadingGames } = useStore();
@@ -98,7 +110,15 @@ const HomePage = () => {
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [activeShowcase, setActiveShowcase] = useState('releases'); // estado do showcase
 
-  // --- Hooks fixos ---
+  // --- Dados derivados do Firestore ---
+  const bestRatedGames = [...games].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+  const heroGames = bestRatedGames.slice(0, 3);
+  const popularGames = bestRatedGames.slice(3, 9);
+  const showcaseGame = bestRatedGames[0]; 
+  const bestSellers = bestRatedGames.slice(5, 9);
+  const promotions = bestRatedGames.slice(9, 14);
+
+    // --- Hooks fixos ---
   const handleHeroNav = (direction) => {
     const totalSlides = heroGames.length;
     setCurrentHeroIndex(prev =>
@@ -111,9 +131,14 @@ const HomePage = () => {
   const handleIndicatorClick = (index) => setCurrentHeroIndex(index);
 
   useEffect(() => {
-    const timer = setTimeout(() => handleHeroNav('next'), 7000);
-    return () => clearTimeout(timer);
-  }, [currentHeroIndex]);
+    if (heroGames.length === 0) return;
+
+    const interval = setInterval(() => {
+      handleHeroNav('next');
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, [heroGames.length]);
 
   const handleScroll = (ref, direction) => {
     if (ref.current) {
@@ -124,14 +149,6 @@ const HomePage = () => {
       });
     }
   };
-
-  // --- Dados derivados do Firestore ---
-  const bestRatedGames = [...games].sort((a, b) => (b.rating || 0) - (a.rating || 0));
-  const heroGames = bestRatedGames.slice(0, 3);
-  const popularGames = bestRatedGames.slice(3, 9);
-  const showcaseGame = bestRatedGames[0]; 
-  const bestSellers = bestRatedGames.slice(5, 9);
-  const promotions = bestRatedGames.slice(9, 13);
 
   // --- Jogo mais recente ---
   const latestReleaseGame = [...games]
@@ -169,7 +186,15 @@ const HomePage = () => {
             <h1 className={styles.heroTitle}>{activeHeroGame.title}</h1>
             <h2 className={styles.heroSubtitle}>{activeHeroGame.shortDescription || 'Confira agora este sucesso!'}</h2>
             <p className={styles.heroDescription}>
-              {activeHeroGame.about?.substring(0, 150) || 'Um dos jogos mais bem avaliados da loja!'}
+              {activeHeroGame.about
+                ? activeHeroGame.about.length > 200
+                  ? `${activeHeroGame.about.substring(0, 200)}...`
+                  : activeHeroGame.about
+                : activeHeroGame.description
+                ? activeHeroGame.description.length > 200
+                  ? `${activeHeroGame.description.substring(0, 200)}...`
+                  : activeHeroGame.description
+                : 'Um dos jogos mais bem avaliados da loja!'}
             </p>
 
             <div className={styles.heroInfoBar}>
@@ -179,7 +204,7 @@ const HomePage = () => {
               </div>
               <div className={styles.infoItem}>
                 <CalendarDays size={16} />
-                <span>Lançamento: {activeHeroGame.releaseDate || 'TBA'}</span>
+                 <span>Lançamento: {formatReleaseDate(activeHeroGame.releaseDate)}</span>
               </div>
               <div className={styles.platformIconsHero}>
                 {activeHeroGame.platforms?.map(platform => (
@@ -303,20 +328,19 @@ const HomePage = () => {
             <Link href={`/product/${game.id}`} key={game.id} className={styles.bestSellerCard}>
               <span className={styles.rank}>#{index + 1}</span>
               <div className={styles.bestSellerImage}>
+                
                 <Image 
                   src={game.headerImageUrl || game.coverImageUrl || '/placeholder.jpg'} 
                   alt={game.title}
                   fill
-                  sizes="100px"
                   style={{ objectFit: 'cover' }}
                 />
               </div>
               <div className={styles.bestSellerInfo}>
                 <h4>{game.title}</h4>
                 <div className={styles.bestSellerTags}>
-                  {game.categories?.slice(0, 2).map(tag => (
-                    <span key={tag}>{tag}</span>
-                  ))}
+                  <Tag size={14} className={styles.tagIcon} />
+                  <span className={styles.gameTags}>{(game.categories || []).join(', ')}</span>
                 </div>
                 <div className={styles.bestSellerRating}>
                   <Star size={14} fill="currentColor" /> 

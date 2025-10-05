@@ -1,10 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Play, ChevronLeft, ChevronRight, Star, X } from 'lucide-react';
+import { Play, ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import { FaPlaystation, FaXbox, FaSteam } from "react-icons/fa";
 import { BsNintendoSwitch, BsPcDisplay } from "react-icons/bs";
-import ReactPlayer from 'react-player';
 import styles from './HeroSection.module.scss';
 
 // Mapeamento de plataformas para ícones
@@ -25,10 +24,16 @@ export default function HeroSection({ game }) {
   const gameDiscount = hasDiscount ? game.originalPrice - game.discountedPrice : 0;
   const discountPercentage = hasDiscount ? Math.round(((game.originalPrice - game.discountedPrice) / game.originalPrice) * 100) : 0;
 
+  // --- Ajuste da data ---
+  const gameRelease = new Date(game.releaseDate); // Firebase traz "YYYY-MM-DD"
   const today = new Date();
-  const [day, month, year] = game.releaseDate.split('/');
-  const gameRelease = new Date(`${year}-${month}-${day}T00:00:00`);
   const isReleased = today >= gameRelease;
+
+  const formattedReleaseDate = gameRelease.toLocaleDateString('pt-BR', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric'
+  });
 
   // Pega o primeiro URL do array de trailers.
   const mainTrailerUrl = game.trailerUrls && game.trailerUrls.length > 0 ? game.trailerUrls[0] : '';
@@ -37,12 +42,10 @@ export default function HeroSection({ game }) {
   const extractYouTubeID = (url) => {
     if (!url) return null;
     try {
-      // tenta extrair pelo padrão embed / youtu.be / v=
       const regex = /(?:youtube\.com\/(?:.*v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/;
       const m = url.match(regex);
       if (m && m[1]) return m[1];
 
-      // fallback para query params (watch?v=)
       const q = url.split('?')[1] || '';
       const params = new URLSearchParams(q);
       if (params.has('v')) return params.get('v');
@@ -55,13 +58,8 @@ export default function HeroSection({ game }) {
   };
 
   const youtubeId = extractYouTubeID(mainTrailerUrl);
-  const embedUrl = youtubeId ? `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0` : null;
 
   useEffect(() => {
-    // debug: confirma a url que está chegando
-    console.log('HeroSection - mainTrailerUrl:', mainTrailerUrl);
-    console.log('HeroSection - youtubeId:', youtubeId);
-    // reset de erro quando a URL mudar
     setPlayerError(false);
   }, [mainTrailerUrl]);
 
@@ -82,7 +80,12 @@ export default function HeroSection({ game }) {
 
   return (
     <div className={styles.heroWrapper}>
-      <div className={styles.banner} style={{ backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(15, 20, 36, 0.8) 70%, rgba(15, 20, 36, 1) 100%), url('${game.headerImageUrl || game.coverImageUrl}')` }}>
+      <div
+        className={styles.banner}
+        style={{
+          backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(15, 20, 36, 0.8) 70%, rgba(15, 20, 36, 1) 100%), url('${game.headerImageUrl || game.coverImageUrl}')`
+        }}
+      >
         <div className={styles.bannerOverlay}></div>
       </div>
       
@@ -91,10 +94,10 @@ export default function HeroSection({ game }) {
           <h1 className={styles.gameTitle}>{game.title}</h1>
           <div className={styles.gameMeta}>
             <span className={styles.metaItem}><Star size={16} /> {game.rating}</span>
-            <span className={styles.metaItem}>Lançamento: {game.releaseDate}</span>
+            <span className={styles.metaItem}>Lançamento: {formattedReleaseDate}</span>
             <div className={`${styles.metaItem} ${styles.platformIcons}`}>
               {game.platforms.map(platform => (
-                <span key={platform} title={platform.charAt(0).toUpperCase() + platform.slice(1)} className={styles.platformIconWrapper}>
+                <span key={platform} title={platform} className={styles.platformIconWrapper}>
                   {platformIcons[platform] || platform}
                 </span>
               ))}
@@ -114,9 +117,11 @@ export default function HeroSection({ game }) {
           </div>
           <div className={styles.buttonGroup}>
             <button className={styles.addButton}>{isReleased ? 'Comprar Agora' : 'Realizar Preorder'}</button>
-            <button className={styles.trailerButton} onClick={handlePlayVideo}>
-              Ver trailer <Play size={16} />
-            </button>
+            {mainTrailerUrl && (
+              <button className={styles.trailerButton} onClick={handlePlayVideo}>
+                Ver trailer <Play size={16} />
+              </button>
+            )}
           </div>
         </section>
 
@@ -177,8 +182,8 @@ export default function HeroSection({ game }) {
             <div className={styles.thumbnailStrip}>
               <button className={styles.thumbNav}><ChevronLeft size={20}/></button>
               <div className={styles.thumbnails}>
-                 <div className={styles.thumbnail} onClick={() => handleThumbnailClick(game.videoThumbnail)}>
-                    <img src={game.videoThumbnail} alt="Video Thumbnail" />
+                <div className={styles.thumbnail} onClick={() => handleThumbnailClick(game.videoThumbnail)}>
+                  <img src={game.videoThumbnail} alt="Video Thumbnail" />
                 </div>
                 {game.gallery.map((img, index) => (
                   <div key={index} className={styles.thumbnail} onClick={() => handleThumbnailClick(img)}>
@@ -192,7 +197,7 @@ export default function HeroSection({ game }) {
 
           <div className={styles.purchaseCard}>
             <div className={styles.card}>
-              <div className={styles.priceInfo} >
+              <div className={styles.priceInfo}>
                 {hasDiscount ? (
                   <>
                     <span className={styles.discountedPrice}>R$ {game.discountedPrice.toFixed(2)}</span>
@@ -203,9 +208,11 @@ export default function HeroSection({ game }) {
                 )}
               </div>
               {hasDiscount && (
-                <p style={{color:`green`, fontWeight:`bold`, marginBottom:`12px`}}>Você economiza {gameDiscount.toFixed(2)} reais</p>
+                <p style={{ color:`green`, fontWeight:`bold`, marginBottom:`12px` }}>
+                  Você economiza {gameDiscount.toFixed(2)} reais
+                </p>
               )}
-              <button className={styles.addButton}>Comprar Agora</button>
+              <button className={styles.addButton}>{isReleased ? 'Comprar Agora' : 'Realizar Preorder'}</button>
             </div>
             <div className={styles.requirements}>
               <div className={styles.card}>
@@ -220,7 +227,7 @@ export default function HeroSection({ game }) {
               <div className={styles.card}>
                 <h3 className={styles.reqTitle}>Requisitos Recomendados</h3>
                 <ul className={styles.reqList}>
-                   <li><strong>CPU:</strong> <span>{game.systemRequirements.recommended.cpu}</span></li>
+                  <li><strong>CPU:</strong> <span>{game.systemRequirements.recommended.cpu}</span></li>
                   <li><strong>RAM:</strong> <span>{game.systemRequirements.recommended.ram}</span></li>
                   <li><strong>GPU:</strong> <span>{game.systemRequirements.recommended.gpu}</span></li>
                   <li><strong>Armazenamento:</strong> <span>{game.systemRequirements.recommended.storage}</span></li>
