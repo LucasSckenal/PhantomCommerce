@@ -25,6 +25,7 @@
     margin: 0 auto;
     padding: 1rem 3rem;
     overflow: hidden;
+    margin-top: 4rem;
 
     @media (max-width: 768px) {
         padding: 1rem;
@@ -489,7 +490,7 @@
   margin-top: auto; 
   padding-top: 0.5rem; 
   color: var(--txt-500);
-  .starIcon { color: #ffca28; }
+  .starIcon { color: var(--primary-color-400) }
 }
 
 .priceSection {
@@ -504,12 +505,12 @@
   align-items: baseline;
   gap: 0.5rem;
   .gamePrice { 
-    font-size: 1.4rem; 
+    font-size: 1.2rem; 
     font-weight: 700; 
     color: var(--txt-50); 
   }
   .originalPrice {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--txt-500);
     text-decoration: line-through;
   }
@@ -549,7 +550,7 @@
     gap: var(--br-8);
     align-items: baseline;
     padding-bottom: 0.5rem;
-    color: var(--w-500);
+    color: var(--primary-color-400);
 }
 .showcaseNav {
     grid-area: nav;
@@ -705,7 +706,7 @@
         align-items: center;
         gap: 0.25rem;
         font-size: 0.9rem;
-        color: var(--w-500);
+        color: var(--primary-color-400);
     }
 }
 
@@ -979,7 +980,7 @@
         align-items: center;
         gap: 0.25rem;
         font-size: 0.9rem;
-        color: var(--w-500);
+        color: var(--primary-color-400);
     }
 }
 
