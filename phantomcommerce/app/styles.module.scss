@@ -1,8 +1,7 @@
 .container {
-  background: #0d1117;
-  color: #fff;
+  background: var(--bg-900);
+  color: var(--txt-50);
   min-height: 100vh;
-  font-family: Arial, sans-serif;
   padding-bottom: 50px;
 }
 
@@ -31,20 +30,20 @@
     .price {
       font-size: 1.2rem;
       margin-bottom: 10px;
-      color: #00ff95;
+      color: var(--e-500);
     }
 
     .buyBtn {
-      background: #0070f3;
+      background: var(--primary-color-500);
       border: none;
       padding: 10px 20px;
       border-radius: 8px;
       cursor: pointer;
-      color: #fff;
+      color: var(--txt-50);
       transition: 0.3s;
 
       &:hover {
-        background: #0057b8;
+        background: var(--primary-color-400);
       }
     }
   }
@@ -57,7 +56,7 @@
 
   .videoBox {
     flex: 2;
-    background: #1e1e1e;
+    background: var(--bg-800);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -65,13 +64,13 @@
 
     .videoPlaceholder {
       font-size: 4rem;
-      color: #aaa;
+      color: var(--txt-500);
     }
   }
 
   .infoBox {
     flex: 1;
-    background: #161b22;
+    background: var(--bg-800);
     padding: 20px;
     border-radius: 12px;
 
@@ -86,13 +85,13 @@
 
       li {
         margin-bottom: 6px;
-        color: #ccc;
+        color: var(--txt-50);
       }
     }
 
     .release {
       margin-top: 15px;
-      color: #999;
+      color: var(--txt-500);
       font-size: 0.9rem;
     }
   }
