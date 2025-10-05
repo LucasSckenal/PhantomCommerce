@@ -63,7 +63,6 @@ export default function RelatedGames({ games }) {
                     <span>{game.rating}</span>
                     <span className={styles.reviews}>({game.reviews})</span>  {/* Usar vocabulário GAMER, substituindo, por exemplo: 1000 por 1k*/}
                   </div>
-                  <span className={styles.gameTags}>{game.tags.join(', ')}</span>
                 </div>
               </div>
               

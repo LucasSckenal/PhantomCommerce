@@ -1,0 +1,735 @@
+
+/* Estilos minimalistas e profissionais para o formulário de adição de jogos */
+.pageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 8rem 1rem 4rem;
+    background-color: var(--bg-900);
+    color: var(--txt-50);
+}
+
+@media (min-width: 768px) {
+    .pageContainer {
+        padding: 8rem 2rem 4rem;
+    }
+}
+
+.formWrapper {
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--bg-800);
+    padding: 2rem;
+    border-radius: var(--br-16);
+    border: 1px solid var(--txt-700);
+    box-shadow: var(--shadow-lg);
+    animation: formSlideIn 0.6s ease-out;
+}
+
+@media (min-width: 768px) {
+    .formWrapper {
+        padding: 3rem;
+    }
+}
+
+@keyframes formSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--txt-50);
+    margin-bottom: 0.75rem;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: var(--txt-500);
+    margin-bottom: 3rem;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+}
+
+.sectionTitle {
+    font-size: 1.4rem;
+    color: var(--txt-50);
+    margin-top: 3rem;
+    margin-bottom: 1.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--txt-700);
+    font-weight: 600;
+    position: relative;
+}
+
+.sectionTitle:first-of-type {
+    margin-top: 0;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.formGroup.fullWidth {
+    grid-column: 1 / -1;
+}
+
+.formGroup label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--txt-50);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.formGroup label::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--primary-color-400);
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="number"],
+.formGroup input[type="url"],
+.formGroup input[type="date"],
+.formGroup textarea,
+.formGroup select {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--bg-900);
+    border: 1px solid var(--txt-700);
+    border-radius: var(--br-8);
+    color: var(--txt-50);
+    font-size: 1rem;
+    transition: all var(--transition-normal);
+    font-family: inherit;
+}
+
+.formGroup input[type="text"]::placeholder,
+.formGroup input[type="number"]::placeholder,
+.formGroup input[type="url"]::placeholder,
+.formGroup input[type="date"]::placeholder,
+.formGroup textarea::placeholder,
+.formGroup select::placeholder {
+    color: var(--txt-600);
+    font-weight: 400;
+}
+
+.formGroup input[type="text"]:focus,
+.formGroup input[type="number"]:focus,
+.formGroup input[type="url"]:focus,
+.formGroup input[type="date"]:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+    outline: none;
+    border-color: var(--primary-color-400);
+    box-shadow: 0 0 0 2px rgba(77, 124, 255, 0.1);
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+.formGroup select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23718096'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.25rem;
+    padding-right: 3rem;
+}
+
+.platformGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem;
+}
+
+.platformLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    background-color: var(--bg-900);
+    padding: 1rem;
+    border-radius: var(--br-8);
+    border: 1px solid var(--txt-700);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.platformLabel:hover {
+    border-color: var(--primary-color-400);
+}
+
+.platformLabel input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color-400);
+}
+
+.categoryGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.dynamicField {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.addButton, .removeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all var(--transition-normal);
+    padding: 0.5rem;
+    border-radius: var(--br-4);
+    font-weight: 600;
+}
+
+.addButton {
+    color: var(--primary-color-400);
+    background-color: rgba(77, 124, 255, 0.05);
+}
+
+.addButton:hover {
+    background-color: rgba(77, 124, 255, 0.1);
+}
+
+.removeButton {
+    color: var(--txt-600);
+    background-color: rgba(224, 62, 62, 0.05);
+}
+
+.removeButton:hover { 
+    color: var(--e-500); 
+    background-color: rgba(224, 62, 62, 0.1);
+}
+
+.requirementsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .requirementsContainer {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+}
+
+.requirementsSection {
+    background-color: var(--bg-900);
+    padding: 1.5rem;
+    border-radius: var(--br-8);
+    border: 1px solid var(--txt-700);
+}
+
+.requirementsSection h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color-400);
+}
+
+.requirementsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.relatedSearchWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.relatedSearchIcon {
+    position: absolute;
+    color: var(--txt-600);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.relatedSearchWrapper input {
+    padding-left: 3rem;
+    padding-right: 1rem;
+}
+
+.searchResultsDropdown {
+    position: flex;
+    z-index: 20;
+    margin-top: 0.5rem;
+    background-color: var(--bg-700);
+    border: 1px solid var(--txt-700);
+    border-radius: var(--br-8);
+    max-height: 250px;
+    overflow-y: auto;
+    box-shadow: var(--shadow-lg);
+}
+
+.searchResultItem {
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    background-color: var(--bg-700);
+}
+
+.searchResultItem:hover {
+    background-color: var(--primary-color-800);
+}
+
+.searchResultItem:not(:last-child) {
+    border-bottom: 1px solid var(--txt-700);
+}
+
+.selectedGamesContainer {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.selectedGamePill {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--primary-color-800);
+    color: var(--primary-color-200);
+    padding: 0.75rem 1rem;
+    border-radius: var(--br-full);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid var(--primary-color-700);
+}
+
+.removePillButton {
+    background: none;
+    border: none;
+    color: var(--txt-500);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all var(--transition-fast);
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.removePillButton:hover {
+    color: var(--e-500);
+    background-color: rgba(224, 62, 62, 0.1);
+}
+
+.statusMessage {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    border-radius: var(--br-8);
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+    animation: statusSlideIn 0.4s ease-out;
+}
+
+.statusMessage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+}
+
+.statusMessage.success { 
+    background-color: var(--s-100); 
+    color: var(--s-700);
+    border-color: var(--s-500); 
+}
+
+.statusMessage.success::before {
+    background-color: var(--s-500);
+}
+
+.statusMessage.error { 
+    background-color: var(--e-100); 
+    color: var(--e-700);
+    border-color: var(--e-500); 
+}
+
+.statusMessage.error::before {
+    background-color: var(--e-500);
+}
+
+@keyframes statusSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.submitButton {
+    display: block;
+    width: 100%;
+    padding: 1.25rem;
+    margin-top: 3rem;
+    border: none;
+    border-radius: var(--br-8);
+    background-color: var(--btn-500);
+    color: var(--txt-50);
+    font-size: 1.125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.submitButton:hover:not(:disabled) {
+    background-color: var(--btn-400);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.submitButton:active:not(:disabled) {
+    transform: translateY(-1px);
+}
+
+.submitButton:disabled {
+    background-color: var(--txt-700);
+    color: var(--txt-500);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* --- ESTILOS PARA UPLOAD DE IMAGEM --- */
+.imageUploadGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.imageUploadGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.imageUploadGroup label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--txt-50);
+}
+
+.uploadBox {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: var(--bg-900);
+    border: 2px dashed var(--txt-700);
+    border-radius: var(--br-8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    overflow: hidden;
+}
+
+.uploadBox:hover {
+    border-color: var(--primary-color-400);
+    background-color: var(--bg-800);
+}
+
+.uploadBox.hasPreview {
+    border-style: solid;
+    border-color: var(--txt-700);
+    cursor: default;
+}
+
+.uploadBox.hasPreview:hover {
+    background-color: var(--bg-900);
+}
+
+.uploadPlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--txt-500);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.uploadPlaceholder span {
+    font-weight: 600;
+    color: var(--txt-50);
+}
+
+.uploadPlaceholder small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.previewImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.removePreviewButton {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background-color: rgba(17, 24, 39, 0.8);
+    color: var(--txt-50);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    backdrop-filter: blur(4px);
+}
+
+.removePreviewButton:hover {
+    background-color: var(--e-500);
+}
+
+/* --- ESTILOS PARA A GALERIA --- */
+.galleryPreviewContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+.galleryPreviewItem {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: var(--br-8);
+    overflow: hidden;
+    border: 1px solid var(--txt-700);
+    transition: all var(--transition-normal);
+    background-color: var(--bg-900);
+}
+
+.galleryPreviewItem:hover {
+    border-color: var(--primary-color-400);
+}
+
+.galleryPreviewItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.removeGalleryButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: rgba(17, 24, 39, 0.8);
+    color: var(--txt-50);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    backdrop-filter: blur(4px);
+}
+
+.removeGalleryButton:hover {
+    background-color: var(--e-500);
+}
+
+.addGalleryButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    border: 2px dashed var(--txt-700);
+    border-radius: var(--br-8);
+    color: var(--txt-500);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    gap: 0.75rem;
+    background-color: var(--bg-900);
+}
+
+.addGalleryButton span {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.addGalleryButton:hover {
+    border-color: var(--primary-color-400);
+    color: var(--primary-color-400);
+    background-color: var(--bg-800);
+}
+
+/* Loading state */
+.loadingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 20, 36, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--br-8);
+    z-index: 50;
+}
+
+/* Scroll personalizado */
+.searchResultsDropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.searchResultsDropdown::-webkit-scrollbar-track {
+    background-color: var(--bg-800);
+}
+
+.searchResultsDropdown::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color-700);
+    border-radius: 3px;
+}
+
+.searchResultsDropdown::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-color-600);
+}
+
+/* Responsividade adicional */
+@media (max-width: 640px) {
+    .formWrapper {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .formGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .platformGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .requirementsGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .imageUploadGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .galleryPreviewContainer {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .dynamicField {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+    
+    .dynamicField .removeButton {
+        align-self: flex-end;
+        width: fit-content;
+    }
+}
+
+/* Animações de entrada para elementos */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.formGroup,
+.requirementsSection,
+.imageUploadGroup {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Delay escalonado para animações */
+.formGroup:nth-child(1) { animation-delay: 0.1s; }
+.formGroup:nth-child(2) { animation-delay: 0.15s; }
+.formGroup:nth-child(3) { animation-delay: 0.2s; }
+.formGroup:nth-child(4) { animation-delay: 0.25s; }
+.formGroup:nth-child(5) { animation-delay: 0.3s; }
+
+/* Melhorias de acessibilidade */
+
+
+/* Estados de foco para teclado */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--primary-color-400);
+    outline-offset: 2px;
+}

@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body>
-        {/* Envolvendo a aplicação com o SearchProvider */}
+        
         <SearchProvider>
           {children}
         </SearchProvider>
