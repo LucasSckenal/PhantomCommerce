@@ -11,7 +11,7 @@ import { FaPlaystation, FaXbox, FaSteam } from "react-icons/fa";
 import { BsNintendoSwitch } from "react-icons/bs";
 import styles from './styles/Home.module.scss';
 import gameData from './data/gameData.json';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 
 // --- ÍCONES ---
 const platformIcons = {
