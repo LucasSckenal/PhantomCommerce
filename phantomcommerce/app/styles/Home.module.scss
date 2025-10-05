@@ -543,7 +543,14 @@
     min-height: 450px;
     overflow: hidden;
 }
-
+.showcaseRating{
+    display: flex;
+    flex-direction: row;
+    gap: var(--br-8);
+    align-items: baseline;
+    padding-bottom: 0.5rem;
+    color: var(--w-500);
+}
 .showcaseNav {
     grid-area: nav;
     padding: 2rem 2rem 0 3rem;
@@ -674,6 +681,8 @@
 }
 
 .bestSellerImage img {
+    height: 7.5rem;
+    width: 7.5rem;
     border-radius: var(--br-8);
 }
 
@@ -883,5 +892,182 @@
     }
     .statsGrid {
         grid-template-columns: 1fr;
+    }
+}
+/* Melhorias para a seção Mais Vendidos */
+.bestSellersGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.bestSellerCard {
+    background-color: var(--bg-800);
+    border-radius: var(--br-16);
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: auto 100px 1fr auto;
+    align-items: start;
+    gap: 1.2rem;
+    transition: var(--transition-normal);
+    border: 1px solid var(--txt-700);
+    text-decoration: none;
+    min-height: 140px;
+
+    &:hover {
+        border-color: var(--primary-color-400);
+        background-color: #2D3748;
+        transform: translateY(-3px);
+
+        .rank {
+            color: var(--btn-400);
+        }
+        
+        .bestSellerImage img {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.rank {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 0 0.5rem;
+    color: var(--txt-50);
+    align-self: center;
+}
+
+.bestSellerImage {
+    position: relative;
+    width: 100px;
+    height: 120px;
+    border-radius: var(--br-8);
+    overflow: hidden;
+    flex-shrink: 0;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform var(--transition-normal);
+        border-radius: var(--br-8);
+    }
+}
+
+.bestSellerInfo {
+    color: var(--txt-50);
+    align-self: center;
+    
+    h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+    }
+    
+    .bestSellerTags {
+        display: flex;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        color: var(--txt-500);
+        margin-bottom: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .bestSellerRating {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0.9rem;
+        color: var(--w-500);
+    }
+}
+
+.bestSellerPrice {
+    text-align: right;
+    color: var(--txt-50);
+    align-self: center;
+
+    span {
+        display: block;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+        color: var(--primary-color-400);
+    }
+    
+    button {
+        background-color: var(--primary-color-600);
+        color: var(--txt-50);
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: var(--br-8);
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition-normal);
+        width: 100%;
+        
+        &:hover {
+            background-color: var(--primary-color-400);
+            transform: translateY(-2px);
+        }
+    }
+}
+
+/* Responsive para Mais Vendidos */
+@media (max-width: 768px) {
+    .bestSellerCard {
+        grid-template-columns: auto 80px 1fr;
+        grid-template-areas: 
+            "rank image info"
+            "rank image price";
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .bestSellerImage {
+        width: 80px;
+        height: 100px;
+        grid-area: image;
+    }
+    
+    .rank {
+        grid-area: rank;
+        align-self: start;
+    }
+    
+    .bestSellerInfo {
+        grid-area: info;
+    }
+    
+    .bestSellerPrice {
+        grid-area: price;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        
+        span {
+            margin-bottom: 0;
+        }
+        
+        button {
+            width: auto;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .bestSellersGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bestSellerCard {
+        grid-template-columns: auto 70px 1fr;
+    }
+    
+    .bestSellerImage {
+        width: 70px;
+        height: 90px;
     }
 }

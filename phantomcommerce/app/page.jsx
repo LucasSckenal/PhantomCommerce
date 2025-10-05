@@ -292,7 +292,7 @@ const HomePage = () => {
         </section>
 
             
-            {/* Mais Vendidos */}
+     {/* Mais Vendidos */}
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Mais Vendidos</h2>
@@ -303,19 +303,28 @@ const HomePage = () => {
             <Link href={`/product/${game.id}`} key={game.id} className={styles.bestSellerCard}>
               <span className={styles.rank}>#{index + 1}</span>
               <div className={styles.bestSellerImage}>
-                <Image src={game.headerImageUrl || game.coverImageUrl || '/placeholder.jpg'} alt={game.title} width={60} height={80} objectFit="cover" />
+                <Image 
+                  src={game.headerImageUrl || game.coverImageUrl || '/placeholder.jpg'} 
+                  alt={game.title}
+                  fill
+                  sizes="100px"
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
               <div className={styles.bestSellerInfo}>
                 <h4>{game.title}</h4>
                 <div className={styles.bestSellerTags}>
-                  {game.categories?.slice(0, 2).map(tag => <span key={tag}>{tag}</span>)}
+                  {game.categories?.slice(0, 2).map(tag => (
+                    <span key={tag}>{tag}</span>
+                  ))}
                 </div>
                 <div className={styles.bestSellerRating}>
-                  <Star size={14} fill="currentColor" /> {game.rating}
+                  <Star size={14} fill="currentColor" /> 
+                  <span>{game.rating || 'N/A'}</span>
                 </div>
               </div>
               <div className={styles.bestSellerPrice}>
-                <span>R$ {(game.price || 0).toFixed(2)}</span>
+                <span>R$ {(game.discountedPrice || game.price || 0).toFixed(2).replace('.', ',')}</span>
                 <button>COMPRAR</button>
               </div>
             </Link>
