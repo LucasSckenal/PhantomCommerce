@@ -1,13 +1,22 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Search, ShoppingCart, Bell, User, Menu, X } from "lucide-react";
+// Importando todos os ícones necessários
+import { Search, ShoppingCart, Bell, User, Menu, X, ChevronDown, Loader2 } from "lucide-react";
 import styles from "./Header.module.scss";
 import CartModal from "../CartModal/CartModal";
 import { useSearch } from "../../contexts/SearchContext";
 
+// Dados mocados (substituir por contextos ou APIs no futuro)
 const initialCartData = [
     { id: 1, name: 'Starlight Odyssey', edition: 'Edição Padrão', price: 124.95, oldPrice: 249.90, image: 'https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
+];
+const categories = [
+  { name: "Ação", slug: "acao" },
+  { name: "Aventura", slug: "aventura" },
+  { name: "RPG", slug: "rpg" },
+  { name: "Estratégia", slug: "estrategia" },
+  { name: "Simulação", slug: "simulacao" },
 ];
 
 const IconButton = ({ icon: Icon, badge, label, onClick }) => (
@@ -22,44 +31,46 @@ export default function Header() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [isScrolled, setIsScrolled] = useState(false);
-  
   const [currentUser, setCurrentUser] = useState(null);
+  const [isCategoryMenuOpen, setIsCategoryMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCurrentUser({
-        name: "Ana",
-        avatarUrl: "https://i.pravatar.cc/150?img=40" 
-      });
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const { 
-    searchQuery, 
-    searchResults, 
-    isResultsVisible, 
-    handleSearchSubmit, 
-    handleSearchChange, 
+  const {
+    searchQuery,
+    searchResults,
+    isResultsVisible,
+    isSearching, // Estado de carregamento da busca
+    handleSearchSubmit,
+    handleSearchChange,
     hideSearchResults,
     clearSearch
   } = useSearch();
 
   const searchContainerRef = useRef(null);
+  const categoryMenuRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+    const timer = setTimeout(() => {
+      setCurrentUser({
+        name: "Ana",
+        avatarUrl: "https://i.pravatar.cc/150?img=40"
+      });
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
         hideSearchResults();
+      }
+      if (categoryMenuRef.current && !categoryMenuRef.current.contains(event.target)) {
+        setIsCategoryMenuOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -100,20 +111,32 @@ export default function Header() {
                 />
               </div>
             </form>
-            {isResultsVisible && searchResults.length > 0 && (
+
+            {isResultsVisible && (
               <div className={styles.searchResultsContainer}>
-                <ul className={styles.searchResultsList}>
-                  {searchResults.map((game) => (
-                    <li key={game.id}>
-                      <Link href={`/product/${game.id}`} className={styles.searchResultItem} onClick={clearSearch}>
-                        <div className={styles.resultImageContainer}>
-                          <img src={game.bannerImage} alt={`Capa do jogo ${game.title}`} className={styles.resultImage} />
-                        </div>
-                        <span className={styles.resultTitle}>{game.title}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                {isSearching ? (
+                  <div className={styles.searchFeedback}>
+                    <Loader2 size={16} className={styles.loaderIcon} />
+                    <span>Buscando...</span>
+                  </div>
+                ) : searchResults.length > 0 ? (
+                  <ul className={styles.searchResultsList}>
+                    {searchResults.map((game) => (
+                      <li key={game.id}>
+                        <Link href={`/product/${game.id}`} className={styles.searchResultItem} onClick={clearSearch}>
+                          <div className={styles.resultImageContainer}>
+                            <img src={game.bannerImage} alt={`Capa do jogo ${game.title}`} className={styles.resultImage} />
+                          </div>
+                          <span className={styles.resultTitle}>{game.title}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <div className={styles.searchFeedback}>
+                    <span>Nenhum resultado encontrado.</span>
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -121,18 +144,42 @@ export default function Header() {
           <div className={styles.rightItems}>
             <nav className={styles.mainNav}>
               <Link href="/store" className={styles.navLink}>Loja</Link>
-              <Link href="/library" className={styles.navLink}>Biblioteca</Link>
-              <Link href="/community" className={styles.navLink}>Comunidade</Link>
-              <Link href="/help" className={styles.navLink}>Ajuda</Link>
+              <div className={styles.categoryMenu} ref={categoryMenuRef}>
+                <button
+                  className={`${styles.navLink} ${styles.categoryButton}`}
+                  onClick={() => setIsCategoryMenuOpen(!isCategoryMenuOpen)}
+                >
+                  Categorias
+                  <ChevronDown size={16} className={`${styles.chevronIcon} ${isCategoryMenuOpen ? styles.open : ''}`} />
+                </button>
+                {isCategoryMenuOpen && (
+                  <div className={styles.categoryDropdown}>
+                    <ul className={styles.categoryList}>
+                       <li>
+                          <Link href="/category/all" className={styles.categoryItem} onClick={() => setIsCategoryMenuOpen(false)}>
+                            Ver Todas
+                          </Link>
+                        </li>
+                      {categories.map((category) => (
+                        <li key={category.slug}>
+                          <Link
+                            href={`/category/${category.slug}`}
+                            className={styles.categoryItem}
+                            onClick={() => setIsCategoryMenuOpen(false)}
+                          >
+                            {category.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
             </nav>
+
             <div className={styles.userActions}>
               <div className={styles.desktopActions}>
-                <IconButton 
-                  icon={ShoppingCart} 
-                  badge={cartItems.length} 
-                  label="Carrinho"
-                  onClick={() => setIsCartOpen(true)} 
-                />
+                <IconButton icon={ShoppingCart} badge={cartItems.length} label="Carrinho" onClick={() => setIsCartOpen(true)} />
                 <IconButton icon={Bell} badge={3} label="Notificações" />
                 {currentUser ? (
                   <Link href="/profile" className={styles.userProfile}>
@@ -147,13 +194,9 @@ export default function Header() {
               </div>
             </div>
           </div>
-          
+
           <div className={styles.mobileMenuToggle}>
-             <button
-                className={styles.mobileMenuButton}
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                aria-label="Menu"
-              >
+             <button className={styles.mobileMenuButton} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Menu">
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
           </div>
@@ -161,17 +204,15 @@ export default function Header() {
 
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ""}`}>
           <nav className={styles.mobileNav}>
-            <Link href="/store" className={styles.mobileNavLink}>Loja</Link>
-            <Link href="/library" className={styles.mobileNavLink}>Biblioteca</Link>
-            <Link href="/community" className={styles.mobileNavLink}>Comunidade</Link>
-            <Link href="/help" className={styles.mobileNavLink}>Ajuda</Link>
+            <Link href="/store" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Loja</Link>
+            <Link href="/category/all" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Categorias</Link>
             {currentUser ? (
-               <Link href="/profile" className={styles.mobileUserButton}>
+               <Link href="/profile" className={styles.mobileUserButton} onClick={() => setIsMenuOpen(false)}>
                   <img src={currentUser.avatarUrl} alt={`Avatar de ${currentUser.name}`} className={styles.userAvatar} />
                   <span>Minha Conta</span>
                 </Link>
             ) : (
-              <Link href="/auth/login" className={styles.mobileUserButton}>
+              <Link href="/auth/login" className={styles.mobileUserButton} onClick={() => setIsMenuOpen(false)}>
                 <User size={18} />
                 <span>Entrar</span>
               </Link>
@@ -180,7 +221,7 @@ export default function Header() {
         </div>
       </header>
 
-      <CartModal 
+      <CartModal
         isOpen={isCartOpen}
         onClose={() => setIsCartOpen(false)}
         cartItems={cartItems}
@@ -194,4 +235,3 @@ export default function Header() {
     </>
   );
 }
-

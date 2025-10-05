@@ -1,8 +1,13 @@
 "use client";
 
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import gameData from '../data/gameData.json';
+// 1. IMPORTAÇÃO CENTRALIZADA DO FIREBASE
+import { db } from '../lib/firebase'; // Ajuste o caminho conforme sua estrutura
+// 2. Importações específicas do Firestore continuam necessárias
+import { collection, query, where, getDocs, limit } from "firebase/firestore";
+
+// O bloco de configuração do Firebase foi REMOVIDO daqui
 
 const SearchContext = createContext();
 
@@ -11,61 +16,71 @@ export function SearchProvider({ children }) {
   
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
   const [isResultsVisible, setIsResultsVisible] = useState(false);
 
   const categories = ['aventura', 'acao', 'rpg', 'estrategia', 'esportes', 'corrida'];
-
-  const handleSearchSubmit = (query) => {
-    if (!query) return;
-
-    if (!isNaN(query)) {
-      router.push(`/product/${query}`);
+  const handleSearchSubmit = (queryText) => {
+    if (!queryText) return;
+    if (!isNaN(queryText)) {
+      router.push(`/product/${queryText}`);
     } else {
-      const queryLowerCase = query.toLowerCase();
+      const queryLowerCase = queryText.toLowerCase();
       if (categories.includes(queryLowerCase)) {
         router.push(`/category/${encodeURIComponent(queryLowerCase)}`);
       } else {
-        router.push(`/search?q=${encodeURIComponent(query)}`);
+        router.push(`/search?q=${encodeURIComponent(queryText)}`);
       }
     }
-    
     clearSearch();
   };
 
-  const handleSearchChange = (event) => {
-    const query = event.target.value;
-    setSearchQuery(query);
+  const handleSearchChange = useCallback(async (event) => {
+    const searchText = event.target.value;
+    setSearchQuery(searchText);
 
-    // CORREÇÃO: Alterado de `query.length > 1` para `query.length > 0`
-    // para que a busca inicie na primeira letra.
-    if (query.length > 0) {
-      const filteredGames = gameData.filter(game => 
-        game.title.toLowerCase().includes(query.toLowerCase())
-      ).slice(0, 5);
-      
-      setSearchResults(filteredGames);
-      // A lista só aparece se houver resultados
-      setIsResultsVisible(filteredGames.length > 0); 
+    if (searchText.length > 0) {
+      setIsSearching(true);
+      try {
+        const gamesRef = collection(db, 'games');
+        const q = query(
+          gamesRef,
+          where('title_lowercase', '>=', searchText.toLowerCase()),
+          where('title_lowercase', '<=', searchText.toLowerCase() + '\uf8ff'),
+          limit(5)
+        );
+
+        const querySnapshot = await getDocs(q);
+        const results = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+        setSearchResults(results);
+        setIsResultsVisible(results.length > 0);
+      } catch (error) {
+        console.error("Erro ao buscar jogos:", error);
+        setSearchResults([]);
+        setIsResultsVisible(false);
+      } finally {
+        setIsSearching(false);
+      }
     } else {
-      setSearchResults([]);
-      setIsResultsVisible(false);
+      clearSearch();
     }
-  };
+  }, []);
 
-  const hideSearchResults = () => {
-    setIsResultsVisible(false);
-  };
+  const hideSearchResults = () => setIsResultsVisible(false);
 
   const clearSearch = () => {
     setSearchQuery('');
     setSearchResults([]);
     setIsResultsVisible(false);
+    setIsSearching(false);
   };
 
   const value = {
     searchQuery,
     searchResults,
     isResultsVisible,
+    isSearching,
     handleSearchSubmit,
     handleSearchChange,
     hideSearchResults,
@@ -86,4 +101,3 @@ export function useSearch() {
   }
   return context;
 }
-

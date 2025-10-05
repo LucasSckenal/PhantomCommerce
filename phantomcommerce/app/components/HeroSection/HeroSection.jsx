@@ -3,16 +3,17 @@
 import { useState, useEffect } from 'react';
 import { Play, ChevronLeft, ChevronRight, Star, X } from 'lucide-react';
 import { FaPlaystation, FaXbox, FaSteam } from "react-icons/fa";
-import { BsNintendoSwitch } from "react-icons/bs";
+import { BsNintendoSwitch, BsPcDisplay } from "react-icons/bs";
 import ReactPlayer from 'react-player';
 import styles from './HeroSection.module.scss';
 
 // Mapeamento de plataformas para ícones
 const platformIcons = {
-  xbox: <FaXbox size={20} />,
-  playstation: <FaPlaystation size={20} />,
-  steam: <FaSteam size={20} />,
-  nintendoSwitch: <BsNintendoSwitch size={20} />,
+  Xbox: <FaXbox size={15} />,
+  PlayStation: <FaPlaystation size={15} />,
+  Steam: <FaSteam size={15} />,
+  'Nintendo Switch': <BsNintendoSwitch size={15} />,
+  PC: <BsPcDisplay size={15} />
 };
 
 export default function HeroSection({ game }) {

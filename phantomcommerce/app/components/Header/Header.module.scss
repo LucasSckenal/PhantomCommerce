@@ -22,11 +22,13 @@
 
 .container {
   width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .logoSection {
@@ -41,18 +43,20 @@
 }
 
 .logo {
-  height: 3rem;
+  height: 40px;
   width: auto;
 }
 
-// Seção de Busca
 .searchSection {
-  width: 100%;
+  flex-grow: 1;
   max-width: 500px;
   position: relative;
   @media (max-width: 992px) {
-    flex-grow: 1; // Permite que a busca cresça no mobile se necessário
-    padding: 0 1rem;
+    order: 3;
+    width: 100%;
+    max-width: none;
+    margin-top: 1rem;
+    display: none; // Escondido por padrão no mobile, pode ser mostrado com o menu
   }
 }
 
@@ -60,33 +64,123 @@
   width: 100%;
 }
 
+.searchWrapper {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--txt-300);
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--txt-50);
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+
+  &::placeholder {
+    color: var(--txt-400);
+  }
+
+  &:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-color-500);
+  }
+}
+
+.searchResultsContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 8px;
+  background-color: var(--bg-800);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 35;
+}
+
+.searchResultsList {
+  list-style: none;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.searchResultItem {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--txt-100);
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+.resultImageContainer {
+  flex-shrink: 0;
+  width: 80px;
+  height: 45px;
+  margin-right: 1rem;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--bg-700);
+}
+
+.resultImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resultTitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
 .rightItems {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+.mainNav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
   @media (max-width: 992px) {
     display: none;
   }
 }
 
-// Navegação Principal
-.mainNav {
-  display: flex;
-  gap: 1.5rem;
-}
-
 .navLink {
+  color: var(--txt-100);
   text-decoration: none;
-  color: var(--txt-50); // Tom mais claro para melhor contraste e acessibilidade
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-weight: 500;
+  font-size: 0.95rem;
   position: relative;
-  transition: color 0.2s ease;
+  padding: 0.5rem 0;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: -5px;
+    bottom: 5px;
     left: 0;
     width: 100%;
     height: 2px;
@@ -102,116 +196,34 @@
       transform: scaleX(1);
     }
   }
-}
 
-.searchWrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.searchInput {
-  width: 100%;
-  padding: 0.65rem 1rem 0.65rem 2.5rem; 
-  border-radius: 8px;
-  border: 1px solid transparent;
-  background-color: var(--bg-800);
-  color: var(--txt-50);
-  font-size: 0.9rem;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
-  
-  &:focus {
-    outline: none;
-    border-color: var(--primary-color-400);
-    background-color: var(--bg-900);
-  }
-}
-
-.searchIcon {
-  position: absolute;
-  left: 0.8rem;
-  color: var(--txt-500);
-  pointer-events: none; 
-}
-
-.searchResultsContainer {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background-color: var(--bg-800);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  margin-top: 0.5rem;
-  max-height: 400px;
-  overflow-y: auto;
-  z-index: 50;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  padding: 0.5rem;
-}
-
-.searchResultsList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.searchResultItem {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.5rem;
-  text-decoration: none;
-  color: var(--txt-50);
-  transition: background-color 0.2s ease;
-  border-radius: 6px;
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-}
-
-.resultImageContainer {
-  width: 100px;
-  height: 56px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  overflow: hidden;
-  background-color: var(--bg-900);
-}
-
-.resultImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.resultTitle {
-  font-weight: 500;
-  font-size: 0.9rem;
-  line-height: 1.3;
 }
 
 .userActions {
-  flex-shrink: 0;
   display: flex;
   align-items: center;
+  gap: 1.2rem;
 }
 
 .desktopActions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1.2rem;
+  
+  @media (max-width: 992px) {
+    display: none;
+  }
 }
 
 .iconButton {
   position: relative;
   background: none;
   border: none;
-  color: var(--txt-50);
+  color: var(--txt-100);
   cursor: pointer;
   padding: 0.5rem;
   transition: color 0.2s ease;
+
   &:hover {
     color: var(--primary-color-400);
   }
@@ -222,38 +234,39 @@
   top: 0;
   right: 0;
   background-color: var(--primary-color-600);
-  color: var(--bg-50);
+  color: white;
   border-radius: 50%;
   width: 18px;
   height: 18px;
-  font-size: 0.7rem;
+  font-size: 11px;
   font-weight: bold;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  transform: translate(40%, -40%);
 }
 
 .userButton {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   background-color: var(--primary-color-600);
   color: var(--txt-50);
-  border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
   &:hover {
-    background-color: var(--primary-color-700);
+    background-color: var(--primary-color-500);
+    transform: translateY(-2px);
   }
 }
 
 .userProfile {
-  display: flex;
-  align-items: center;
+  display: block;
   cursor: pointer;
 }
 
@@ -300,10 +313,10 @@
   align-items: center;
   transition: left 0.4s ease-out;
   z-index: 100;
-}
-
-.mobileMenuOpen {
-  left: 0;
+  
+  &.mobileMenuOpen {
+    left: 0;
+  }
 }
 
 .mobileNav {
@@ -314,30 +327,106 @@
 }
 
 .mobileNavLink {
-  text-decoration: none;
   color: var(--txt-50);
+  text-decoration: none;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .mobileUserButton {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  background-color: var(--primary-color-600);
-  color: var(--txt-50);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
+  gap: 1rem;
   margin-top: 2rem;
-  font-size: 1.1rem;
+  color: var(--txt-50);
   text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
 
-  .userAvatar {
-    width: 32px;
-    height: 32px;
+// Estilos para o Menu de Categorias (Dropdown)
+.categoryMenu {
+  position: relative;
+}
+
+.categoryButton {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--txt-100);
+  font-weight: 500;
+  font-size: 0.95rem;
+
+    &::after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color-400);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
   }
 }
 
+.chevronIcon {
+  transition: transform 0.2s ease-in-out;
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+
+.categoryDropdown {
+  position: absolute;
+  top: calc(100% + 10px); // Um pouco de espaço do link
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bg-800);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  min-width: 200px;
+  z-index: 40;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  opacity: 1; // Para animações futuras
+  animation: fadeIn 0.2s ease-out;
+}
+
+.categoryList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categoryItem {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: var(--txt-100);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap; // Impede que o texto quebre em duas linhas
+
+  &:hover {
+    background-color: var(--primary-color-600);
+    color: var(--txt-50);
+  }
+}
+
+// Animação simples de fade-in
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}

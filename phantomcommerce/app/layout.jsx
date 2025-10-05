@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./styles/globals.scss";
 import { SearchProvider } from './contexts/SearchContext';
+import { ProductProvider } from "./contexts/ProductContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,10 +22,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body>
-        
-        <SearchProvider>
-          {children}
-        </SearchProvider>
+          <ProductProvider>
+          <SearchProvider>
+            {children}
+          </SearchProvider>
+        </ProductProvider>
       </body>
     </html>
   );

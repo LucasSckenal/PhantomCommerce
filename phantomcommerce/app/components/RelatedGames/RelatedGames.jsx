@@ -1,31 +1,46 @@
-import gameData from '../../data/gameData.json';
+'use client'; // Necessário para usar hooks como o useContext (useProduct)
+
 import Link from 'next/link';
 import { Star } from 'lucide-react';
 import { FaPlaystation, FaXbox, FaSteam } from "react-icons/fa";
-import { BsNintendoSwitch } from "react-icons/bs";
+import { BsNintendoSwitch, BsPcDisplay } from "react-icons/bs";
 import styles from './RelatedGames.module.scss';
+import { useProduct } from '../../contexts/ProductContext'; // 1. Importe o hook do seu contexto
 
-// Mapeamento de plataformas para ícones
+// Mapeamento de plataformas para ícones (sem alterações)
 const platformIcons = {
-  xbox: <FaXbox size={15} />,
-  playstation: <FaPlaystation size={15} />, // Usando um ícone diferente para variar
-  steam: <FaSteam size={15} />,
-  nintendoSwitch: <BsNintendoSwitch size={15} />,
+  Xbox: <FaXbox size={15} />,
+  PlayStation: <FaPlaystation size={15} />,
+  Steam: <FaSteam size={15} />,
+  'Nintendo Switch': <BsNintendoSwitch size={15} />,
+  PC: <BsPcDisplay size={15} />
 };
 
-export default function RelatedGames({ games }) {
+export default function RelatedGames() { // 2. Remova a prop "games"
+  // 3. Puxe os dados diretamente do contexto
+  const { relatedGames } = useProduct();
+
+  // Se não houver jogos relacionados, não renderiza a seção
+  if (!relatedGames || relatedGames.length === 0) {
+    return null;
+  }
+
   return (
     <section className={`${styles.relatedSection} container`}>
       <h2 className={styles.sectionTitle}>Jogos Relacionados</h2>
       <div className={styles.gamesGrid}>
-        {games.map(game => {
-          const exists = gameData.some(g => g.id === game.id);
+        {relatedGames.map(game => {
+          // 4. Lógica de preço e desconto baseada nos dados do Firebase/Context
+          const hasDiscount = game.originalPrice && game.originalPrice > game.discountedPrice;
+          const discountPercentage = hasDiscount 
+            ? Math.round(((game.originalPrice - game.discountedPrice) / game.originalPrice) * 100)
+            : 0;
 
           return (
             <div key={game.id} className={styles.gameCard}>
-              {/* Novo container para a imagem para aplicar o efeito de sombra */}
               <div className={styles.imageContainer}>
-                <img src={game.image} alt={game.title} className={styles.gameImage} />
+                {/* Use a imagem principal da galeria ou uma imagem de capa, se disponível */}
+                <img src={game.gallery?.[0] || game.image} alt={game.title} className={styles.gameImage} />
               </div>
 
               <div className={styles.platformIcons}>
@@ -34,21 +49,16 @@ export default function RelatedGames({ games }) {
                       {platformIcons[platform] || platform}
                     </span>
                   ))}
-                </div>
+              </div>
 
               <div className={styles.overlay}>
                 <div className={styles.hoverContent}>
-                  {exists ? (
-                    <Link href={`/product/${game.id}`}>
-                      <button className={styles.viewMoreButton}>
-                        Ver mais
-                      </button>
-                    </Link>
-                  ) : (
-                    <button className={styles.viewMoreButton} disabled>
-                      Indisponível
+                  {/* 5. Removida a verificação com gameData.json. Se o jogo está aqui, ele existe. */}
+                  <Link href={`/product/${game.id}`}>
+                    <button className={styles.viewMoreButton}>
+                      Ver mais
                     </button>
-                  )}
+                  </Link>
                 </div>
               </div>
 
@@ -56,18 +66,20 @@ export default function RelatedGames({ games }) {
                 <div>
                   <h3 className={styles.gameTitle}>{game.title}</h3>
                   <div className={styles.priceContainer}>
-                    <p className={styles.gamePrice}>R$ {game.price.toFixed(2)}</p>
+                     {/* Mostra o preço com desconto e risca o original se houver desconto */}
+                    {hasDiscount && <p className={styles.gameOldPrice}>R$ {game.originalPrice.toFixed(2)}</p>}
+                    <p className={styles.gamePrice}>R$ {game.discountedPrice.toFixed(2)}</p>
                   </div>
                   <div className={styles.ratingInfo}>
                     <Star size={16} className={styles.starIcon} />
                     <span>{game.rating}</span>
-                    <span className={styles.reviews}>({game.reviews})</span>  {/* Usar vocabulário GAMER, substituindo, por exemplo: 1000 por 1k*/}
+                    <span className={styles.reviews}>({game.reviews})</span>
                   </div>
                 </div>
               </div>
               
-              {/* Selo de desconto movido para fora do cardBody para posicionamento absoluto */}
-              <span className={styles.discountBadge}>-{game.discount}%</span>
+              {/* Selo de desconto só aparece se o desconto for maior que 0 */}
+              {hasDiscount && <span className={styles.discountBadge}>-{discountPercentage}%</span>}
             </div>
           );
         })}
