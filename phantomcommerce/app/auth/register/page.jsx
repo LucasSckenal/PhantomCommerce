@@ -1,3 +1,4 @@
+// page.jsx - RegisterPage atualizado
 "use client";
 
 import React, { useState, useRef } from "react";
@@ -5,21 +6,40 @@ import styles from './Register.module.scss';
 import Link from 'next/link';
 import { Camera, X } from 'lucide-react';
 import Image from 'next/image';
+import { useAuth } from '../../contexts/AuthContext';
+import { useRouter } from 'next/navigation';
+import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 export default function RegisterPage() {
+  const { signup } = useAuth();
+  const router = useRouter();
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
     confirmPassword: ''
   });
+  const [avatarFile, setAvatarFile] = useState(null);
   const [avatarPreview, setAvatarPreview] = useState(null);
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
   const fileInputRef = useRef(null);
 
   const handleAvatarChange = (event) => {
     const file = event.target.files[0];
     if (file) {
+      // Validar tipo e tamanho do arquivo
+      if (!file.type.startsWith('image/')) {
+        setErrors({ avatar: 'Por favor, selecione uma imagem válida' });
+        return;
+      }
+      if (file.size > 5 * 1024 * 1024) { // 5MB
+        setErrors({ avatar: 'A imagem deve ter menos de 5MB' });
+        return;
+      }
+      
+      setAvatarFile(file);
       const reader = new FileReader();
       reader.onload = (e) => {
         setAvatarPreview(e.target.result);
@@ -31,6 +51,7 @@ export default function RegisterPage() {
   const removeAvatar = (e) => {
     e.stopPropagation();
     setAvatarPreview(null);
+    setAvatarFile(null);
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -54,7 +75,7 @@ export default function RegisterPage() {
   const validateForm = () => {
     const newErrors = {};
     
-    if (!formData.name) newErrors.name = 'Nome é obrigatório';
+    if (!formData.name.trim()) newErrors.name = 'Nome é obrigatório';
     if (!formData.email) {
       newErrors.email = 'Email é obrigatório';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -72,16 +93,108 @@ export default function RegisterPage() {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const uploadAvatarToStorage = async (file, userId) => {
+    try {
+      const storage = getStorage();
+      const fileExtension = file.name.split('.').pop();
+      const avatarRef = ref(storage, `avatars/${userId}/profile.${fileExtension}`);
+      
+      // Fazer upload do arquivo
+      const snapshot = await uploadBytes(avatarRef, file);
+      
+      // Obter URL de download
+      const downloadURL = await getDownloadURL(snapshot.ref);
+      
+      return downloadURL;
+    } catch (error) {
+      console.error('Erro ao fazer upload do avatar:', error);
+      throw error;
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validateForm();
     
-    if (Object.keys(newErrors).length === 0) {
-      console.log('Form data:', formData);
-      console.log('Avatar:', avatarPreview);
-    } else {
+    if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
+      return;
     }
+
+    setLoading(true);
+    
+    try {
+      let photoURL = '';
+      
+      // 1. Se houver avatar, fazer upload primeiro
+      if (avatarFile) {
+        // Criar usuário temporariamente para obter o UID
+        // Na prática, faremos o upload após criar o usuário
+        // Vamos lidar com isso após a criação do usuário
+      }
+
+      // 2. Preparar dados do usuário
+      const userData = {
+        name: formData.name.trim(),
+        // photoURL será adicionado após o upload
+      };
+
+      // 3. Criar usuário no Auth e Firestore
+      const userCredential = await signup(formData.email, formData.password, userData);
+      const user = userCredential.user;
+
+      // 4. Se houver avatar, fazer upload com o UID real
+      if (avatarFile) {
+        try {
+          photoURL = await uploadAvatarToStorage(avatarFile, user.uid);
+          
+          // Atualizar perfil com a photoURL
+          await updateProfile(user, { photoURL });
+          
+          // Atualizar no Firestore também
+          // (Isso pode ser feito em uma função separada ou no próprio signup)
+        } catch (avatarError) {
+          console.warn('Erro no upload do avatar, continuando sem foto:', avatarError);
+          // Não impedir o registro se o avatar falhar
+        }
+      }
+
+      console.log('Usuário registrado com sucesso:', user.uid);
+      router.push('/'); // Redirecionar para página inicial após registro
+    } catch (error) {
+      console.error('Erro no registro:', error);
+      setErrors({ submit: getAuthErrorMessage(error.code) });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleSocialLogin = async (provider) => {
+    try {
+      if (provider === 'google') {
+        await loginWithGoogle();
+        router.push('/');
+      }
+    } catch (error) {
+      console.error('Erro no login social:', error);
+      setErrors({ submit: getAuthErrorMessage(error.code) });
+    }
+  };
+
+  const getAuthErrorMessage = (errorCode) => {
+    const errorMessages = {
+      'auth/email-already-in-use': 'Este email já está em uso.',
+      'auth/invalid-email': 'Email inválido.',
+      'auth/operation-not-allowed': 'Operação não permitida.',
+      'auth/weak-password': 'Senha muito fraca.',
+      'auth/user-disabled': 'Esta conta foi desativada.',
+      'auth/user-not-found': 'Usuário não encontrado.',
+      'auth/wrong-password': 'Senha incorreta.',
+      'auth/popup-closed-by-user': 'Popup fechado pelo usuário.',
+      'auth/cancelled-popup-request': 'Solicitação de popup cancelada.',
+      'auth/popup-blocked': 'Popup bloqueado pelo navegador.',
+    };
+    return errorMessages[errorCode] || 'Ocorreu um erro inesperado. Tente novamente.';
   };
 
   return (
@@ -118,6 +231,7 @@ export default function RegisterPage() {
             onChange={handleAvatarChange}
             accept="image/*"
           />
+          {errors.avatar && <span className={styles.errorText}>{errors.avatar}</span>}
         </div>
 
         <form className={styles.form} onSubmit={handleSubmit}>
@@ -173,7 +287,15 @@ export default function RegisterPage() {
             {errors.confirmPassword && <span className={styles.errorText}>{errors.confirmPassword}</span>}
           </div>
 
-          <button type="submit" className={styles.submitButton}>Registrar</button>
+          {errors.submit && <span className={styles.errorText}>{errors.submit}</span>}
+
+          <button 
+            type="submit" 
+            className={styles.submitButton}
+            disabled={loading}
+          >
+            {loading ? 'Registrando...' : 'Registrar'}
+          </button>
         </form>
 
         <p className={styles.loginLink}>
@@ -185,26 +307,14 @@ export default function RegisterPage() {
         </div>
 
         <div className={styles.socialLogin}>
-          <button className={`${styles.socialButton} ${styles.google}`}>
+          <button 
+            className={`${styles.socialButton} ${styles.google}`}
+            onClick={() => handleSocialLogin('google')}
+            disabled={loading}
+          >
             <Image
               src="/google.png"
               alt="Google"
-              width={77}
-              height={77}
-            />
-          </button>
-          <button className={`${styles.socialButton} ${styles.twitter}`}>
-            <Image
-              src="/x.png"
-              alt="X"
-              width={77}
-              height={77}
-            />
-          </button>
-          <button className={`${styles.socialButton} ${styles.facebook}`}>
-            <Image
-              src="/facebook.png"
-              alt="Facebook"
               width={77}
               height={77}
             />

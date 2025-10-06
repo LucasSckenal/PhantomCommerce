@@ -234,7 +234,7 @@
   top: 0;
   right: 0;
   background-color: var(--primary-color-600);
-  color: white;
+  color: var(--txt-50);
   border-radius: 50%;
   width: 18px;
   height: 18px;
@@ -266,21 +266,98 @@
 }
 
 .userProfile {
-  display: block;
+  position: relative;
+}
+
+.userAvatarButton {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:focus-visible {
+    outline: 2px solid var(--primary-color-400);
+    outline-offset: 2px;
+  }
 }
 
 .userAvatar {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 2px solid transparent;
+  border: 2px solid var(--primary-color-400);
+  background-color: var(--primary-color-400);
   object-fit: cover;
   transition: border-color 0.2s ease, transform 0.2s ease;
   
   &:hover {
     transform: scale(1.05);
     border-color: var(--primary-color-400);
+  }
+}
+
+.profileDropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: -250%;
+  background-color: var(--bg-800);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  width: 240px;
+  z-index: 40;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.profileInfo {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 0.5rem;
+
+  strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--txt-50);
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  span {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--txt-300);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.dropdownItem {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 1rem;
+  color: var(--txt-100);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  &:hover {
+    background-color: var(--primary-color-600);
+    color: var(--txt-50);
   }
 }
 

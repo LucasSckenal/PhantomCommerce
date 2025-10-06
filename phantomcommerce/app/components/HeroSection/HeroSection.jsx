@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Play, ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { Play, ChevronLeft, ChevronRight, Star, ShoppingCart, Heart } from 'lucide-react';
 import { FaPlaystation, FaXbox, FaSteam } from "react-icons/fa";
 import { BsNintendoSwitch, BsPcDisplay } from "react-icons/bs";
+import { useCart } from '../../contexts/CartContext';
 import styles from './HeroSection.module.scss';
 
 // Mapeamento de plataformas para ícones
@@ -19,6 +20,21 @@ export default function HeroSection({ game }) {
   const [activeImage, setActiveImage] = useState(game.videoThumbnail);
   const [isViewingVideo, setIsViewingVideo] = useState(false);
   const [playerError, setPlayerError] = useState(false);
+  const { addToCart, cartItems } = useCart();
+
+  const isInCart = cartItems.some(item => item.id === game.id);
+
+  const handleAddToCart = () => {
+    const itemToAdd = {
+        id: game.id,
+        name: game.title,
+        edition: 'Edição Padrão',
+        price: game.discountedPrice,
+        oldPrice: game.originalPrice,
+        image: game.bannerImage || game.headerImageUrl,
+    };
+    addToCart(itemToAdd);
+  };
 
   const hasDiscount = game.originalPrice && game.discountedPrice && game.originalPrice > game.discountedPrice;
   const gameDiscount = hasDiscount ? game.originalPrice - game.discountedPrice : 0;
@@ -116,10 +132,17 @@ export default function HeroSection({ game }) {
             )}
           </div>
           <div className={styles.buttonGroup}>
-            <button className={styles.addButton}>{isReleased ? 'Comprar Agora' : 'Realizar Preorder'}</button>
+            <button
+                className={styles.addButton}
+                onClick={handleAddToCart}
+                disabled={isInCart}
+              >
+                {isInCart ? 'NO CARRINHO' : (isReleased ? 'Comprar Agora' : 'Realizar PRÉ-VENDA')}
+              </button>
             {mainTrailerUrl && (
               <button className={styles.trailerButton} onClick={handlePlayVideo}>
-                Ver trailer <Play size={16} />
+                <Heart/>
+                Adicionar a lista de desejo
               </button>
             )}
           </div>
@@ -183,7 +206,7 @@ export default function HeroSection({ game }) {
               <button className={styles.thumbNav}><ChevronLeft size={20}/></button>
               <div className={styles.thumbnails}>
                 <div className={styles.thumbnail} onClick={() => handleThumbnailClick(game.videoThumbnail)}>
-                  <img src={game.videoThumbnail} alt="Video Thumbnail" />
+                  <img src={game.gallery[0]} alt="Video Thumbnail" />
                 </div>
                 {game.gallery.map((img, index) => (
                   <div key={index} className={styles.thumbnail} onClick={() => handleThumbnailClick(img)}>
@@ -212,7 +235,13 @@ export default function HeroSection({ game }) {
                   Você economiza {gameDiscount.toFixed(2)} reais
                 </p>
               )}
-              <button className={styles.addButton}>{isReleased ? 'Comprar Agora' : 'Realizar Preorder'}</button>
+               <button
+                className={styles.addButton}
+                onClick={handleAddToCart}
+                disabled={isInCart}
+              >
+                {isInCart ? 'NO CARRINHO' : (isReleased ? 'Comprar Agora' : 'Realizar PRÉ-VENDA')}
+              </button>
             </div>
             <div className={styles.requirements}>
               <div className={styles.card}>

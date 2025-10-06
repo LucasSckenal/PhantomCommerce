@@ -3,6 +3,8 @@ import "./styles/globals.scss";
 import { SearchProvider } from './contexts/SearchContext';
 import { ProductProvider } from "./contexts/ProductContext";
 import { StoreProvider } from "./contexts/StoreContext";
+import { CartProvider } from "./contexts/CartContext"
+import { AuthProvider } from "./contexts/AuthContext"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,6 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body>
+        <AuthProvider>
          <StoreProvider slug="all" initialFilters={{
             sortOrder: 'rating',
             selectedTags: [],
@@ -31,10 +34,13 @@ export default function RootLayout({ children }) {
           }}>
           <ProductProvider>
           <SearchProvider>
-            {children}
+            <CartProvider>
+              {children}
+            </CartProvider>
           </SearchProvider>
         </ProductProvider>
         </StoreProvider>
+        </AuthProvider>
       </body>
     </html>
   );

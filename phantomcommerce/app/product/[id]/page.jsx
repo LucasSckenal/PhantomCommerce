@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react';
 import { useProduct } from '../../contexts/ProductContext'; // Ajuste o caminho
-
 import Header from '../../components/Header/Header';
 import HeroSection from '../../components/HeroSection/HeroSection';
 import GameDetails from '../../components/GameDetails/GameDetails';

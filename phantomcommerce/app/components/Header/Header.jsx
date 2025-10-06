@@ -1,16 +1,15 @@
-"use client";
+'use client';
+
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-// Importando todos os ícones necessários
-import { Search, ShoppingCart, Bell, User, Menu, X, ChevronDown, Loader2 } from "lucide-react";
+import { Search, ShoppingCart, Heart, User, Menu, X, ChevronDown, Loader2 } from "lucide-react";
 import styles from "./Header.module.scss";
 import CartModal from "../CartModal/CartModal";
 import { useSearch } from "../../contexts/SearchContext";
+import { useCart } from "../../contexts/CartContext";
+import { useAuth } from "../../contexts/AuthContext"; // 1. Importar o hook de autenticação
 
-// Dados mocados (substituir por contextos ou APIs no futuro)
-const initialCartData = [
-    { id: 1, name: 'Starlight Odyssey', edition: 'Edição Padrão', price: 124.95, oldPrice: 249.90, image: 'https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' },
-];
+// Dados mocados para categorias (podem ser substituídos por uma API no futuro)
 const categories = [
   { name: "Ação", slug: "acao" },
   { name: "Aventura", slug: "aventura" },
@@ -28,17 +27,18 @@ const IconButton = ({ icon: Icon, badge, label, onClick }) => (
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isCartOpen, setIsCartOpen] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [currentUser, setCurrentUser] = useState(null);
   const [isCategoryMenuOpen, setIsCategoryMenuOpen] = useState(false);
-
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+  
+  // 2. Usar os contextos
+  const { currentUser, logout } = useAuth();
+  const { isCartOpen, cartItems, handleCartClick, closeCart, removeFromCart} = useCart();
   const {
     searchQuery,
     searchResults,
     isResultsVisible,
-    isSearching, // Estado de carregamento da busca
+    isSearching,
     handleSearchSubmit,
     handleSearchChange,
     hideSearchResults,
@@ -47,16 +47,7 @@ export default function Header() {
 
   const searchContainerRef = useRef(null);
   const categoryMenuRef = useRef(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCurrentUser({
-        name: "Ana",
-        avatarUrl: "https://i.pravatar.cc/150?img=40"
-      });
-    }, 3000);
-    return () => clearTimeout(timer);
-  }, []);
+  const profileMenuRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -72,19 +63,24 @@ export default function Header() {
       if (categoryMenuRef.current && !categoryMenuRef.current.contains(event.target)) {
         setIsCategoryMenuOpen(false);
       }
+      if (profileMenuRef.current && !profileMenuRef.current.contains(event.target)) {
+        setIsProfileMenuOpen(false);
+      }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [hideSearchResults]);
 
-  useEffect(() => {
-    setCartItems(initialCartData);
-  }, []);
 
   const onSearchSubmit = (event) => {
     event.preventDefault();
     handleSearchSubmit(searchQuery);
   }
+
+  const handleLogout = async () => {
+    await logout();
+    setIsProfileMenuOpen(false);
+  };
 
   return (
     <>
@@ -140,10 +136,9 @@ export default function Header() {
               </div>
             )}
           </div>
-
           <div className={styles.rightItems}>
             <nav className={styles.mainNav}>
-              <Link href="/store" className={styles.navLink}>Loja</Link>
+              <Link href="/" className={styles.navLink}>Loja</Link>
               <div className={styles.categoryMenu} ref={categoryMenuRef}>
                 <button
                   className={`${styles.navLink} ${styles.categoryButton}`}
@@ -179,12 +174,35 @@ export default function Header() {
 
             <div className={styles.userActions}>
               <div className={styles.desktopActions}>
-                <IconButton icon={ShoppingCart} badge={cartItems.length} label="Carrinho" onClick={() => setIsCartOpen(true)} />
-                <IconButton icon={Bell} badge={3} label="Notificações" />
+                <IconButton icon={ShoppingCart} badge={cartItems.length} label="Carrinho" onClick={handleCartClick} />
+                <IconButton icon={Heart} badge={3} label="Notificações" />
+                
+                {/* 3. Lógica de autenticação dinâmica */}
                 {currentUser ? (
-                  <Link href="/profile" className={styles.userProfile}>
-                    <img src={currentUser.avatarUrl} alt={`Avatar de ${currentUser.name}`} className={styles.userAvatar} />
-                  </Link>
+                  <div className={styles.userProfile} ref={profileMenuRef}>
+                    <button onClick={() => setIsProfileMenuOpen(!isProfileMenuOpen)} className={styles.userAvatarButton}>
+                      <img 
+                        src={currentUser.photoURL || '/default-avatar.svg'} 
+                        alt={`Avatar de ${currentUser.displayName || 'Utilizador'}`}
+                        className={styles.userAvatar} 
+                        onError={(e) => { e.currentTarget.src = '/default-avatar.svg'; }} // Fallback para imagem quebrada
+                      />
+                    </button>
+                    {isProfileMenuOpen && (
+                      <div className={styles.profileDropdown}>
+                         <div className={styles.profileInfo}>
+                            <strong>{currentUser.displayName || 'Bem-vindo(a)!'}</strong>
+                            <span>{currentUser.email}</span>
+                        </div>
+                        <Link href="/profile" className={styles.dropdownItem} onClick={() => setIsProfileMenuOpen(false)}>
+                            Minha Conta
+                        </Link>
+                        <button onClick={handleLogout} className={styles.dropdownItem}>
+                            Sair
+                        </button>
+                      </div>
+                    )}
+                  </div>
                 ) : (
                   <Link href="/auth/login" className={styles.userButton}>
                     <User size={18} />
@@ -204,13 +222,18 @@ export default function Header() {
 
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ""}`}>
           <nav className={styles.mobileNav}>
-            <Link href="/store" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Loja</Link>
+            <Link href="/" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Loja</Link>
             <Link href="/category/all" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Categorias</Link>
             {currentUser ? (
+              <>
                <Link href="/profile" className={styles.mobileUserButton} onClick={() => setIsMenuOpen(false)}>
-                  <img src={currentUser.avatarUrl} alt={`Avatar de ${currentUser.name}`} className={styles.userAvatar} />
+                  <img src={currentUser.photoURL || '/default-avatar.svg'} alt={`Avatar de ${currentUser.displayName}`} className={styles.userAvatar} />
                   <span>Minha Conta</span>
                 </Link>
+                <button onClick={handleLogout} className={`${styles.mobileNavLink} ${styles.logoutButton}`}>
+                    Sair
+                </button>
+              </>
             ) : (
               <Link href="/auth/login" className={styles.mobileUserButton} onClick={() => setIsMenuOpen(false)}>
                 <User size={18} />
@@ -223,14 +246,9 @@ export default function Header() {
 
       <CartModal
         isOpen={isCartOpen}
-        onClose={() => setIsCartOpen(false)}
+        onClose={closeCart}
         cartItems={cartItems}
-        onRemoveItem={(id) => setCartItems(prev => prev.filter(item => item.id !== id))}
-        onUpdateQuantity={(id, newQuantity) => {
-          if (newQuantity === 0) {
-            setCartItems(prev => prev.filter(item => item.id !== id));
-          }
-        }}
+        onRemoveItem={removeFromCart}
       />
     </>
   );

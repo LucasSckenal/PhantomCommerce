@@ -67,12 +67,12 @@ const CartModal = ({
 
         {/* Conteúdo */}
         {cartItems.length === 0 ? (
-          <div className="flex-grow flex flex-col justify-center items-center text-center p-6">
-            <ShoppingCart size={96} className="text-gray-600 mb-4" />
-            <h3 className="text-2xl font-bold text-gray-400">
-              Seu carrinho está vazio
-            </h3>
-            <p className="text-gray-500 mt-2">Adicione jogos para vê-los aqui.</p>
+          <div className={styles.emptyCartContainer}>
+            <ShoppingCart size={96} className={styles.emptyCartIcon} />
+            <h3 className={styles.emptyCartTitle}>Seu carrinho está vazio</h3>
+            <p className={styles.emptyCartText}>
+              Adicione jogos para vê-los aqui.
+            </p>
           </div>
         ) : (
           <>

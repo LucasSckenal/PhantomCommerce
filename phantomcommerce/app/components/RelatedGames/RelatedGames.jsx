@@ -39,8 +39,8 @@ export default function RelatedGames() { // 2. Remova a prop "games"
           return (
             <div key={game.id} className={styles.gameCard}>
               <div className={styles.imageContainer}>
-                {/* Use a imagem principal da galeria ou uma imagem de capa, se disponível */}
-                <img src={game.gallery?.[0] || game.image} alt={game.title} className={styles.gameImage} />
+                
+                <img src={game.headerImageUrl || game.coverImageUrl} alt={game.title} className={styles.gameImage} />
               </div>
 
               <div className={styles.platformIcons}>
@@ -73,7 +73,6 @@ export default function RelatedGames() { // 2. Remova a prop "games"
                   <div className={styles.ratingInfo}>
                     <Star size={16} className={styles.starIcon} />
                     <span>{game.rating}</span>
-                    <span className={styles.reviews}>({game.reviews})</span>
                   </div>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
+import { useCart } from './contexts/CartContext';
 import Image from 'next/image';
 import Link from 'next/link';
 import { 
@@ -9,6 +10,7 @@ import {
 } from 'lucide-react';
 import { FaPlaystation, FaXbox, FaSteam } from "react-icons/fa";
 import { BsNintendoSwitch, BsPcDisplay } from "react-icons/bs";
+import { Heart } from 'lucide-react';
 import styles from './styles/Home.module.scss';
 import Header from './components/Header/Header';
 import { useStore } from './contexts/StoreContext';
@@ -109,14 +111,37 @@ const HomePage = () => {
   const popularScrollRef = useRef(null);
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [activeShowcase, setActiveShowcase] = useState('releases'); // estado do showcase
+    const { addToCart, cartItems } = useCart();
+
+  const isInCart = cartItems.some(item => item.id === game.id);
+
+  const handleAddToCart = () => {
+    const itemToAdd = {
+        id: game.id,
+        name: game.title,
+        edition: 'Edição Padrão',
+        price: game.discountedPrice,
+        oldPrice: game.originalPrice,
+        image: game.bannerImage || game.headerImageUrl,
+    };
+    addToCart(itemToAdd);
+  };
 
   // --- Dados derivados do Firestore ---
   const bestRatedGames = [...games].sort((a, b) => (b.rating || 0) - (a.rating || 0));
+const discountedGames = [...games]
+    .filter(game => game.oldPrice && game.oldPrice > game.price)
+    .map(game => ({
+      ...game,
+      discountPercentage: Math.round(((game.oldPrice - game.price) / game.oldPrice) * 100),
+      discountAmount: game.oldPrice - game.price
+    }))
+    .sort((a, b) => b.discountPercentage - a.discountPercentage);
   const heroGames = bestRatedGames.slice(0, 3);
   const popularGames = bestRatedGames.slice(3, 9);
   const showcaseGame = bestRatedGames[0]; 
   const bestSellers = bestRatedGames.slice(5, 9);
-  const promotions = bestRatedGames.slice(9, 14);
+  const promotions = discountedGames.slice(0, 5);
 
     // --- Hooks fixos ---
   const handleHeroNav = (direction) => {
@@ -225,11 +250,12 @@ const HomePage = () => {
 
             <div className={styles.heroActions}>
               <Link href={`/product/${activeHeroGame.id}`} className={styles.heroButtonPrimary}>
-                Comprar Agora
+                Ver jogo
               </Link>
               {activeHeroGame.trailerUrls?.length > 0 && (
                 <Link href={activeHeroGame.trailerUrls[0]} target="_blank" className={styles.heroButtonSecondary}>
-                  Ver trailer &gt;
+                  <Heart/>
+                  <p>Adicionar a lista de favoritos</p> 
                 </Link>
               )}
             </div>
@@ -293,16 +319,15 @@ const HomePage = () => {
                 : displayedShowcaseGame?.about || displayedShowcaseGame?.description
               }
             </p>
-
-            {/* Estrela única */}
-            <div className={styles.showcaseRating}>
-              <Star size={16} className={styles.starIcon} />
-              <span>{displayedShowcaseGame?.rating || 'N/A'}</span>
-            </div>
-
+            
             <div className={styles.showcaseActions}>
-              <button className={styles.primaryButton}>Adicionar ao Carrinho</button>
-              <button className={styles.secondaryButton}>Lista de Desejos</button>
+               <Link
+                className={styles.primaryButton}
+                href={`/product/${displayedShowcaseGame.id}`}
+              >
+               Ver jogo
+              </Link>
+              <button className={styles.secondaryButton}><Heart/>Adicionar a lista de favoritos</button>
             </div>
           </div>
 
@@ -317,7 +342,7 @@ const HomePage = () => {
         </section>
 
             
-     {/* Mais Vendidos */}
+      {/* Mais Vendidos */}
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Mais Vendidos</h2>
@@ -326,16 +351,30 @@ const HomePage = () => {
         <div className={styles.bestSellersGrid}>
           {bestSellers.map((game, index) => (
             <Link href={`/product/${game.id}`} key={game.id} className={styles.bestSellerCard}>
-              <span className={styles.rank}>#{index + 1}</span>
-              <div className={styles.bestSellerImage}>
-                
-                <Image 
-                  src={game.headerImageUrl || game.coverImageUrl || '/placeholder.jpg'} 
+              {/* Camada de fundo para o efeito hover */}
+              <div className={styles.bestSellerImageBackground}>
+                <Image
+                  src={game.headerImageUrl || game.coverImageUrl || '/placeholder.jpg'}
                   alt={game.title}
-                  fill
-                  style={{ objectFit: 'cover' }}
+                  layout="fill"
+                  objectFit="cover"
                 />
               </div>
+
+              {/* Conteúdo visível que será posicionado pelo grid */}
+              <span className={styles.rank}>#{index + 1}</span>
+
+              <div className={styles.bestSellerImageContainer}>
+                <Image
+                  src={game.headerImageUrl || game.coverImageUrl || '/placeholder.jpg'}
+                  alt={game.title}
+                  width={75}
+                  height={100}
+                  objectFit="cover"
+                  className={styles.bestSellerImageSide}
+                />
+              </div>
+
               <div className={styles.bestSellerInfo}>
                 <h4>{game.title}</h4>
                 <div className={styles.bestSellerTags}>
@@ -343,13 +382,14 @@ const HomePage = () => {
                   <span className={styles.gameTags}>{(game.categories || []).join(', ')}</span>
                 </div>
                 <div className={styles.bestSellerRating}>
-                  <Star size={14} fill="currentColor" /> 
+                  <Star size={14} fill="currentColor" />
                   <span>{game.rating || 'N/A'}</span>
                 </div>
               </div>
+              
               <div className={styles.bestSellerPrice}>
                 <span>R$ {(game.discountedPrice || game.price || 0).toFixed(2).replace('.', ',')}</span>
-                <button>COMPRAR</button>
+                <Link href={`/product/${game.id}`}><button>Ver jogo</button></Link>
               </div>
             </Link>
           ))}
