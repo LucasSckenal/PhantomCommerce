@@ -250,6 +250,7 @@
 
 /* Showcase Section */
 .showcaseSection {
+    border: 2px solid var(--txt-700);
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     grid-template-areas: "nav image" "content image";
