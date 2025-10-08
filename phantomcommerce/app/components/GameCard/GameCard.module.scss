@@ -1,12 +1,3 @@
-/* GameGrid.module.scss */
-
-.gameGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 2.5rem;
-}
-
-/* --- ESTILOS DO GAME CARD (copiados de categoryPage) --- */
 .gameCard {
   background: var(--bg-800);
   border-radius: var(--br-8);
@@ -18,23 +9,23 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   text-decoration: none;
   color: inherit;
+  /* A altura é determinada pelo conteúdo, mas o contêiner grid irá igualá-los */
 
   &:hover {
-    border: 1px solid var(--primary-color-400);
+    border-color: var(--primary-color-400);
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
     .overlay { opacity: 1; }
-    .gameImage {
-        transform: scale(1.05);
-    }
+    .gameImage { transform: scale(1.05); }
   }
 }
 
 .imageContainer {
   position: relative;
   width: 100%;
-  padding-top: 133%; /* Proporção 3:4 */
+  padding-top: 133.33%; /* Proporção 3:4 para manter a imagem consistente */
   overflow: hidden;
+  flex-shrink: 0;
   
   &::after {
     content: '';
@@ -43,7 +34,7 @@
     left: 0;
     width: 100%;
     height: 70%;
-    background: linear-gradient(to top, rgba(26, 32, 44, 0.9) 10%, rgba(26, 32, 44, 0) 100%);
+    background: linear-gradient(to top, rgba(26, 32, 44, 0.95) 10%, transparent 100%);
     z-index: 1;
     transition: opacity var(--transition-normal);
   }
@@ -72,7 +63,7 @@
 
 .overlay {
   position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(15, 20, 36, 0.7); /* Cor do var(--bg-900) com transparência */
+  background: rgba(15, 20, 36, 0.7);
   z-index: 2;
   display: flex;
   align-items: center;
@@ -82,19 +73,20 @@
 }
 
 .viewMoreButton {
-  border: 2px solid var(--txt-50);
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: 600;
-  color: var(--txt-50);
-  background: transparent;
-  transition: all var(--transition-fast);
-  cursor: pointer;
+    border: 2px solid var(--primary-color-600);
+    padding: 10px 20px;
+    border-radius: var(--br-16);
+    font-weight: 600;
+    color: var(--txt-50);
+    background-color: rgba(15, 20, 36, 0.8); 
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-fast);
+    cursor: pointer;
 
-  &:hover {
-    background: var(--txt-50);
-    color: var(--bg-900);
-  }
+    &:hover {
+        background: var(--primary-color-600);
+        color: var(--txt-50);
+    }
 }
 
 .cardBody {
@@ -102,14 +94,20 @@
   display: flex; 
   flex-direction: column;
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .gameTitle {
   font-size: 1.1rem; 
   font-weight: 600; 
   margin-bottom: 0.5rem;
-  min-height: 44px;
+  min-height: 44px; /* Garante espaço para até 2 linhas de título */
   color: var(--txt-50);
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .tagsContainer {
@@ -136,13 +134,13 @@
   margin-top: auto; 
   padding-top: 0.5rem; 
   color: var(--txt-500);
-  .starIcon { color: #ffca28; }
+  .starIcon { color: var(--primary-color-400) }
 }
 
 .priceSection {
   padding: 0 1rem 1rem;
   display: flex;
-  justify-content: flex-end; /* Alinha o preço à direita */
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -151,12 +149,12 @@
   align-items: baseline;
   gap: 0.5rem;
   .gamePrice { 
-    font-size: 1.4rem; 
+    font-size: 1.2rem; 
     font-weight: 700; 
     color: var(--txt-50); 
   }
   .originalPrice {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--txt-500);
     text-decoration: line-through;
   }
@@ -174,3 +172,4 @@
   font-size: 1rem;
   font-weight: bold;
 }
+

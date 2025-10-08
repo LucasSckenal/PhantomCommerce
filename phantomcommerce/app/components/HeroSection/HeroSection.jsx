@@ -101,10 +101,9 @@ export default function HeroSection({ game }) {
       <div
         className={styles.banner}
         style={{
-          backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(15, 20, 36, 0.8) 70%, rgba(15, 20, 36, 1) 100%), url('${game.headerImageUrl || game.coverImageUrl}')`
+          backgroundImage: `linear-gradient(180deg, rgba(15, 20, 36, 1) 0%, rgba(15, 20, 36, 1) 13%, rgba(15, 20, 36, 0.2) 13%, rgba(0, 0, 0, 0.3) 40%, rgba(15, 20, 36, 0.8) 70%, rgba(15, 20, 36, 1) 100%), url('${game.headerImageUrl || game.coverImageUrl}')`
         }}
       >
-        <div className={styles.bannerOverlay}></div>
       </div>
       
       <main className={`${styles.mainContent} container`}>
@@ -248,6 +247,9 @@ export default function HeroSection({ game }) {
                 <p style={{ color:`green`, fontWeight:`bold`, marginBottom:`12px` }}>
                   Você economiza {gameDiscount.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} reais
                 </p>
+              )}
+              {!hasDiscount && (
+                <p style={{ marginBottom:`12px` }}></p>
               )}
                <button
                 className={styles.addButton}

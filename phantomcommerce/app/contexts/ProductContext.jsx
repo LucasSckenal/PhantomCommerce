@@ -1,17 +1,11 @@
 'use client';
 
 import { createContext, useContext, useState, useCallback } from 'react';
-// 1. IMPORTAÇÃO CENTRALIZADA DO FIREBASE
-import { db } from '../lib/firebase'; // Ajuste o caminho conforme sua estrutura
-// 2. Importações específicas do Firestore continuam necessárias
+import { db } from '../lib/firebase'; 
 import { doc, getDoc, collection, query, where, getDocs } from "firebase/firestore";
 
-// O bloco de configuração do Firebase foi REMOVIDO daqui
-
-// 1. Criar o Context
 const ProductContext = createContext();
 
-// 2. Criar o Provider (o componente que vai "segurar" e prover os dados)
 export function ProductProvider({ children }) {
     const [game, setGame] = useState(null);
     const [relatedGames, setRelatedGames] = useState([]);
@@ -37,6 +31,7 @@ export function ProductProvider({ children }) {
         };
     };
 
+    // Usamos apenas a função original que busca por Nomes
     const getRelatedGames = async (gameNames = []) => {
         if (!gameNames || gameNames.length === 0) return [];
         const gamesRef = collection(db, 'games');
@@ -61,10 +56,17 @@ export function ProductProvider({ children }) {
         try {
             const mainGame = await getGame(id);
             setGame(mainGame);
-            if (mainGame && mainGame.relatedGameNames) {
-                const related = await getRelatedGames(mainGame.relatedGameNames);
+
+            // LÓGICA ATUALIZADA E SIMPLIFICADA
+            // Pega a lista de nomes da propriedade que existir, ou uma lista vazia.
+            const namesList = mainGame.relatedGameNames || mainGame.relatedGameIds || [];
+
+            // Se a lista tiver nomes, busca os jogos relacionados
+            if (namesList.length > 0) {
+                const related = await getRelatedGames(namesList);
                 setRelatedGames(related);
             }
+
         } catch (err) {
             console.error("Erro ao buscar dados do produto:", err);
             setError(err.message);
@@ -82,7 +84,6 @@ export function ProductProvider({ children }) {
     );
 }
 
-// 3. Criar um Hook customizado para facilitar o uso do context
 export function useProduct() {
     const context = useContext(ProductContext);
     if (context === undefined) {

@@ -1,185 +1,23 @@
 .relatedSection {
-  width: 95vw;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--bg-800);
+  width: 95%;
   border-radius: var(--br-16);
+  padding: 2rem !important;
+  margin: 0 auto 3rem auto;
 }
 
 .sectionTitle {
-  font-size: 1.25rem;
+  width: fit-content;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: var(--text-primary);
-  padding: 1.5rem;
+  color: var(--txt-50);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color-600);
 }
 
 .gamesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
-}
-
-.gameCard {
-  width: 16vw;
-  min-width: 300px;
-  height: auto;
-  background-color: var(--bg-800);
-  border: 2px solid transparent;
-  border-radius: 10px;
-  /* overflow: hidden; // Removido para o selo de desconto poder sair do card */
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  transition: border-color 0.3s, transform 0.3s;
-  border: 1px solid var(--primary-color-600);
-  margin-bottom: 2rem;
-
-  &:hover {
-    border-color: var(--primary-color-600);
-    transform: translateY(-4px);
-
-    .overlay {
-      opacity: 1;
-    }
-  }
-}
-
-/* Novo container para a imagem para aplicar o efeito de sombra e controlar o overflow */
-.imageContainer {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  overflow: hidden; /* Garante que a imagem respeite as bordas arredondadas */
-  
-  /* Efeito de sombra interna (de baixo para cima) */
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(to top, rgba(16, 16, 24, 1) 10%, rgba(16, 16, 24, 0) 100%);
-    pointer-events: none; /* Garante que a sombra não interfira com o mouse */
-  }
-}
-
-.gameImage {
-  width: 100%;
-  height: 100%; /* Modificado para preencher o container */
-  object-fit: cover;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(16, 16, 24, 0.65);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.viewMoreButton {
-  color: #fff;
-  background: none;
-  border: 2px solid #fff;
-  padding: 0.6rem 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  text-transform: uppercase;  
-  transition: all 0.3s;
-
-  &:hover {
-    background-color: var(--accent-blue);
-    border-color: var(--accent-blue);
-  }
-}
-
-.platformIcons {
-  position: absolute;
-  bottom: 160px;
-  right: 20px;
-  width: auto;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 4px 1rem;
-  border-radius: var(--br-16);
-  display: flex;
-  gap: 0.75rem;
-}
-
-.cardBody {
-  padding: 0.8rem 1rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.gameTitle {
-  font-size: 1.5rem;
-  font-weight: bolder;
-  color: var(--text-primary);
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.ratingInfo {
-  display: flex;
-  align-items: center;
-  color: var(--text-secondary);
-  font-size: 0.8rem;
-  margin-bottom: 0.8rem;
-}
-
-.starIcon {
-  color: var(--accent-yellow);
-  margin-right: 0.25rem;
-}
-
-.priceContainer {
-  margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.gamePrice {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #fff;
-}
-
-.gameTags { //! DEIXAR BONITO
-  font-size: 0.75rem;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 0.25rem 0.5rem;
-  border-radius: var(--br-8);
-  color: var(--text-primary);
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-/* Estilos modificados para o selo de desconto */
-.discountBadge {
-  position: absolute;
-  bottom: -15px;      /* Posiciona para fora do card na vertical */
-  right: 15px;       /* Alinha à direita do card */
-  font-size: 0.8rem;
-  font-weight: 700;
-  background-color: #ef4444; /* Vermelho para destaque */
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  z-index: 2; /* Garante que fique sobre outros elementos */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
-  border: 2px solid var(--bg-800); /* Borda da cor do fundo para efeito de recorte */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2.5rem;
+  padding-top: 1rem;
 }

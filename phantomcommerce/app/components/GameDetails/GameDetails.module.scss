@@ -7,12 +7,13 @@
 }
 
 .sectionTitle {
+  width: fit-content;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--txt-50);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--primary-color-600);
 }
 
 .gameDescription {
@@ -35,7 +36,7 @@
   font-size: 0.9rem;
   font-weight: bold;
   margin-bottom: 0.25rem;
-  border-bottom: 2px solid var(--primary-color-600);
+  border-bottom: 1px solid var(--primary-color-600);
   padding-bottom: 4px;
   padding-top: 16px;
   gap: var(--gap-1);
