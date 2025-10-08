@@ -6,7 +6,7 @@ import { Search, ShoppingCart, Heart, User, Menu, X, ChevronDown, Loader2 } from
 import styles from "./Header.module.scss";
 import CartModal from "../CartModal/CartModal";
 import { useSearch } from "../../contexts/SearchContext";
-import { useCart } from "../../contexts/CartContext";
+import { useCart } from "../../contexts/Cartcontext";
 import { useAuth } from "../../contexts/AuthContext"; // 1. Importar o hook de autenticação
 
 // Dados mocados para categorias (podem ser substituídos por uma API no futuro)

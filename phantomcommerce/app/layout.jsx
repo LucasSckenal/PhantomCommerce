@@ -3,7 +3,7 @@ import "./styles/globals.scss";
 import { SearchProvider } from './contexts/SearchContext';
 import { ProductProvider } from "./contexts/ProductContext";
 import { StoreProvider } from "./contexts/StoreContext";
-import { CartProvider } from "./contexts/CartContext"
+import { CartProvider } from "./contexts/Cartcontext"
 import { AuthProvider } from "./contexts/AuthContext"
 
 const geistSans = Geist({

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Play, ChevronLeft, ChevronRight, Star, ShoppingCart, Heart } from 'lucide-react';
 import { FaPlaystation, FaXbox, FaSteam } from "react-icons/fa";
 import { BsNintendoSwitch, BsPcDisplay } from "react-icons/bs";
-import { useCart } from '../../contexts/CartContext';
+import { useCart } from '../../contexts/Cartcontext';
 import styles from './HeroSection.module.scss';
 
 // Mapeamento de plataformas para ícones

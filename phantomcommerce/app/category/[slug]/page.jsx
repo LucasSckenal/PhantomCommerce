@@ -5,7 +5,7 @@ import { useState, useEffect, useMemo, Suspense } from 'react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import { ArrowUpDown, X } from 'lucide-react';
 import Header from '../../components/Header/Header';
-import styles from './CategoryPage.module.scss';
+import styles from './categoryPage.module.scss';
 import { StoreProvider, useStore } from '../../contexts/StoreContext';
 import GameCard from '../../components/GameCard/GameCard'; // 1. IMPORTA O NOSSO NOVO GAMECARD
 
