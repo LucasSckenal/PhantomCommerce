@@ -17,7 +17,6 @@ const platformIcons = {
 };
 
 export default function HeroSection({ game }) {
-  const [activeImage, setActiveImage] = useState(game.videoThumbnail);
   const [isViewingVideo, setIsViewingVideo] = useState(false);
   const [playerError, setPlayerError] = useState(false);
   const { addToCart, cartItems } = useCart();
@@ -73,7 +72,10 @@ export default function HeroSection({ game }) {
     }
   };
 
+  // Gera URL da thumbnail do YouTube e define imagem ativa
   const youtubeId = extractYouTubeID(mainTrailerUrl);
+  const youtubeThumbnailUrl = youtubeId ? `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg` : null;
+  const [activeImage, setActiveImage] = useState(youtubeThumbnailUrl || game.gallery[0]);
 
   useEffect(() => {
     setPlayerError(false);
@@ -86,7 +88,7 @@ export default function HeroSection({ game }) {
     }
     setPlayerError(false);
     setIsViewingVideo(true);
-    setActiveImage(game.videoThumbnail);
+    setActiveImage(youtubeThumbnailUrl); 
   };
 
   const handleThumbnailClick = (img) => {
@@ -123,12 +125,12 @@ export default function HeroSection({ game }) {
           <div className={styles.priceInfo}>
             {hasDiscount ? (
               <>
-                <span className={styles.discountedPrice}>R$ {game.discountedPrice.toFixed(2)}</span>
-                <span className={styles.originalPrice}>R$ {game.originalPrice.toFixed(2)}</span>
+                <span className={styles.discountedPrice}>R$ {game.discountedPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                <span className={styles.originalPrice}>R$ {game.originalPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                 <span className={styles.saveBadge}>{discountPercentage}% OFF</span>
               </>
             ) : (
-              <span className={styles.discountedPrice}>R$ {game.originalPrice.toFixed(2)}</span>
+              <span className={styles.discountedPrice}>R$ {game.originalPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             )}
           </div>
           <div className={styles.buttonGroup}>
@@ -193,7 +195,7 @@ export default function HeroSection({ game }) {
                     alt="Visualização do jogo"
                     className={styles.mainImage}
                   />
-                  {mainTrailerUrl && (
+                  {!isViewingVideo && activeImage === youtubeThumbnailUrl && (
                     <button className={styles.playButton} onClick={handlePlayVideo}>
                       <Play />
                     </button>
@@ -203,18 +205,30 @@ export default function HeroSection({ game }) {
             </div>
 
             <div className={styles.thumbnailStrip}>
-              <button className={styles.thumbNav}><ChevronLeft size={20}/></button>
+              <button className={styles.thumbNav}><ChevronLeft size={40}/></button>
               <div className={styles.thumbnails}>
-                <div className={styles.thumbnail} onClick={() => handleThumbnailClick(game.videoThumbnail)}>
-                  <img src={game.gallery[0]} alt="Video Thumbnail" />
-                </div>
+
+                {/* Renderiza a thumbnail do vídeo com o ícone de play */}
+                {youtubeThumbnailUrl && (
+                  <div 
+                    className={`${styles.thumbnail} ${styles.videoThumbnail}`} 
+                    onClick={() => handleThumbnailClick(youtubeThumbnailUrl)}
+                  >
+                    <img src={youtubeThumbnailUrl} alt="Trailer do Jogo" />
+                    <div className={styles.videoOverlay}>
+                      <Play size={28} />
+                    </div>
+                  </div>
+                )}
+
+                {/* Renderiza as outras imagens da galeria */}
                 {game.gallery.map((img, index) => (
                   <div key={index} className={styles.thumbnail} onClick={() => handleThumbnailClick(img)}>
                     <img src={img} alt={`Thumbnail ${index + 1}`} />
                   </div>
                 ))}
               </div>
-              <button className={styles.thumbNav}><ChevronRight size={20}/></button>
+              <button className={styles.thumbNav}><ChevronRight size={40}/></button>
             </div>
           </div>
 
@@ -223,16 +237,16 @@ export default function HeroSection({ game }) {
               <div className={styles.priceInfo}>
                 {hasDiscount ? (
                   <>
-                    <span className={styles.discountedPrice}>R$ {game.discountedPrice.toFixed(2)}</span>
-                    <span className={styles.originalPrice}>R$ {game.originalPrice.toFixed(2)}</span>
+                    <span className={styles.discountedPrice}>R$ {game.discountedPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                    <span className={styles.originalPrice}>R$ {game.originalPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                   </>
                 ) : (
-                  <span className={styles.discountedPrice}>R$ {game.originalPrice.toFixed(2)}</span>
+                  <span className={styles.discountedPrice}>R$ {game.originalPrice.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                 )}
               </div>
               {hasDiscount && (
                 <p style={{ color:`green`, fontWeight:`bold`, marginBottom:`12px` }}>
-                  Você economiza {gameDiscount.toFixed(2)} reais
+                  Você economiza {gameDiscount.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} reais
                 </p>
               )}
                <button

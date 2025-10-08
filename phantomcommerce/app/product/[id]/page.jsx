@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useProduct } from '../../contexts/ProductContext'; // Ajuste o caminho
 import Header from '../../components/Header/Header';
 import HeroSection from '../../components/HeroSection/HeroSection';
@@ -8,7 +8,7 @@ import GameDetails from '../../components/GameDetails/GameDetails';
 import RelatedGames from '../../components/RelatedGames/RelatedGames';
 
 export default function ProductPage({ params }) {
-    const { id } = params;
+    const { id } = React.use(params);
     const { game, relatedGames, loading, error, fetchProductData } = useProduct();
 
     // Dispara a busca de dados quando o ID da página mudar
