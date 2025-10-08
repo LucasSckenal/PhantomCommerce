@@ -121,7 +121,7 @@ export default function Header() {
                       <li key={game.id}>
                         <Link href={`/product/${game.id}`} className={styles.searchResultItem} onClick={clearSearch}>
                           <div className={styles.resultImageContainer}>
-                            <img src={game.bannerImage} alt={`Capa do jogo ${game.title}`} className={styles.resultImage} />
+                            <img src={game.coverImageUrl || game.headerImageUrl} alt={`Capa do jogo ${game.title}`} className={styles.resultImage} />
                           </div>
                           <span className={styles.resultTitle}>{game.title}</span>
                         </Link>

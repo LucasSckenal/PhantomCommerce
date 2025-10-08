@@ -10,8 +10,8 @@
   min-height: 400px;
   background-size: cover;
   background-position: center 25%;
-  filter: blur(5px);
   position: absolute;
+  margin-top: 5rem;
   top: 0;
   left: 0;
   z-index: -1;
@@ -111,8 +111,9 @@
 }
 
 .trailerButton {
-  background: transparent;
-  border: 1px solid var(--txt-500);
+  background-color: rgba(15, 20, 36, 0.8); 
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--primary-color-600);
   color: var(--txt-100);
   font-weight: 600;
   font-size: 1rem;
@@ -125,8 +126,7 @@
   gap: 0.5rem;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: var(--txt-100);
+    color: var(--primary-color-600);
   }
 }
 
@@ -144,7 +144,7 @@
   position: relative;
   aspect-ratio: 11 / 4;
   background-color: black;
-  border-radius: 6px;
+  border-radius: var(--br-16);
   overflow: hidden;
   margin-bottom: 1rem;
   display: flex;
@@ -296,7 +296,7 @@
 
 .addButton {
   width: fit-content;
-  background-color: var(--btn-400);
+  background-color: var(--btn-500);
   color: var(--txt-100);
   font-weight: 600;
   font-size: 1rem;
@@ -307,7 +307,7 @@
   transition: background-color var(--transition-fast);
 
   &:hover {
-    background-color: var(--btn-500);
+    background-color: var(--btn-400);
   }
 }
 

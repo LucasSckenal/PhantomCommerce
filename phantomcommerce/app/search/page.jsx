@@ -2,24 +2,30 @@
 
 import { useSearchParams } from 'next/navigation';
 import { Suspense, useMemo } from 'react';
-import gameData from '../data/gameData.json';
 import Header from '../components/Header/Header';
-import GameGrid from '../components/GameGrid/GameGrid';
+import GameCard from '../components/GameCard/GameCard'; // Usando GameCard
 import styles from './SearchPage.module.scss';
 import { SearchX } from 'lucide-react';
+import { SearchProvider, useSearch } from '../contexts/SearchContext'; // 1. Importa o context
 
 function SearchResults() {
     const searchParams = useSearchParams();
     const query = searchParams.get('q') || '';
+    const { allGames, isSearching } = useSearch(); // 2. Usa o estado do context
 
     const searchedGames = useMemo(() => {
-        if (!query) {
+        if (!query || allGames.length === 0) {
             return [];
         }
-        return gameData.filter(game =>
+        // 3. Filtra a lista de jogos vinda do Firebase
+        return allGames.filter(game =>
             game.title.toLowerCase().includes(query.toLowerCase())
         );
-    }, [query]);
+    }, [query, allGames]);
+
+    if (isSearching && searchedGames.length === 0) {
+        return <div>Buscando...</div>
+    }
 
     return (
         <div className={styles.searchPageWrapper}>
@@ -34,7 +40,11 @@ function SearchResults() {
                             <p className={styles.resultsCount}>
                                 {searchedGames.length} jogo(s) encontrado(s)
                             </p>
-                            <GameGrid games={searchedGames} />
+                            <div className={styles.gameGrid}>
+                                {searchedGames.map(game => (
+                                    <GameCard key={game.id} game={game} />
+                                ))}
+                            </div>
                         </>
                     ) : (
                         <div className={styles.noResults}>
@@ -53,11 +63,13 @@ function SearchResults() {
     );
 }
 
+// 4. Envolve a página com o provider
 export default function SearchPage() {
     return (
         <Suspense fallback={<div>A carregar...</div>}>
-            <SearchResults />
+            <SearchProvider>
+                <SearchResults />
+            </SearchProvider>
         </Suspense>
     );
 }
-

@@ -1,13 +1,9 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback } from 'react';
+import { createContext, useContext, useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-// 1. IMPORTAÇÃO CENTRALIZADA DO FIREBASE
-import { db } from '../lib/firebase'; // Ajuste o caminho conforme sua estrutura
-// 2. Importações específicas do Firestore continuam necessárias
-import { collection, query, where, getDocs, limit } from "firebase/firestore";
-
-// O bloco de configuração do Firebase foi REMOVIDO daqui
+import { db } from '../lib/firebase';
+import { collection, query, getDocs } from "firebase/firestore";
 
 const SearchContext = createContext();
 
@@ -18,54 +14,66 @@ export function SearchProvider({ children }) {
   const [searchResults, setSearchResults] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
   const [isResultsVisible, setIsResultsVisible] = useState(false);
+  const [allGames, setAllGames] = useState([]);
+
+  // Busca todos os jogos uma vez quando o provider é montado
+  useEffect(() => {
+    const fetchAllGames = async () => {
+      setIsSearching(true);
+      try {
+        const gamesRef = collection(db, 'games');
+        const q = query(gamesRef);
+        const querySnapshot = await getDocs(q);
+        const results = querySnapshot.docs.map(doc => ({ 
+            id: doc.id, 
+            ...doc.data(),
+            originalPrice: doc.data().oldPrice || doc.data().price,
+            discountedPrice: doc.data().price,
+            tags: doc.data().categories || [],
+        }));
+        setAllGames(results);
+      } catch (error) {
+        console.error("Erro ao buscar todos os jogos:", error);
+      } finally {
+        setIsSearching(false);
+      }
+    };
+    fetchAllGames();
+  }, []);
 
   const categories = ['aventura', 'acao', 'rpg', 'estrategia', 'esportes', 'corrida'];
+  
   const handleSearchSubmit = (queryText) => {
     if (!queryText) return;
+    const queryLowerCase = queryText.toLowerCase();
+    
     if (!isNaN(queryText)) {
       router.push(`/product/${queryText}`);
+    } else if (categories.includes(queryLowerCase)) {
+      router.push(`/category/${encodeURIComponent(queryLowerCase)}`);
     } else {
-      const queryLowerCase = queryText.toLowerCase();
-      if (categories.includes(queryLowerCase)) {
-        router.push(`/category/${encodeURIComponent(queryLowerCase)}`);
-      } else {
-        router.push(`/search?q=${encodeURIComponent(queryText)}`);
-      }
+      router.push(`/search?q=${encodeURIComponent(queryText)}`);
     }
     clearSearch();
   };
 
-  const handleSearchChange = useCallback(async (event) => {
+  // LÓGICA CORRIGIDA PARA O DROPDOWN
+  const handleSearchChange = useCallback((event) => {
     const searchText = event.target.value;
     setSearchQuery(searchText);
 
     if (searchText.length > 0) {
-      setIsSearching(true);
-      try {
-        const gamesRef = collection(db, 'games');
-        const q = query(
-          gamesRef,
-          where('title_lowercase', '>=', searchText.toLowerCase()),
-          where('title_lowercase', '<=', searchText.toLowerCase() + '\uf8ff'),
-          limit(5)
-        );
+      // Filtra a lista de jogos já carregada em vez de fazer uma nova chamada ao DB
+      const filteredResults = allGames.filter(game => 
+        game.title.toLowerCase().includes(searchText.toLowerCase())
+      ).slice(0, 5); // Pega os 5 primeiros resultados
 
-        const querySnapshot = await getDocs(q);
-        const results = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-        setSearchResults(results);
-        setIsResultsVisible(results.length > 0);
-      } catch (error) {
-        console.error("Erro ao buscar jogos:", error);
-        setSearchResults([]);
-        setIsResultsVisible(false);
-      } finally {
-        setIsSearching(false);
-      }
+      setSearchResults(filteredResults);
+      setIsResultsVisible(filteredResults.length > 0);
     } else {
       clearSearch();
     }
-  }, []);
+  }, [allGames]); // Depende da lista de todos os jogos
 
   const hideSearchResults = () => setIsResultsVisible(false);
 
@@ -73,7 +81,6 @@ export function SearchProvider({ children }) {
     setSearchQuery('');
     setSearchResults([]);
     setIsResultsVisible(false);
-    setIsSearching(false);
   };
 
   const value = {
@@ -81,6 +88,7 @@ export function SearchProvider({ children }) {
     searchResults,
     isResultsVisible,
     isSearching,
+    allGames,
     handleSearchSubmit,
     handleSearchChange,
     hideSearchResults,
@@ -101,3 +109,4 @@ export function useSearch() {
   }
   return context;
 }
+

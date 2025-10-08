@@ -217,7 +217,7 @@ const HomePage = () => {
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Mais Vendidos</h2>
-          <Link href="/category/geral?sort=sales" className={styles.viewMoreButton}>Ver Mais</Link>
+          <Link href="/category/all?sort=sales" className={styles.viewMoreButton}>Ver Mais</Link>
         </div>
         <div className={styles.bestSellersGrid}>
           {bestSellers.map((game, index) => (
