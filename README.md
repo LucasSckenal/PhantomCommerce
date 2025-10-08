@@ -148,6 +148,5 @@ Por favor siga o padrão de código, mantenha testes atualizados, etc.
 
 ## Licença
 
-Este projeto está sob a licença **MIT** (ou outra que vocês definirem).  
-Você pode colocar aqui o texto da licença ou link para o arquivo LICENSE.
+Este projeto está licenciado sob os termos da licença [MIT](./LICENSE).
 
